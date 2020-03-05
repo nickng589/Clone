@@ -13,10 +13,17 @@ public class PlayerController : MonoBehaviour
 
     #region Private Variables
     private GameManager p_GM;
+    private LayerMask p_wallMask;
+    #endregion
+
+    #region Public Variables
+    public int move_Dist;
     #endregion
     // Start is called before the first frame update
     void Start()
     {
+        p_wallMask = LayerMask.GetMask("Wall");
+        move_Dist = 1;
         p_GM = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
@@ -27,44 +34,64 @@ public class PlayerController : MonoBehaviour
         {
             float right = Input.GetAxis("Horizontal");
             float up = Input.GetAxis("Vertical");
+            if(move_Dist == -1)
+            {
+                right *= -1.0f;
+                up *= -1.0f;
+            }
             //Else ifs insure that the game doesnt register 2 directions at the same time
             if (up > 0.01) //Up
             {
-                if(!Physics2D.Raycast(new Vector2(gameObject.transform.position.x,gameObject.transform.position.y+1), new Vector2(0, 0),1))//checks that there are no walls above the player
+                for(int i = Mathf.Abs(move_Dist); i>= 1; i--) // Moves the longest possible distance (example, move_dist =3, wall 2 blocks away, so only move 2 blocks)
                 {
-                    p_GM.numMovingPlayers += 1; // increase GameManagers count of players currently moving
-                    StartCoroutine(MoveUpCoroutine(1));
+                    if(!Physics2D.Raycast(gameObject.transform.position, new Vector2(0,1),i,p_wallMask))
+                    {
+                        p_GM.numMovingPlayers += 1; // increase GameManagers count of players currently moving
+                        StartCoroutine(MoveUpCoroutine(i));
+                        break;
+                    }
                 }
                     
             }
             else if(up < -0.01) //Down
             {
-                if (!Physics2D.Raycast(new Vector2(gameObject.transform.position.x, gameObject.transform.position.y - 1), new Vector2(0, 0), 1))//checks that there are no walls below the player
+                for (int i = Mathf.Abs(move_Dist); i >= 1; i--) // Moves the longest possible distance (example, move_dist =3, wall 2 blocks away, so only move 2 blocks)
                 {
-                    p_GM.numMovingPlayers += 1; // increase GameManagers count of players currently moving
-                    StartCoroutine(MoveDownCoroutine(1));
+                    if (!Physics2D.Raycast(gameObject.transform.position, new Vector2(0, -1), i, p_wallMask))
+                    {
+                        p_GM.numMovingPlayers += 1; // increase GameManagers count of players currently moving
+                        StartCoroutine(MoveDownCoroutine(i));
+                        break;
+                    }
                 }
             }
             else if(right > 0.01) //Right
             {
-                if (!Physics2D.Raycast(new Vector2(gameObject.transform.position.x + 1, gameObject.transform.position.y), new Vector2(0, 0), 1))//checks that there are no walls to the right of the player
+                for (int i = Mathf.Abs(move_Dist); i >= 1; i--) // Moves the longest possible distance (example, move_dist =3, wall 2 blocks away, so only move 2 blocks)
                 {
-                    p_GM.numMovingPlayers += 1; // increase GameManagers count of players currently moving
-                    StartCoroutine(MoveRightCoroutine(1));
+                    if (!Physics2D.Raycast(gameObject.transform.position, new Vector2(1, 0), i, p_wallMask))
+                    {
+                        p_GM.numMovingPlayers += 1; // increase GameManagers count of players currently moving
+                        StartCoroutine(MoveRightCoroutine(i));
+                        break;
+                    }
                 }
             }
             else if(right < -0.01) //Left
             {
-                if (!Physics2D.Raycast(new Vector2(gameObject.transform.position.x - 1, gameObject.transform.position.y), new Vector2(0, 0), 1))//checks that there are no walls to the left of the player
+                for (int i = Mathf.Abs(move_Dist); i >= 1; i--) // Moves the longest possible distance (example, move_dist =3, wall 2 blocks away, so only move 2 blocks)
                 {
-                    p_GM.numMovingPlayers += 1; // increase GameManagers count of players currently moving
-                    StartCoroutine(MoveLeftCoroutine(1));
+                    if (!Physics2D.Raycast(gameObject.transform.position, new Vector2(-1, 0), i, p_wallMask))
+                    {
+                        p_GM.numMovingPlayers += 1; // increase GameManagers count of players currently moving
+                        StartCoroutine(MoveLeftCoroutine(i));
+                        break;
+                    }
                 }
             }
         }
         
     }
-
     #region Coroutines
     IEnumerator MoveUpCoroutine(int distance)
     {  
