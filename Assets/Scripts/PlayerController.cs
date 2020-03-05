@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
             //Else ifs insure that the game doesnt register 2 directions at the same time
             if (up > 0.01) //Up
             {
-                if(!Physics2D.Raycast(gameObject.transform.position, new Vector2(0, 1),1))//checks that there are no walls above the player
+                if(!Physics2D.Raycast(new Vector2(gameObject.transform.position.x,gameObject.transform.position.y+1), new Vector2(0, 0),1))//checks that there are no walls above the player
                 {
                     p_GM.numMovingPlayers += 1; // increase GameManagers count of players currently moving
                     StartCoroutine(MoveUpCoroutine(1));
@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
             }
             else if(up < -0.01) //Down
             {
-                if (!Physics2D.Raycast(gameObject.transform.position, new Vector2(0, -1), 1))//checks that there are no walls below the player
+                if (!Physics2D.Raycast(new Vector2(gameObject.transform.position.x, gameObject.transform.position.y - 1), new Vector2(0, 0), 1))//checks that there are no walls below the player
                 {
                     p_GM.numMovingPlayers += 1; // increase GameManagers count of players currently moving
                     StartCoroutine(MoveDownCoroutine(1));
@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour
             }
             else if(right > 0.01) //Right
             {
-                if (!Physics2D.Raycast(gameObject.transform.position, new Vector2(1, 0), 1))//checks that there are no walls to the right of the player
+                if (!Physics2D.Raycast(new Vector2(gameObject.transform.position.x + 1, gameObject.transform.position.y), new Vector2(0, 0), 1))//checks that there are no walls to the right of the player
                 {
                     p_GM.numMovingPlayers += 1; // increase GameManagers count of players currently moving
                     StartCoroutine(MoveRightCoroutine(1));
@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour
             }
             else if(right < -0.01) //Left
             {
-                if (!Physics2D.Raycast(gameObject.transform.position, new Vector2(-1, 0), 1))//checks that there are no walls to the left of the player
+                if (!Physics2D.Raycast(new Vector2(gameObject.transform.position.x - 1, gameObject.transform.position.y), new Vector2(0, 0), 1))//checks that there are no walls to the left of the player
                 {
                     p_GM.numMovingPlayers += 1; // increase GameManagers count of players currently moving
                     StartCoroutine(MoveLeftCoroutine(1));
