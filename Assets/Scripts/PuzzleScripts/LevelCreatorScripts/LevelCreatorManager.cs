@@ -25,6 +25,7 @@ public class LevelCreatorManager : MonoBehaviour
     private Camera p_cam;
     private GameObject currPlaceGO;
     private int p_numObjects;
+    private GameObject p_GM;
     #endregion
     // Start is called before the first frame update
     void Start()
@@ -37,6 +38,7 @@ public class LevelCreatorManager : MonoBehaviour
         m_Texts[0].color = Color.yellow;
         p_numObjects = m_Objects.Length;
         p_cam = Camera.main;
+        p_GM = GameObject.Find("GameManager");
     }
 
     // Update is called once per frame
@@ -65,7 +67,8 @@ public class LevelCreatorManager : MonoBehaviour
             {
                 Destroy(hit.transform.gameObject);
             }
-            Instantiate(currPlaceGO, spawnPos, Quaternion.identity);
+            var newObj = Instantiate(currPlaceGO, spawnPos, Quaternion.identity);
+            newObj.transform.parent = p_GM.transform;
         }
         if (Input.GetMouseButton(1))
         {
