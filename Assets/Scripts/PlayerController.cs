@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
                 {
                     if(!Physics2D.Raycast(gameObject.transform.position, new Vector2(0,1),i,p_wallMask))
                     {
-                        p_GM.numMovingPlayers += 1; // increase GameManagers count of players currently moving
+                        p_GM.IncreaseNumMoving(); // increase GameManagers count of players currently moving
                         StartCoroutine(MoveUpCoroutine(i));
                         break;
                     }
@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
                 {
                     if (!Physics2D.Raycast(gameObject.transform.position, new Vector2(0, -1), i, p_wallMask))
                     {
-                        p_GM.numMovingPlayers += 1; // increase GameManagers count of players currently moving
+                        p_GM.IncreaseNumMoving(); // increase GameManagers count of players currently moving
                         StartCoroutine(MoveDownCoroutine(i));
                         break;
                     }
@@ -71,7 +71,7 @@ public class PlayerController : MonoBehaviour
                 {
                     if (!Physics2D.Raycast(gameObject.transform.position, new Vector2(1, 0), i, p_wallMask))
                     {
-                        p_GM.numMovingPlayers += 1; // increase GameManagers count of players currently moving
+                        p_GM.IncreaseNumMoving(); // increase GameManagers count of players currently moving
                         StartCoroutine(MoveRightCoroutine(i));
                         break;
                     }
@@ -83,7 +83,7 @@ public class PlayerController : MonoBehaviour
                 {
                     if (!Physics2D.Raycast(gameObject.transform.position, new Vector2(-1, 0), i, p_wallMask))
                     {
-                        p_GM.numMovingPlayers += 1; // increase GameManagers count of players currently moving
+                        p_GM.IncreaseNumMoving(); // increase GameManagers count of players currently moving
                         StartCoroutine(MoveLeftCoroutine(i));
                         break;
                     }
@@ -103,7 +103,7 @@ public class PlayerController : MonoBehaviour
             elapsedTime += Time.deltaTime;
             yield return null;
         }
-        p_GM.numMovingPlayers -= 1; // decrease GameManagers count of players currently moving
+        p_GM.DecreaseNumMoving(); // decrease GameManagers count of players currently moving
     }
 
     IEnumerator MoveDownCoroutine(int distance)
@@ -116,7 +116,7 @@ public class PlayerController : MonoBehaviour
             elapsedTime += Time.deltaTime;
             yield return null;
         }
-        p_GM.numMovingPlayers -= 1; // decrease GameManagers count of players currently moving
+        p_GM.DecreaseNumMoving(); // decrease GameManagers count of players currently moving
     }
 
     IEnumerator MoveLeftCoroutine(int distance)
@@ -129,7 +129,7 @@ public class PlayerController : MonoBehaviour
             elapsedTime += Time.deltaTime;
             yield return null;
         }
-        p_GM.numMovingPlayers -= 1; // decrease GameManagers count of players currently moving
+        p_GM.DecreaseNumMoving(); // decrease GameManagers count of players currently moving
     }
 
     IEnumerator MoveRightCoroutine(int distance)
@@ -142,8 +142,9 @@ public class PlayerController : MonoBehaviour
             elapsedTime += Time.deltaTime;
             yield return null;
         }
-        p_GM.numMovingPlayers -= 1; // decrease GameManagers count of players currently moving
+        p_GM.DecreaseNumMoving(); // decrease GameManagers count of players currently moving
     }
+
 
     #endregion
 }
