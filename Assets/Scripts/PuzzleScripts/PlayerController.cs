@@ -14,6 +14,11 @@ public class PlayerController : MonoBehaviour
     #region Private Variables
     private GameManager p_GM;
     private LayerMask p_wallMask;
+    private bool moving = false;
+    private Vector2 upV = new Vector2(0, 1);
+    private Vector2 downV = new Vector2(0, -1);
+    private Vector2 rightV = new Vector2(1, 0);
+    private Vector2 leftV = new Vector2(-1, 0);
     #endregion
 
     #region Public Variables
@@ -30,7 +35,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
-        if (p_GM.playersCanMove) //only calculate movement if GameManager says all players can move
+        if (!moving && p_GM.playersCanMove) //only calculate movement if GameManager says all players can move
         {
             float right = Input.GetAxis("Horizontal");
             float up = Input.GetAxis("Vertical");
@@ -44,8 +49,9 @@ public class PlayerController : MonoBehaviour
             {
                 for(int i = Mathf.Abs(move_Dist); i>= 1; i--) // Moves the longest possible distance (example, move_dist =3, wall 2 blocks away, so only move 2 blocks)
                 {
-                    if(!Physics2D.Raycast(gameObject.transform.position, new Vector2(0,1),i,p_wallMask))
+                    if(!Physics2D.Raycast((Vector2)gameObject.transform.position + upV, upV,i-1,p_wallMask))
                     {
+                        moving = true;
                         p_GM.IncreaseNumMoving(); // increase GameManagers count of players currently moving
                         StartCoroutine(MoveUpCoroutine(i));
                         break;
@@ -57,8 +63,9 @@ public class PlayerController : MonoBehaviour
             {
                 for (int i = Mathf.Abs(move_Dist); i >= 1; i--) // Moves the longest possible distance (example, move_dist =3, wall 2 blocks away, so only move 2 blocks)
                 {
-                    if (!Physics2D.Raycast(gameObject.transform.position, new Vector2(0, -1), i, p_wallMask))
+                    if (!Physics2D.Raycast((Vector2)gameObject.transform.position + downV, downV, i - 1, p_wallMask))
                     {
+                        moving = true;
                         p_GM.IncreaseNumMoving(); // increase GameManagers count of players currently moving
                         StartCoroutine(MoveDownCoroutine(i));
                         break;
@@ -69,8 +76,9 @@ public class PlayerController : MonoBehaviour
             {
                 for (int i = Mathf.Abs(move_Dist); i >= 1; i--) // Moves the longest possible distance (example, move_dist =3, wall 2 blocks away, so only move 2 blocks)
                 {
-                    if (!Physics2D.Raycast(gameObject.transform.position, new Vector2(1, 0), i, p_wallMask))
+                    if (!Physics2D.Raycast((Vector2)gameObject.transform.position + rightV, rightV, i - 1, p_wallMask))
                     {
+                        moving = true;
                         p_GM.IncreaseNumMoving(); // increase GameManagers count of players currently moving
                         StartCoroutine(MoveRightCoroutine(i));
                         break;
@@ -81,8 +89,9 @@ public class PlayerController : MonoBehaviour
             {
                 for (int i = Mathf.Abs(move_Dist); i >= 1; i--) // Moves the longest possible distance (example, move_dist =3, wall 2 blocks away, so only move 2 blocks)
                 {
-                    if (!Physics2D.Raycast(gameObject.transform.position, new Vector2(-1, 0), i, p_wallMask))
+                    if (!Physics2D.Raycast((Vector2)gameObject.transform.position + leftV, leftV, i - 1, p_wallMask))
                     {
+                        moving = true;
                         p_GM.IncreaseNumMoving(); // increase GameManagers count of players currently moving
                         StartCoroutine(MoveLeftCoroutine(i));
                         break;
@@ -103,6 +112,7 @@ public class PlayerController : MonoBehaviour
             elapsedTime += Time.deltaTime;
             yield return null;
         }
+        moving = false;
         p_GM.DecreaseNumMoving(); // decrease GameManagers count of players currently moving
     }
 
@@ -116,6 +126,7 @@ public class PlayerController : MonoBehaviour
             elapsedTime += Time.deltaTime;
             yield return null;
         }
+        moving = false;
         p_GM.DecreaseNumMoving(); // decrease GameManagers count of players currently moving
     }
 
@@ -129,6 +140,7 @@ public class PlayerController : MonoBehaviour
             elapsedTime += Time.deltaTime;
             yield return null;
         }
+        moving = false;
         p_GM.DecreaseNumMoving(); // decrease GameManagers count of players currently moving
     }
 
@@ -142,6 +154,7 @@ public class PlayerController : MonoBehaviour
             elapsedTime += Time.deltaTime;
             yield return null;
         }
+        moving = false;
         p_GM.DecreaseNumMoving(); // decrease GameManagers count of players currently moving
     }
 

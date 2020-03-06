@@ -19,18 +19,22 @@ public class LevelCreatorManager : MonoBehaviour
     [Tooltip("The Texts corrisponding to those objects (same order)")]
     private Text[] m_Texts;
 
+    [SerializeField]
+    [Tooltip("The parent objects for the objects (same order)")]
+    private GameObject[] m_Parents;
+
     #endregion
 
     #region Private Variables
     private Camera p_cam;
     private GameObject currPlaceGO;
     private int p_numObjects;
-    private GameObject p_GM;
+    private GameObject p_parent;
     #endregion
     // Start is called before the first frame update
     void Start()
     {
-        if (m_Objects.Length != m_Texts.Length || m_Texts.Length != m_Buttons.Length)
+        if (m_Objects.Length != m_Texts.Length || m_Texts.Length != m_Buttons.Length || m_Buttons.Length != m_Parents.Length)
         {
             throw new System.ArgumentException("Input Lists must be same size", "original");
         }
@@ -38,7 +42,6 @@ public class LevelCreatorManager : MonoBehaviour
         m_Texts[0].color = Color.yellow;
         p_numObjects = m_Objects.Length;
         p_cam = Camera.main;
-        p_GM = GameObject.Find("GameManager");
     }
 
     // Update is called once per frame
@@ -55,6 +58,7 @@ public class LevelCreatorManager : MonoBehaviour
                     tex.color = Color.white;
                 }
                 m_Texts[i].color = Color.yellow;
+                p_parent = m_Parents[i];
             }
         }
 
@@ -68,7 +72,7 @@ public class LevelCreatorManager : MonoBehaviour
                 Destroy(hit.transform.gameObject);
             }
             var newObj = Instantiate(currPlaceGO, spawnPos, Quaternion.identity);
-            newObj.transform.parent = p_GM.transform;
+            newObj.transform.parent = p_parent.transform;
         }
         if (Input.GetMouseButton(1))
         {

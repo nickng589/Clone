@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_mul: 2
-  m_numMoves: 3
+  m_numMoves: 5
 --- !u!61 &8643019491139427191
 BoxCollider2D:
   m_ObjectHideFlags: 0
