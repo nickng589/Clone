@@ -8,20 +8,21 @@ public class LevelCreatorManager : MonoBehaviour
 {
     #region Editor Variables
     [SerializeField]
+    [Tooltip("The image used to show whether the player can place")]
+    private Image m_canPlaceImage;
+
+    [SerializeField]
+    [Tooltip("The drop down to select the objects")]
+    private Dropdown m_dropdown;
+
+    [SerializeField]
     [Tooltip("The GameObjects that we can spawn")]
     private GameObject[] m_Objects;
 
     [SerializeField]
-    [Tooltip("The button to press to spawn those objects (same order)")]
-    private string[] m_Buttons;
-
-    [SerializeField]
-    [Tooltip("The Texts corrisponding to those objects (same order)")]
-    private Text[] m_Texts;
-
-    [SerializeField]
     [Tooltip("The parent objects for the objects (same order)")]
     private GameObject[] m_Parents;
+
 
     #endregion
 
@@ -30,39 +31,48 @@ public class LevelCreatorManager : MonoBehaviour
     private GameObject currPlaceGO;
     private int p_numObjects;
     private GameObject p_parent;
+    private bool canPlace;
     #endregion
     // Start is called before the first frame update
     void Start()
     {
-        if (m_Objects.Length != m_Texts.Length || m_Texts.Length != m_Buttons.Length || m_Buttons.Length != m_Parents.Length)
+        if (m_Objects.Length != m_Parents.Length)
         {
             throw new System.ArgumentException("Input Lists must be same size", "original");
         }
         currPlaceGO = m_Objects[0];
-        m_Texts[0].color = Color.yellow;
+        p_parent = m_Parents[0];
         p_numObjects = m_Objects.Length;
         p_cam = Camera.main;
+        canPlace = true;
+        m_dropdown.onValueChanged.AddListener(delegate {DropdownValueChanged(m_dropdown);});
+        m_canPlaceImage.color = Color.green;
+    }
+
+    void DropdownValueChanged(Dropdown change)
+    {
+        currPlaceGO = m_Objects[change.value];
+        p_parent = m_Parents[change.value];
     }
 
     // Update is called once per frame
     void Update()
     {
-        for(int i =0; i<p_numObjects; i++)
-        {
-            if(Input.GetKeyDown(m_Buttons[i]))
-            {
-                currPlaceGO = m_Objects[i];
 
-                foreach(Text tex in m_Texts)
-                {
-                    tex.color = Color.white;
-                }
-                m_Texts[i].color = Color.yellow;
-                p_parent = m_Parents[i];
+        if(Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            canPlace = !canPlace;
+            if(canPlace)
+            {
+                m_canPlaceImage.color = Color.green;
+            }
+            else
+            {
+                m_canPlaceImage.color = Color.red;
             }
         }
 
-        if (Input.GetMouseButton(0))
+        if (canPlace && Input.GetMouseButton(0) )
         {
             Vector2 spawnPos = p_cam.ScreenToWorldPoint(Input.mousePosition);
             spawnPos = new Vector2((float)Math.Round(spawnPos.x),(float)Math.Round(spawnPos.y));
@@ -76,9 +86,10 @@ public class LevelCreatorManager : MonoBehaviour
         }
         if (Input.GetMouseButton(1))
         {
+
             Vector2 deletePos = p_cam.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D[] hits = Physics2D.RaycastAll(deletePos, new Vector2(0, 0), 0.1f);
-            foreach(RaycastHit2D hit in hits)
+            foreach (RaycastHit2D hit in hits)
             {
                 Destroy(hit.transform.gameObject);
             }
@@ -94,4 +105,6 @@ public class LevelCreatorManager : MonoBehaviour
             }
         }
     }
+
+
 }
