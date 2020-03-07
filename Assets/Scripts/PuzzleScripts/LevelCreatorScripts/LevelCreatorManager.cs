@@ -83,5 +83,15 @@ public class LevelCreatorManager : MonoBehaviour
                 Destroy(hit.transform.gameObject);
             }
         }
+
+        if (Input.GetMouseButtonDown(2))
+        {
+            Vector2 rotatePos = p_cam.ScreenToWorldPoint(Input.mousePosition);
+            RaycastHit2D[] hits = Physics2D.RaycastAll(rotatePos, new Vector2(0, 0), 0.1f);
+            foreach (RaycastHit2D hit in hits)
+            {
+                hit.transform.Rotate(new Vector3(0, 0, 90));
+            }
+        }
     }
 }

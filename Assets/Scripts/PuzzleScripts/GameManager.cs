@@ -1,6 +1,8 @@
-﻿    using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,6 +10,14 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     [Tooltip("The number of goals")]
     private int m_numGoals;
+
+    [SerializeField]
+    [Tooltip("The text object for when player beats the level")]
+    private Text m_VictoryText;
+
+    [SerializeField]
+    [Tooltip("The text to show when the player beats the level")]
+    private string m_VictoryMessage;
     #endregion
 
     #region Private Variables
@@ -27,12 +37,16 @@ public class GameManager : MonoBehaviour
         numInGoal = 0;
         numMovingPlayers = 0;
         playersCanMove = true;
+        m_VictoryText.text = "";
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 
     public void IncreaseNumMoving()
@@ -80,7 +94,7 @@ public class GameManager : MonoBehaviour
 
     public void win()
     {
-
+        m_VictoryText.text = m_VictoryMessage;
     }
     IEnumerator waitOneUpdateCoroutine() // wait one update to change the players can move value (without this, only the first player can move)
     {

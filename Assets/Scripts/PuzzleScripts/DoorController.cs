@@ -12,11 +12,16 @@ public class DoorController : MonoBehaviour
     [Tooltip("The sprite for the closed door")]
     Sprite m_ClosedSprite;
 
+    [SerializeField]
+    [Tooltip("Whether or not the door starts open")]
+    bool m_startOpen;
+
     private bool open;
     // Start is called before the first frame update
     void Start()
     {
-        
+        open = m_startOpen;
+        DoorUpdate(); 
     }
 
     private void DoorUpdate()
