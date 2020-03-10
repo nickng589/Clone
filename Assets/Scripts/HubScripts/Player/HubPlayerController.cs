@@ -25,4 +25,5 @@ public class HubPlayerController : MonoBehaviour
         movementVector = movementVector * 4;
         playerRB.velocity = movementVector;
     }
+
 }
