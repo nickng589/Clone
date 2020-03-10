@@ -50,6 +50,7 @@ public class DialogueManager : MonoBehaviour
     public void DisplayText(string text) {
         textBoxText.text = text;
         textBoxContainer.SetActive(true);
+        Debug.Log(textBoxContainer.activeSelf);
     }
 
     // Disable the normal textbox

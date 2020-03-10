@@ -35,4 +35,8 @@ public class HubPlayerController : MonoBehaviour
         }
     }
 
+    public void test()
+    {
+
+    }
 }
