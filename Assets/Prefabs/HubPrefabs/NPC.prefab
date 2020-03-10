@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 334112450}
   - component: {fileID: 334112451}
+  - component: {fileID: 334112452}
+  - component: {fileID: 334112453}
   m_Layer: 0
   m_Name: TalkRadius
   m_TagString: Untagged
@@ -57,6 +59,34 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3, y: 3}
   m_EdgeRadius: 0
+--- !u!114 &334112452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 334112449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0088020cbdf4a447842924008b0c1f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npcmanager: {fileID: 0}
+  dm: {fileID: 0}
+  player: {fileID: 0}
+--- !u!114 &334112453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 334112449}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5c30e3b5374c4990a137a7c55b51d67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dm: {fileID: 0}
 --- !u!1 &5023649119384983902
 GameObject:
   m_ObjectHideFlags: 0
