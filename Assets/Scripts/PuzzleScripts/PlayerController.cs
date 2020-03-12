@@ -14,11 +14,16 @@ public class PlayerController : MonoBehaviour
     #region Private Variables
     private GameManager p_GM;
     private LayerMask p_wallMask;
+    private LayerMask p_boxMask;
+    private LayerMask p_finalMask;
     private bool moving = false;
     private Vector2 upV = new Vector2(0, 1);
     private Vector2 downV = new Vector2(0, -1);
     private Vector2 rightV = new Vector2(1, 0);
     private Vector2 leftV = new Vector2(-1, 0);
+    private int distanceToBox;
+    private int distanceToWall;
+    private int distanceAfterBox;
     #endregion
 
     #region Public Variables
@@ -28,6 +33,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         p_wallMask = LayerMask.GetMask("Wall");
+        p_boxMask = LayerMask.GetMask("Box");
         move_Dist = 1;
         p_GM = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
@@ -47,54 +53,170 @@ public class PlayerController : MonoBehaviour
             //Else ifs insure that the game doesnt register 2 directions at the same time
             if (up > 0.01) //Up
             {
-                for(int i = Mathf.Abs(move_Dist); i>= 1; i--) // Moves the longest possible distance (example, move_dist =3, wall 2 blocks away, so only move 2 blocks)
+                RaycastHit2D rayBox = Physics2D.Raycast(gameObject.transform.position, upV, move_Dist, p_boxMask);
+                if (rayBox.transform != null)
                 {
-                    if(!Physics2D.Raycast((Vector2)gameObject.transform.position + upV, upV,i-1,p_wallMask))
+                    distanceToBox = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayBox.transform.position));
+                    RaycastHit2D rayWall = Physics2D.Raycast(gameObject.transform.position, upV, distanceToBox, p_wallMask);
+                    if (rayWall.transform != null)
                     {
-                        moving = true;
-                        p_GM.IncreaseNumMoving(); // increase GameManagers count of players currently moving
-                        StartCoroutine(MoveUpCoroutine(i));
-                        break;
+                        distanceToWall = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayWall.transform.position));
+                        if (distanceToWall > 1)
+                        {
+                            moving = true;
+                            p_GM.IncreaseNumMoving();
+                            StartCoroutine(MoveUpCoroutine(distanceToWall - 1));
+                        }
+                    }
+                    else
+                    {
+                        distanceAfterBox = rayBox.transform.gameObject.GetComponent<BoxController>().PushUp(move_Dist - distanceToBox + 1);
+                        if(distanceToBox + distanceAfterBox >1)
+                        {
+                            moving = true;
+                            p_GM.IncreaseNumMoving();
+                            StartCoroutine(MoveUpCoroutine(distanceToBox + distanceAfterBox - 1));
+                        }               
                     }
                 }
-                    
+                else
+                {
+                    for (int i = Mathf.Abs(move_Dist); i >= 1; i--) // Moves the longest possible distance (example, move_dist =3, wall 2 blocks away, so only move 2 blocks)
+                    {
+                        if (!Physics2D.Raycast((Vector2)gameObject.transform.position + upV, upV, i - 1, p_wallMask))
+                        {
+                            moving = true;
+                            p_GM.IncreaseNumMoving(); // increase GameManagers count of players currently moving
+                            StartCoroutine(MoveUpCoroutine(i));
+                            break;
+                        }
+                    }
+                }
+
             }
             else if(up < -0.01) //Down
             {
-                for (int i = Mathf.Abs(move_Dist); i >= 1; i--) // Moves the longest possible distance (example, move_dist =3, wall 2 blocks away, so only move 2 blocks)
-                {
-                    if (!Physics2D.Raycast((Vector2)gameObject.transform.position + downV, downV, i - 1, p_wallMask))
+                RaycastHit2D rayBox = Physics2D.Raycast(gameObject.transform.position, downV, move_Dist, p_boxMask);
+                if (rayBox.transform != null)
+                {                 
+                    distanceToBox = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayBox.transform.position));
+                    RaycastHit2D rayWall = Physics2D.Raycast(gameObject.transform.position, downV,distanceToBox, p_wallMask);
+                    if(rayWall.transform != null)
                     {
-                        moving = true;
-                        p_GM.IncreaseNumMoving(); // increase GameManagers count of players currently moving
-                        StartCoroutine(MoveDownCoroutine(i));
-                        break;
+                        distanceToWall = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayWall.transform.position));
+                        if (distanceToWall > 1)
+                        {
+                            moving = true;
+                            p_GM.IncreaseNumMoving();
+                            StartCoroutine(MoveDownCoroutine(distanceToWall - 1));
+                        }
+                    }
+                    else
+                    {
+                        distanceAfterBox = rayBox.transform.gameObject.GetComponent<BoxController>().PushDown(move_Dist - distanceToBox + 1);
+                        if (distanceToBox + distanceAfterBox > 1)
+                        {
+                            moving = true;
+                            p_GM.IncreaseNumMoving();
+                            StartCoroutine(MoveDownCoroutine(distanceToBox + distanceAfterBox - 1));
+                        }
+                    }             
+                }
+                else
+                {
+                    for (int i = Mathf.Abs(move_Dist); i >= 1; i--) // Moves the longest possible distance (example, move_dist =3, wall 2 blocks away, so only move 2 blocks)
+                    {
+                        if (!Physics2D.Raycast((Vector2)gameObject.transform.position + downV, downV, i - 1, p_wallMask))
+                        {
+                            moving = true;
+                            p_GM.IncreaseNumMoving(); // increase GameManagers count of players currently moving
+                            StartCoroutine(MoveDownCoroutine(i));
+                            break;
+                        }
                     }
                 }
             }
             else if(right > 0.01) //Right
             {
-                for (int i = Mathf.Abs(move_Dist); i >= 1; i--) // Moves the longest possible distance (example, move_dist =3, wall 2 blocks away, so only move 2 blocks)
+                RaycastHit2D rayBox = Physics2D.Raycast(gameObject.transform.position, rightV, move_Dist, p_boxMask);
+                if (rayBox.transform != null)
                 {
-                    if (!Physics2D.Raycast((Vector2)gameObject.transform.position + rightV, rightV, i - 1, p_wallMask))
+                    distanceToBox = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayBox.transform.position));
+                    RaycastHit2D rayWall = Physics2D.Raycast(gameObject.transform.position, rightV, distanceToBox, p_wallMask);
+                    if (rayWall.transform != null)
                     {
-                        moving = true;
-                        p_GM.IncreaseNumMoving(); // increase GameManagers count of players currently moving
-                        StartCoroutine(MoveRightCoroutine(i));
-                        break;
+                        distanceToWall = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayWall.transform.position));
+                        if (distanceToWall > 1)
+                        {
+                            moving = true;
+                            p_GM.IncreaseNumMoving();
+                            StartCoroutine(MoveRightCoroutine(distanceToWall - 1));
+                        }
+                    }
+                    else
+                    {
+                        distanceAfterBox = rayBox.transform.gameObject.GetComponent<BoxController>().PushRight(move_Dist - distanceToBox + 1);
+                        if (distanceToBox + distanceAfterBox > 1)
+                        {
+                            moving = true;
+                            p_GM.IncreaseNumMoving();
+                            StartCoroutine(MoveRightCoroutine(distanceToBox + distanceAfterBox - 1));
+                        }
+                    }
+                }
+                else
+                {
+                    for (int i = Mathf.Abs(move_Dist); i >= 1; i--) // Moves the longest possible distance (example, move_dist =3, wall 2 blocks away, so only move 2 blocks)
+                    {
+                        if (!Physics2D.Raycast((Vector2)gameObject.transform.position + rightV, rightV, i - 1, p_wallMask))
+                        {
+                            moving = true;
+                            p_GM.IncreaseNumMoving(); // increase GameManagers count of players currently moving
+                            StartCoroutine(MoveRightCoroutine(i));
+                            break;
+                        }
                     }
                 }
             }
             else if(right < -0.01) //Left
             {
-                for (int i = Mathf.Abs(move_Dist); i >= 1; i--) // Moves the longest possible distance (example, move_dist =3, wall 2 blocks away, so only move 2 blocks)
+                RaycastHit2D rayBox = Physics2D.Raycast(gameObject.transform.position, leftV, move_Dist, p_boxMask);
+                if (rayBox.transform != null)
                 {
-                    if (!Physics2D.Raycast((Vector2)gameObject.transform.position + leftV, leftV, i - 1, p_wallMask))
+                    distanceToBox = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayBox.transform.position));
+                    RaycastHit2D rayWall = Physics2D.Raycast(gameObject.transform.position, leftV,distanceToBox, p_wallMask);
+                    if (rayWall.transform != null)
                     {
-                        moving = true;
-                        p_GM.IncreaseNumMoving(); // increase GameManagers count of players currently moving
-                        StartCoroutine(MoveLeftCoroutine(i));
-                        break;
+                        distanceToWall = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayWall.transform.position));
+                        if(distanceToWall >1)
+                        {
+                            moving = true;
+                            p_GM.IncreaseNumMoving();
+                            StartCoroutine(MoveLeftCoroutine(distanceToWall - 1));
+                        }                      
+                    }
+                    else
+                    {
+                        distanceAfterBox = rayBox.transform.gameObject.GetComponent<BoxController>().PushLeft(move_Dist - distanceToBox + 1);
+                        if (distanceToBox + distanceAfterBox > 1)
+                        {
+                            moving = true;
+                            p_GM.IncreaseNumMoving();
+                            StartCoroutine(MoveLeftCoroutine(distanceToBox + distanceAfterBox - 1));
+                        }
+                    }
+                }
+                else
+                {
+                    for (int i = Mathf.Abs(move_Dist); i >= 1; i--) // Moves the longest possible distance (example, move_dist =3, wall 2 blocks away, so only move 2 blocks)
+                    {
+                        if (!Physics2D.Raycast((Vector2)gameObject.transform.position + leftV, leftV, i - 1, p_wallMask))
+                        {
+                            moving = true;
+                            p_GM.IncreaseNumMoving(); // increase GameManagers count of players currently moving
+                            StartCoroutine(MoveLeftCoroutine(i));
+                            break;
+                        }
                     }
                 }
             }
@@ -132,6 +254,7 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator MoveLeftCoroutine(int distance)
     {
+
         float elapsedTime = 0.0f;
         Vector3 finalPos = new Vector3(gameObject.transform.position.x - distance, gameObject.transform.position.y, gameObject.transform.position.z);
         while (gameObject.transform.position != finalPos)

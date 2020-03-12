@@ -27,7 +27,7 @@ public class ButtonController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Box")
         {
             foreach(DoorController doorCon in p_doorCons)
             {
@@ -37,9 +37,12 @@ public class ButtonController : MonoBehaviour
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
-        foreach (DoorController doorCon in p_doorCons)
+        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Box")
         {
-            doorCon.SwapOpenClose();
-        }
+            foreach (DoorController doorCon in p_doorCons)
+            {
+                doorCon.SwapOpenClose();
+            }
+        }      
     }
 }
