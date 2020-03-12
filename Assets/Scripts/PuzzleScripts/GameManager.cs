@@ -47,6 +47,11 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
+
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            SceneManager.LoadScene("HubWorld");
+        }
     }
 
     public void IncreaseNumMoving()
@@ -95,6 +100,14 @@ public class GameManager : MonoBehaviour
     public void win()
     {
         m_VictoryText.text = m_VictoryMessage;
+        playersCanMove = false;
+        StartCoroutine(freezeCoroutine(3));    
+    }
+
+    IEnumerator freezeCoroutine(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        SceneManager.LoadScene("HubWorld");
     }
     IEnumerator waitOneUpdateCoroutine() // wait one update to change the players can move value (without this, only the first player can move)
     {
