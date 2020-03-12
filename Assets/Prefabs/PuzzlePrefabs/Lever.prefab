@@ -95,7 +95,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ddc54c3b986e9249ab11108aaeda71a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_door: {fileID: 0}
+  m_doors:
+  - {fileID: 0}
   m_OnSprite: {fileID: 21300000, guid: 3a4416c7e1a2cdb40a920649982e56f9, type: 3}
   m_OffSprite: {fileID: 21300000, guid: 33161a4ccff4e9343920180b1bfccc83, type: 3}
 --- !u!50 &541769744638290493

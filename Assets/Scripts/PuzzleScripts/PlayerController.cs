@@ -15,7 +15,6 @@ public class PlayerController : MonoBehaviour
     private GameManager p_GM;
     private LayerMask p_wallMask;
     private LayerMask p_boxMask;
-    private LayerMask p_finalMask;
     private bool moving = false;
     private Vector2 upV = new Vector2(0, 1);
     private Vector2 downV = new Vector2(0, -1);
