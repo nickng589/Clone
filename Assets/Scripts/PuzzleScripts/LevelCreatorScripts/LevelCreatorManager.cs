@@ -101,6 +101,14 @@ public class LevelCreatorManager : MonoBehaviour
             RaycastHit2D[] hits = Physics2D.RaycastAll(rotatePos, new Vector2(0, 0), 0.1f);
             foreach (RaycastHit2D hit in hits)
             {
+                if(hit.transform.tag == "Conveyor")
+                {
+                    int dir = hit.transform.GetComponent<ConveyorBeltController>().direction;
+                    dir -= 1;
+                    if (dir == 0)
+                        dir = 4;
+                    hit.transform.GetComponent<ConveyorBeltController>().direction = dir;
+                }
                 hit.transform.Rotate(new Vector3(0, 0, 90));
             }
         }
