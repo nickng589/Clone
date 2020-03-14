@@ -56,47 +56,7 @@ public class PlayerController : MonoBehaviour
             {
                 if (conveyorDirection == 1) //up
                 {
-                    move_Dist += 1;
-                    RaycastHit2D rayBox = Physics2D.Raycast(gameObject.transform.position, upV, move_Dist, p_boxMask);
-                    if (rayBox.transform != null)
-                    {
-                        distanceToBox = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayBox.transform.position));
-                        RaycastHit2D rayWall = Physics2D.Raycast(gameObject.transform.position, upV, distanceToBox, p_wallMask);
-                        if (rayWall.transform != null)
-                        {
-                            distanceToWall = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayWall.transform.position));
-                            if (distanceToWall > 1)
-                            {
-                                moving = true;
-                                p_GM.IncreaseNumMoving();
-                                StartCoroutine(MoveUpCoroutine(distanceToWall - 1));
-                            }
-                        }
-                        else
-                        {
-                            distanceAfterBox = rayBox.transform.gameObject.GetComponent<BoxController>().PushUp(move_Dist - distanceToBox + 1);
-                            if (distanceToBox + distanceAfterBox > 1)
-                            {
-                                moving = true;
-                                p_GM.IncreaseNumMoving();
-                                StartCoroutine(MoveUpCoroutine(distanceToBox + distanceAfterBox - 1));
-                            }
-                        }
-                    }
-                    else
-                    {
-                        for (int i = Mathf.Abs(move_Dist); i >= 1; i--) // Moves the longest possible distance (example, move_dist =3, wall 2 blocks away, so only move 2 blocks)
-                        {
-                            if (!Physics2D.Raycast((Vector2)gameObject.transform.position + upV, upV, i - 1, p_wallMask))
-                            {
-                                moving = true;
-                                p_GM.IncreaseNumMoving(); // increase GameManagers count of players currently moving
-                                StartCoroutine(MoveUpCoroutine(i));
-                                break;
-                            }
-                        }
-                    }
-                    move_Dist -= 1;
+                    MoveUp(move_Dist + 1);
                 }
                 else if (conveyorDirection == 3) //down
                 {
@@ -104,48 +64,8 @@ public class PlayerController : MonoBehaviour
                 }
                 else
                 {
-                    RaycastHit2D rayBox = Physics2D.Raycast(gameObject.transform.position, upV, move_Dist, p_boxMask);
-                    if (rayBox.transform != null)
-                    {
-                        distanceToBox = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayBox.transform.position));
-                        RaycastHit2D rayWall = Physics2D.Raycast(gameObject.transform.position, upV, distanceToBox, p_wallMask);
-                        if (rayWall.transform != null)
-                        {
-                            distanceToWall = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayWall.transform.position));
-                            if (distanceToWall > 1)
-                            {
-                                moving = true;
-                                p_GM.IncreaseNumMoving();
-                                StartCoroutine(MoveUpCoroutine(distanceToWall - 1));
-                            }
-                        }
-                        else
-                        {
-                            distanceAfterBox = rayBox.transform.gameObject.GetComponent<BoxController>().PushUp(move_Dist - distanceToBox + 1);
-                            if (distanceToBox + distanceAfterBox > 1)
-                            {
-                                moving = true;
-                                p_GM.IncreaseNumMoving();
-                                StartCoroutine(MoveUpCoroutine(distanceToBox + distanceAfterBox - 1));
-                            }
-                        }
-                    }
-                    else
-                    {
-                        for (int i = Mathf.Abs(move_Dist); i >= 1; i--) // Moves the longest possible distance (example, move_dist =3, wall 2 blocks away, so only move 2 blocks)
-                        {
-                            if (!Physics2D.Raycast((Vector2)gameObject.transform.position + upV, upV, i - 1, p_wallMask))
-                            {
-                                moving = true;
-                                p_GM.IncreaseNumMoving(); // increase GameManagers count of players currently moving
-                                StartCoroutine(MoveUpCoroutine(i));
-                                break;
-                            }
-                        }
-                    }
+                    MoveUp(move_Dist);
                 }
-
-
             }
             else if (up < -0.01) //Down
             {
@@ -155,136 +75,18 @@ public class PlayerController : MonoBehaviour
                 }
                 else if (conveyorDirection == 3)
                 {
-                    move_Dist += 1;
-                    RaycastHit2D rayBox = Physics2D.Raycast(gameObject.transform.position, downV, move_Dist, p_boxMask);
-                    if (rayBox.transform != null)
-                    {
-                        distanceToBox = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayBox.transform.position));
-                        RaycastHit2D rayWall = Physics2D.Raycast(gameObject.transform.position, downV, distanceToBox, p_wallMask);
-                        if (rayWall.transform != null)
-                        {
-                            distanceToWall = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayWall.transform.position));
-                            if (distanceToWall > 1)
-                            {
-                                moving = true;
-                                p_GM.IncreaseNumMoving();
-                                StartCoroutine(MoveDownCoroutine(distanceToWall - 1));
-                            }
-                        }
-                        else
-                        {
-                            distanceAfterBox = rayBox.transform.gameObject.GetComponent<BoxController>().PushDown(move_Dist - distanceToBox + 1);
-                            if (distanceToBox + distanceAfterBox > 1)
-                            {
-                                moving = true;
-                                p_GM.IncreaseNumMoving();
-                                StartCoroutine(MoveDownCoroutine(distanceToBox + distanceAfterBox - 1));
-                            }
-                        }
-                    }
-                    else
-                    {
-                        for (int i = Mathf.Abs(move_Dist); i >= 1; i--) // Moves the longest possible distance (example, move_dist =3, wall 2 blocks away, so only move 2 blocks)
-                        {
-                            if (!Physics2D.Raycast((Vector2)gameObject.transform.position + downV, downV, i - 1, p_wallMask))
-                            {
-                                moving = true;
-                                p_GM.IncreaseNumMoving(); // increase GameManagers count of players currently moving
-                                StartCoroutine(MoveDownCoroutine(i));
-                                break;
-                            }
-                        }
-                    }
-                    move_Dist -= 1;
+                    MoveDown(move_Dist + 1);
                 }
                 else
                 {
-                    RaycastHit2D rayBox = Physics2D.Raycast(gameObject.transform.position, downV, move_Dist, p_boxMask);
-                    if (rayBox.transform != null)
-                    {
-                        distanceToBox = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayBox.transform.position));
-                        RaycastHit2D rayWall = Physics2D.Raycast(gameObject.transform.position, downV, distanceToBox, p_wallMask);
-                        if (rayWall.transform != null)
-                        {
-                            distanceToWall = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayWall.transform.position));
-                            if (distanceToWall > 1)
-                            {
-                                moving = true;
-                                p_GM.IncreaseNumMoving();
-                                StartCoroutine(MoveDownCoroutine(distanceToWall - 1));
-                            }
-                        }
-                        else
-                        {
-                            distanceAfterBox = rayBox.transform.gameObject.GetComponent<BoxController>().PushDown(move_Dist - distanceToBox + 1);
-                            if (distanceToBox + distanceAfterBox > 1)
-                            {
-                                moving = true;
-                                p_GM.IncreaseNumMoving();
-                                StartCoroutine(MoveDownCoroutine(distanceToBox + distanceAfterBox - 1));
-                            }
-                        }
-                    }
-                    else
-                    {
-                        for (int i = Mathf.Abs(move_Dist); i >= 1; i--) // Moves the longest possible distance (example, move_dist =3, wall 2 blocks away, so only move 2 blocks)
-                        {
-                            if (!Physics2D.Raycast((Vector2)gameObject.transform.position + downV, downV, i - 1, p_wallMask))
-                            {
-                                moving = true;
-                                p_GM.IncreaseNumMoving(); // increase GameManagers count of players currently moving
-                                StartCoroutine(MoveDownCoroutine(i));
-                                break;
-                            }
-                        }
-                    }
+                    MoveDown(move_Dist);
                 }
             }
             else if (right > 0.01) //Right
             {
                 if (conveyorDirection == 2)
                 {
-                    move_Dist += 1;
-                    RaycastHit2D rayBox = Physics2D.Raycast(gameObject.transform.position, rightV, move_Dist, p_boxMask);
-                    if (rayBox.transform != null)
-                    {
-                        distanceToBox = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayBox.transform.position));
-                        RaycastHit2D rayWall = Physics2D.Raycast(gameObject.transform.position, rightV, distanceToBox, p_wallMask);
-                        if (rayWall.transform != null)
-                        {
-                            distanceToWall = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayWall.transform.position));
-                            if (distanceToWall > 1)
-                            {
-                                moving = true;
-                                p_GM.IncreaseNumMoving();
-                                StartCoroutine(MoveRightCoroutine(distanceToWall - 1));
-                            }
-                        }
-                        else
-                        {
-                            distanceAfterBox = rayBox.transform.gameObject.GetComponent<BoxController>().PushRight(move_Dist - distanceToBox + 1);
-                            if (distanceToBox + distanceAfterBox > 1)
-                            {
-                                moving = true;
-                                p_GM.IncreaseNumMoving();
-                                StartCoroutine(MoveRightCoroutine(distanceToBox + distanceAfterBox - 1));
-                            }
-                        }
-                    }
-                    else
-                    {
-                        for (int i = Mathf.Abs(move_Dist); i >= 1; i--) // Moves the longest possible distance (example, move_dist =3, wall 2 blocks away, so only move 2 blocks)
-                        {
-                            if (!Physics2D.Raycast((Vector2)gameObject.transform.position + rightV, rightV, i - 1, p_wallMask))
-                            {
-                                moving = true;
-                                p_GM.IncreaseNumMoving(); // increase GameManagers count of players currently moving
-                                StartCoroutine(MoveRightCoroutine(i));
-                                break;
-                            }
-                        }
-                    }
-                    move_Dist -= 1;
+                    MoveRight(move_Dist + 1);
                 }
                 else if (conveyorDirection == 4)
                 {
@@ -292,47 +94,8 @@ public class PlayerController : MonoBehaviour
                 }
                 else
                 {
-                    RaycastHit2D rayBox = Physics2D.Raycast(gameObject.transform.position, rightV, move_Dist, p_boxMask);
-                    if (rayBox.transform != null)
-                    {
-                        distanceToBox = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayBox.transform.position));
-                        RaycastHit2D rayWall = Physics2D.Raycast(gameObject.transform.position, rightV, distanceToBox, p_wallMask);
-                        if (rayWall.transform != null)
-                        {
-                            distanceToWall = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayWall.transform.position));
-                            if (distanceToWall > 1)
-                            {
-                                moving = true;
-                                p_GM.IncreaseNumMoving();
-                                StartCoroutine(MoveRightCoroutine(distanceToWall - 1));
-                            }
-                        }
-                        else
-                        {
-                            distanceAfterBox = rayBox.transform.gameObject.GetComponent<BoxController>().PushRight(move_Dist - distanceToBox + 1);
-                            if (distanceToBox + distanceAfterBox > 1)
-                            {
-                                moving = true;
-                                p_GM.IncreaseNumMoving();
-                                StartCoroutine(MoveRightCoroutine(distanceToBox + distanceAfterBox - 1));
-                            }
-                        }
-                    }
-                    else
-                    {
-                        for (int i = Mathf.Abs(move_Dist); i >= 1; i--) // Moves the longest possible distance (example, move_dist =3, wall 2 blocks away, so only move 2 blocks)
-                        {
-                            if (!Physics2D.Raycast((Vector2)gameObject.transform.position + rightV, rightV, i - 1, p_wallMask))
-                            {
-                                moving = true;
-                                p_GM.IncreaseNumMoving(); // increase GameManagers count of players currently moving
-                                StartCoroutine(MoveRightCoroutine(i));
-                                break;
-                            }
-                        }
-                    }
+                    MoveRight(move_Dist);  
                 }
-
             }
             else if (right < -0.01) //Left
             {
@@ -342,93 +105,226 @@ public class PlayerController : MonoBehaviour
                 }
                 else if (conveyorDirection == 4)
                 {
-                    move_Dist += 1;
-                    RaycastHit2D rayBox = Physics2D.Raycast(gameObject.transform.position, leftV, move_Dist, p_boxMask);
-                    if (rayBox.transform != null)
-                    {
-                        distanceToBox = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayBox.transform.position));
-                        RaycastHit2D rayWall = Physics2D.Raycast(gameObject.transform.position, leftV, distanceToBox, p_wallMask);
-                        if (rayWall.transform != null)
-                        {
-                            distanceToWall = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayWall.transform.position));
-                            if (distanceToWall > 1)
-                            {
-                                moving = true;
-                                p_GM.IncreaseNumMoving();
-                                StartCoroutine(MoveLeftCoroutine(distanceToWall - 1));
-                            }
-                        }
-                        else
-                        {
-                            distanceAfterBox = rayBox.transform.gameObject.GetComponent<BoxController>().PushLeft(move_Dist - distanceToBox + 1);
-                            if (distanceToBox + distanceAfterBox > 1)
-                            {
-                                moving = true;
-                                p_GM.IncreaseNumMoving();
-                                StartCoroutine(MoveLeftCoroutine(distanceToBox + distanceAfterBox - 1));
-                            }
-                        }
-                    }
-                    else
-                    {
-                        for (int i = Mathf.Abs(move_Dist); i >= 1; i--) // Moves the longest possible distance (example, move_dist =3, wall 2 blocks away, so only move 2 blocks)
-                        {
-                            if (!Physics2D.Raycast((Vector2)gameObject.transform.position + leftV, leftV, i - 1, p_wallMask))
-                            {
-                                moving = true;
-                                p_GM.IncreaseNumMoving(); // increase GameManagers count of players currently moving
-                                StartCoroutine(MoveLeftCoroutine(i));
-                                break;
-                            }
-                        }
-                    }
-                    move_Dist -= 1;
+                    MoveLeft(move_Dist + 1);
                 }
                 else
                 {
-                    RaycastHit2D rayBox = Physics2D.Raycast(gameObject.transform.position, leftV, move_Dist, p_boxMask);
-                    if (rayBox.transform != null)
-                    {
-                        distanceToBox = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayBox.transform.position));
-                        RaycastHit2D rayWall = Physics2D.Raycast(gameObject.transform.position, leftV, distanceToBox, p_wallMask);
-                        if (rayWall.transform != null)
-                        {
-                            distanceToWall = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayWall.transform.position));
-                            if (distanceToWall > 1)
-                            {
-                                moving = true;
-                                p_GM.IncreaseNumMoving();
-                                StartCoroutine(MoveLeftCoroutine(distanceToWall - 1));
-                            }
-                        }
-                        else
-                        {
-                            distanceAfterBox = rayBox.transform.gameObject.GetComponent<BoxController>().PushLeft(move_Dist - distanceToBox + 1);
-                            if (distanceToBox + distanceAfterBox > 1)
-                            {
-                                moving = true;
-                                p_GM.IncreaseNumMoving();
-                                StartCoroutine(MoveLeftCoroutine(distanceToBox + distanceAfterBox - 1));
-                            }
-                        }
-                    }
-                    else
-                    {
-                        for (int i = Mathf.Abs(move_Dist); i >= 1; i--) // Moves the longest possible distance (example, move_dist =3, wall 2 blocks away, so only move 2 blocks)
-                        {
-                            if (!Physics2D.Raycast((Vector2)gameObject.transform.position + leftV, leftV, i - 1, p_wallMask))
-                            {
-                                moving = true;
-                                p_GM.IncreaseNumMoving(); // increase GameManagers count of players currently moving
-                                StartCoroutine(MoveLeftCoroutine(i));
-                                break;
-                            }
-                        }
-                    }
-                }      
+                    MoveLeft(move_Dist);
+                }
             }
         }
         
+    }
+
+    public void OnWait()//called when the player waits
+    {
+        if (!moving && conveyorDirection != 0)
+        {
+            if (conveyorDirection == 1)
+            {
+                MoveUp(1);
+            }
+            else if (conveyorDirection == 2)
+            {
+                MoveRight(1);
+            }
+            else if (conveyorDirection == 3)
+            {
+                MoveDown(1);
+            }
+            else if (conveyorDirection == 4)
+            {
+                MoveLeft(1);
+            }
+        }
+    }
+
+    private void MoveUp(int distance)
+    {
+        RaycastHit2D rayBox = Physics2D.Raycast(gameObject.transform.position, upV, distance, p_boxMask); // find if there are any boxes in the players path
+        if (rayBox.transform != null)
+        {
+            distanceToBox = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayBox.transform.position));
+            RaycastHit2D rayWall = Physics2D.Raycast(gameObject.transform.position, upV, distanceToBox, p_wallMask); // find if there are any walls before the box in front of us
+            if (rayWall.transform != null)
+            {
+                distanceToWall = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayWall.transform.position));
+                if (distanceToWall > 1)
+                {
+                    moving = true;
+                    p_GM.IncreaseNumMoving();
+                    StartCoroutine(MoveUpCoroutine(distanceToWall - 1));
+                }
+            }
+            else
+            {
+                distanceAfterBox = rayBox.transform.gameObject.GetComponent<BoxController>().PushUp(distance - distanceToBox + 1); // ask box how far it can be pushed
+                if (distanceToBox + distanceAfterBox > 1)
+                {
+                    moving = true;
+                    p_GM.IncreaseNumMoving();
+                    StartCoroutine(MoveUpCoroutine(distanceToBox + distanceAfterBox - 1));
+                }
+            }
+        }
+        else
+        {
+            RaycastHit2D rayWall = Physics2D.Raycast(gameObject.transform.position, upV, distance, p_wallMask); // find if any walls in out path
+            if (rayWall.transform != null)
+            {
+                distanceToWall = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayWall.transform.position));
+                if (distanceToWall > 1)
+                {
+                    moving = true;
+                    p_GM.IncreaseNumMoving();
+                    StartCoroutine(MoveUpCoroutine(distanceToWall - 1)); ;
+                }   
+            }
+            moving = true;
+            p_GM.IncreaseNumMoving();
+            StartCoroutine(MoveUpCoroutine(distance));
+        }
+    }
+
+    private void MoveDown(int distance)
+    {
+        RaycastHit2D rayBox = Physics2D.Raycast(gameObject.transform.position, downV, distance, p_boxMask); // find if there are any boxes in the players path
+        if (rayBox.transform != null)
+        {
+            distanceToBox = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayBox.transform.position));
+            RaycastHit2D rayWall = Physics2D.Raycast(gameObject.transform.position, downV, distanceToBox, p_wallMask); // find if there are any walls before the box in front of us
+            if (rayWall.transform != null)
+            {
+                distanceToWall = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayWall.transform.position));
+                if (distanceToWall > 1)
+                {
+                    moving = true;
+                    p_GM.IncreaseNumMoving();
+                    StartCoroutine(MoveDownCoroutine(distanceToWall - 1));
+                }
+            }
+            else
+            {
+                distanceAfterBox = rayBox.transform.gameObject.GetComponent<BoxController>().PushDown(distance - distanceToBox + 1); // ask box how far it can be pushed
+                if (distanceToBox + distanceAfterBox > 1)
+                {
+                    moving = true;
+                    p_GM.IncreaseNumMoving();
+                    StartCoroutine(MoveDownCoroutine(distanceToBox + distanceAfterBox - 1));
+                }
+            }
+        }
+        else
+        {
+            RaycastHit2D rayWall = Physics2D.Raycast(gameObject.transform.position, downV, distance, p_wallMask); // find if any walls in out path
+            if (rayWall.transform != null)
+            {
+                distanceToWall = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayWall.transform.position));
+                if (distanceToWall > 1)
+                {
+                    moving = true;
+                    p_GM.IncreaseNumMoving();
+                    StartCoroutine(MoveDownCoroutine(distanceToWall - 1)); ;
+                }
+            }
+            moving = true;
+            p_GM.IncreaseNumMoving();
+            StartCoroutine(MoveDownCoroutine(distance));
+        }
+    }
+
+    private void MoveRight(int distance)
+    {
+        RaycastHit2D rayBox = Physics2D.Raycast(gameObject.transform.position, rightV, distance, p_boxMask); // find if there are any boxes in the players path
+        if (rayBox.transform != null)
+        {
+            distanceToBox = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayBox.transform.position));
+            RaycastHit2D rayWall = Physics2D.Raycast(gameObject.transform.position, rightV, distanceToBox, p_wallMask); // find if there are any walls before the box in front of us
+            if (rayWall.transform != null)
+            {
+                distanceToWall = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayWall.transform.position));
+                if (distanceToWall > 1)
+                {
+                    moving = true;
+                    p_GM.IncreaseNumMoving();
+                    StartCoroutine(MoveRightCoroutine(distanceToWall - 1));
+                }
+            }
+            else
+            {
+                distanceAfterBox = rayBox.transform.gameObject.GetComponent<BoxController>().PushRight(distance - distanceToBox + 1); // ask box how far it can be pushed
+                if (distanceToBox + distanceAfterBox > 1)
+                {
+                    moving = true;
+                    p_GM.IncreaseNumMoving();
+                    StartCoroutine(MoveRightCoroutine(distanceToBox + distanceAfterBox - 1));
+                }
+            }
+        }
+        else
+        {
+            RaycastHit2D rayWall = Physics2D.Raycast(gameObject.transform.position, rightV, distance, p_wallMask); // find if any walls in out path
+            if (rayWall.transform != null)
+            {
+                distanceToWall = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayWall.transform.position));
+                if (distanceToWall > 1)
+                {
+                    moving = true;
+                    p_GM.IncreaseNumMoving();
+                    StartCoroutine(MoveRightCoroutine(distanceToWall - 1)); ;
+                }
+            }
+            moving = true;
+            p_GM.IncreaseNumMoving();
+            StartCoroutine(MoveRightCoroutine(distance));
+        }
+    }
+
+    private void MoveLeft(int distance)
+    {
+        RaycastHit2D rayBox = Physics2D.Raycast(gameObject.transform.position, leftV, distance, p_boxMask); // find if there are any boxes in the players path
+        if (rayBox.transform != null)
+        {
+            distanceToBox = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayBox.transform.position));
+            RaycastHit2D rayWall = Physics2D.Raycast(gameObject.transform.position, leftV, distanceToBox, p_wallMask); // find if there are any walls before the box in front of us
+            if (rayWall.transform != null)
+            {
+                distanceToWall = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayWall.transform.position));
+                if (distanceToWall > 1)
+                {
+                    moving = true;
+                    p_GM.IncreaseNumMoving();
+                    StartCoroutine(MoveLeftCoroutine(distanceToWall - 1));
+                }
+            }
+            else
+            {
+                distanceAfterBox = rayBox.transform.gameObject.GetComponent<BoxController>().PushLeft(distance - distanceToBox + 1); // ask box how far it can be pushed
+                if (distanceToBox + distanceAfterBox > 1)
+                {
+                    moving = true;
+                    p_GM.IncreaseNumMoving();
+                    StartCoroutine(MoveLeftCoroutine(distanceToBox + distanceAfterBox - 1));
+                }
+            }
+        }
+        else
+        {
+            RaycastHit2D rayWall = Physics2D.Raycast(gameObject.transform.position, leftV, distance, p_wallMask); // find if any walls in out path
+            if (rayWall.transform != null)
+            {
+                distanceToWall = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayWall.transform.position));
+                if (distanceToWall > 1)
+                {
+                    moving = true;
+                    p_GM.IncreaseNumMoving();
+                    StartCoroutine(MoveLeftCoroutine(distanceToWall - 1)); ;
+                }
+            }
+            moving = true;
+            p_GM.IncreaseNumMoving();
+            StartCoroutine(MoveLeftCoroutine(distance));
+        }
     }
     #region Coroutines
     IEnumerator MoveUpCoroutine(int distance)

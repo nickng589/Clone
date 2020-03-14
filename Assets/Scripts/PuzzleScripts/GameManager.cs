@@ -18,12 +18,18 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     [Tooltip("The text to show when the player beats the level")]
     private string m_VictoryMessage;
+
+    [SerializeField]
+    [Tooltip("The speed of player")]
+    private float m_speed;
     #endregion
 
     #region Private Variables
     private int numMovingPlayers;
     private ArrayList activePowerUps = new ArrayList();
     private int numInGoal;
+    private GameObject[] boxes;
+    private GameObject[] players;
     #endregion
 
     #region Public Variables
@@ -38,6 +44,8 @@ public class GameManager : MonoBehaviour
         numMovingPlayers = 0;
         playersCanMove = true;
         m_VictoryText.text = "";
+        boxes = GameObject.FindGameObjectsWithTag("Box");
+        players = GameObject.FindGameObjectsWithTag("Player");
     }
 
     // Update is called once per frame
@@ -52,12 +60,43 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadScene("HubWorld");
         }
+
+        if (Input.GetKey(KeyCode.E)&&playersCanMove)
+        {
+            Wait();   
+        }
     }
 
     public void IncreaseNumMoving()
     {
+        if(numMovingPlayers==0)
+        {
+            StartedMoving();
+        }
         numMovingPlayers += 1;
         StartCoroutine(waitOneUpdateCoroutine());
+    }
+
+    private void StartedMoving()
+    {
+        foreach(GameObject box in boxes)
+        {
+            box.GetComponent<BoxController>().OnPlayerMove();
+        }
+    }
+
+    private void Wait()
+    {
+        playersCanMove = false;
+        StartCoroutine(WaitCoroutine());
+        foreach(GameObject player in players)
+        {
+            player.GetComponent<PlayerController>().OnWait();
+        }
+        foreach (GameObject box in boxes)
+        {
+            box.GetComponent<BoxController>().OnPlayerMove();
+        }
     }
 
     public void DecreaseNumMoving()
@@ -102,6 +141,12 @@ public class GameManager : MonoBehaviour
         m_VictoryText.text = m_VictoryMessage;
         playersCanMove = false;
         StartCoroutine(freezeCoroutine(3));    
+    }
+
+    IEnumerator WaitCoroutine()
+    {
+        yield return new WaitForSeconds(m_speed);
+        playersCanMove = true;
     }
 
     IEnumerator freezeCoroutine(float seconds)

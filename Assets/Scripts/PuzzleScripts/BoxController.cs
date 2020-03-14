@@ -8,6 +8,8 @@ public class BoxController : MonoBehaviour
     [Tooltip("The time it takes the player to move (in seconds)")]
     private float m_speed;
 
+    public int conveyorDirection; //0=none, 1=up, 2=right, 3=down, 4=left
+
     private Vector2 upV = new Vector2(0, 1);
     private Vector2 downV = new Vector2(0, -1);
     private Vector2 rightV = new Vector2(1, 0);
@@ -30,6 +32,28 @@ public class BoxController : MonoBehaviour
         
     }
 
+    public void OnPlayerMove()//called by game manager when player moves or waits
+    {
+        if(conveyorDirection!=0)
+        {
+            if(conveyorDirection==1)
+            {
+                this.PushUp(1);
+            }
+            else if(conveyorDirection ==2 )
+            {
+                this.PushRight(1);
+            }
+            else if (conveyorDirection == 3)
+            {
+                this.PushDown(1);
+            }
+            else if (conveyorDirection == 4)
+            {
+                this.PushLeft(1);
+            }
+        }
+    }
     public int PushUp(int distance)
     {
         RaycastHit2D rayBox = Physics2D.Raycast((Vector2)gameObject.transform.position+upV, upV, distance-1, p_boxMask);
@@ -47,20 +71,20 @@ public class BoxController : MonoBehaviour
             {
                 distanceAfterBox = rayBox.transform.gameObject.GetComponent<BoxController>().PushUp(distance - distanceToBox + 1);
                 StartCoroutine(MoveUpCoroutine(distanceToBox + distanceAfterBox - 1));
-                return distanceAfterBox;
+                return distanceToBox + distanceAfterBox-1;
             }
         }
         else
         {
-            for (int i = Mathf.Abs(distance); i >= 1; i--) // Moves the longest possible distance (example, move_dist =3, wall 2 blocks away, so only move 2 blocks)
+            RaycastHit2D rayWall = Physics2D.Raycast(gameObject.transform.position, upV, distance, p_wallMask);
+            if (rayWall.transform != null)
             {
-                if (!Physics2D.Raycast((Vector2)gameObject.transform.position + upV, upV, i - 1, p_wallMask))
-                {
-                    StartCoroutine(MoveUpCoroutine(i));
-                    return i;
-                }
+                distanceToWall = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayWall.transform.position));
+                StartCoroutine(MoveUpCoroutine(distanceToWall - 1));
+                return distanceToWall - 1;
             }
-            return 0;
+            StartCoroutine(MoveUpCoroutine(distance));
+            return distance;
         } 
     }
 
@@ -81,20 +105,20 @@ public class BoxController : MonoBehaviour
             {
                 distanceAfterBox = rayBox.transform.gameObject.GetComponent<BoxController>().PushDown(distance - distanceToBox + 1);
                 StartCoroutine(MoveDownCoroutine(distanceToBox + distanceAfterBox - 1));
-                return distanceAfterBox;
+                return distanceToBox + distanceAfterBox - 1;
             }
         }
         else
         {
-            for (int i = Mathf.Abs(distance); i >= 1; i--) // Moves the longest possible distance (example, move_dist =3, wall 2 blocks away, so only move 2 blocks)
+            RaycastHit2D rayWall = Physics2D.Raycast(gameObject.transform.position, downV, distance, p_wallMask);
+            if (rayWall.transform != null)
             {
-                if (!Physics2D.Raycast((Vector2)gameObject.transform.position + downV, downV, i - 1, p_wallMask))
-                {
-                    StartCoroutine(MoveDownCoroutine(i));
-                    return i;
-                }
+                distanceToWall = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayWall.transform.position));
+                StartCoroutine(MoveDownCoroutine(distanceToWall - 1));
+                return distanceToWall - 1;
             }
-            return 0;
+            StartCoroutine(MoveDownCoroutine(distance));
+            return distance;
         }
     }
 
@@ -115,20 +139,20 @@ public class BoxController : MonoBehaviour
             {
                 distanceAfterBox = rayBox.transform.gameObject.GetComponent<BoxController>().PushRight(distance - distanceToBox + 1);
                 StartCoroutine(MoveRightCoroutine(distanceToBox + distanceAfterBox - 1));
-                return distanceAfterBox;
+                return distanceToBox + distanceAfterBox - 1;
             }
         }
         else
         {
-            for (int i = Mathf.Abs(distance); i >= 1; i--) // Moves the longest possible distance (example, move_dist =3, wall 2 blocks away, so only move 2 blocks)
+            RaycastHit2D rayWall = Physics2D.Raycast(gameObject.transform.position, rightV, distance, p_wallMask);
+            if (rayWall.transform != null)
             {
-                if (!Physics2D.Raycast((Vector2)gameObject.transform.position + rightV, rightV, i - 1, p_wallMask))
-                {
-                    StartCoroutine(MoveRightCoroutine(i));
-                    return i;
-                }
+                distanceToWall = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayWall.transform.position));
+                StartCoroutine(MoveRightCoroutine(distanceToWall - 1));
+                return distanceToWall - 1;
             }
-            return 0;
+            StartCoroutine(MoveRightCoroutine(distance));
+            return distance;
         }
     }
 
@@ -149,26 +173,27 @@ public class BoxController : MonoBehaviour
             {
                 distanceAfterBox = rayBox.transform.gameObject.GetComponent<BoxController>().PushLeft(distance - distanceToBox + 1);
                 StartCoroutine(MoveLeftCoroutine(distanceToBox + distanceAfterBox - 1));
-                return distanceAfterBox;
+                return distanceToBox + distanceAfterBox - 1;
             }
         }
         else
         {
-            for (int i = Mathf.Abs(distance); i >= 1; i--) // Moves the longest possible distance (example, move_dist =3, wall 2 blocks away, so only move 2 blocks)
+            RaycastHit2D rayWall = Physics2D.Raycast(gameObject.transform.position, leftV, distance, p_wallMask);
+            if (rayWall.transform != null)
             {
-                if (!Physics2D.Raycast((Vector2)gameObject.transform.position + leftV, leftV, i - 1, p_wallMask))
-                {
-                    StartCoroutine(MoveLeftCoroutine(i));
-                    return i;
-                }
+                distanceToWall = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayWall.transform.position));
+                StartCoroutine(MoveLeftCoroutine(distanceToWall - 1));
+                return distanceToWall - 1;
             }
-            return 0;
+            StartCoroutine(MoveLeftCoroutine(distance));
+            return distance;
         }
     }
 
 
     IEnumerator MoveUpCoroutine(int distance)
     {
+        conveyorDirection = 0;
         float elapsedTime = 0.0f;
         Vector3 finalPos = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + distance, gameObject.transform.position.z);
         while (gameObject.transform.position != finalPos)
@@ -181,6 +206,7 @@ public class BoxController : MonoBehaviour
 
     IEnumerator MoveDownCoroutine(int distance)
     {
+        conveyorDirection = 0;
         float elapsedTime = 0.0f;
         Vector3 finalPos = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y - distance, gameObject.transform.position.z);
         while (gameObject.transform.position != finalPos)
@@ -193,6 +219,7 @@ public class BoxController : MonoBehaviour
 
     IEnumerator MoveLeftCoroutine(int distance)
     {
+        conveyorDirection = 0;
         float elapsedTime = 0.0f;
         Vector3 finalPos = new Vector3(gameObject.transform.position.x - distance, gameObject.transform.position.y, gameObject.transform.position.z);
         while (gameObject.transform.position != finalPos)
@@ -205,6 +232,7 @@ public class BoxController : MonoBehaviour
 
     IEnumerator MoveRightCoroutine(int distance)
     {
+        conveyorDirection = 0;
         float elapsedTime = 0.0f;
         Vector3 finalPos = new Vector3(gameObject.transform.position.x + distance, gameObject.transform.position.y, gameObject.transform.position.z);
         while (gameObject.transform.position != finalPos)

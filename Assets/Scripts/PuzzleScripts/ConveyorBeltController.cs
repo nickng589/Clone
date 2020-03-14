@@ -23,5 +23,9 @@ public class ConveyorBeltController : MonoBehaviour
         {       
             collision.gameObject.GetComponent<PlayerController>().conveyorDirection = direction;
         }
+        else if (collision.gameObject.tag == "Box")
+        {
+            collision.gameObject.GetComponent<BoxController>().conveyorDirection = direction;
+        }
     }
 }
