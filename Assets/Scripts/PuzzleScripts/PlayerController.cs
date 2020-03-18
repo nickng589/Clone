@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour
                 }
                 else if (conveyorDirection == 3) //down
                 {
-
+                    p_GM.StartedMoving();
                 }
                 else
                 {
@@ -71,7 +71,7 @@ public class PlayerController : MonoBehaviour
             {
                 if (conveyorDirection == 1)
                 {
-
+                    p_GM.StartedMoving();
                 }
                 else if (conveyorDirection == 3)
                 {
@@ -90,7 +90,7 @@ public class PlayerController : MonoBehaviour
                 }
                 else if (conveyorDirection == 4)
                 {
-
+                    p_GM.StartedMoving();
                 }
                 else
                 {
@@ -101,7 +101,7 @@ public class PlayerController : MonoBehaviour
             {
                 if (conveyorDirection == 2)
                 {
-
+                    p_GM.StartedMoving();
                 }
                 else if (conveyorDirection == 4)
                 {

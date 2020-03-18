@@ -67,9 +67,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void IncreaseNumMoving()
+    public void IncreaseNumMoving(bool fromBox = false)
     {
-        if(numMovingPlayers==0)
+        if(!fromBox && numMovingPlayers==0)
         {
             StartedMoving();
         }
@@ -77,7 +77,13 @@ public class GameManager : MonoBehaviour
         StartCoroutine(waitOneUpdateCoroutine());
     }
 
-    private void StartedMoving()
+    public void BoxRemoved()
+    {
+        boxes = GameObject.FindGameObjectsWithTag("Box");
+    }
+
+
+    public void StartedMoving()
     {
         foreach(GameObject box in boxes)
         {
@@ -85,10 +91,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void Wait()
+    public void Wait()
     {
-        playersCanMove = false;
-        StartCoroutine(WaitCoroutine());
         foreach(GameObject player in players)
         {
             player.GetComponent<PlayerController>().OnWait();
@@ -102,8 +106,9 @@ public class GameManager : MonoBehaviour
     public void DecreaseNumMoving()
     {
         numMovingPlayers -= 1;
-        if(numMovingPlayers == 0)
+        if(numMovingPlayers <= 0)
         {
+            numMovingPlayers = 0;
             playersCanMove = true;
             foreach(PowerUpScript pow in activePowerUps)
             {

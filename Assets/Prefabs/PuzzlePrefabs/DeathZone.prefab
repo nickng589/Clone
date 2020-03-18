@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7070132196444874473}
   m_Layer: 0
   m_Name: DeathZone
-  m_TagString: Untagged
+  m_TagString: DeathZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1abcd076e239f08489c79a91d937b384, type: 3}
-  m_Color: {r: 1, g: 0.71788937, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -142,3 +142,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 3392996753918847589, guid: 8c4eb3023722e2341a8ba63fd235f0bd,
+    type: 3}
