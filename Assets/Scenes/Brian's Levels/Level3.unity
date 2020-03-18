@@ -166,6 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &4892693
 Rigidbody2D:
   serializedVersion: 4
@@ -340,6 +341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &93548462
 Rigidbody2D:
   serializedVersion: 4
@@ -626,6 +628,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &102609533
 Rigidbody2D:
   serializedVersion: 4
@@ -768,6 +771,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &109689501
 Rigidbody2D:
   serializedVersion: 4
@@ -910,6 +914,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &113219079
 Rigidbody2D:
   serializedVersion: 4
@@ -1135,6 +1140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &177987926
 Rigidbody2D:
   serializedVersion: 4
@@ -1672,6 +1678,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &252460428
 Rigidbody2D:
   serializedVersion: 4
@@ -1956,6 +1963,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &267007855
 Rigidbody2D:
   serializedVersion: 4
@@ -2205,6 +2213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &304245911
 Rigidbody2D:
   serializedVersion: 4
@@ -2347,6 +2356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &306163659
 Rigidbody2D:
   serializedVersion: 4
@@ -2489,6 +2499,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &319034146
 Rigidbody2D:
   serializedVersion: 4
@@ -2585,6 +2596,42 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &321360633
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 321360634}
+  m_Layer: 5
+  m_Name: Fill Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &321360634
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 321360633}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1256210250}
+  m_Father: {fileID: 1102448339}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.25}
+  m_AnchorMax: {x: 1, y: 0.75}
+  m_AnchoredPosition: {x: -5, y: 0}
+  m_SizeDelta: {x: -20, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &322772175
 GameObject:
   m_ObjectHideFlags: 0
@@ -2631,6 +2678,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &322772178
 Rigidbody2D:
   serializedVersion: 4
@@ -2805,6 +2853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &393870492
 Rigidbody2D:
   serializedVersion: 4
@@ -2947,6 +2996,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &411105323
 Rigidbody2D:
   serializedVersion: 4
@@ -3089,6 +3139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &413422250
 Rigidbody2D:
   serializedVersion: 4
@@ -3231,6 +3282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &415906778
 Rigidbody2D:
   serializedVersion: 4
@@ -3373,6 +3425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &431581320
 Rigidbody2D:
   serializedVersion: 4
@@ -3469,6 +3522,152 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &444710390
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 444710391}
+  - component: {fileID: 444710392}
+  - component: {fileID: 444710393}
+  m_Layer: 5
+  m_Name: Handle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &444710391
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444710390}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1414973978}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 20, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &444710392
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444710390}
+  m_CullTransparentMesh: 0
+--- !u!114 &444710393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444710390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!1 &449086365
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 449086366}
+  - component: {fileID: 449086368}
+  - component: {fileID: 449086367}
+  m_Layer: 5
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &449086366
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449086365}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1102448339}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.25}
+  m_AnchorMax: {x: 1, y: 0.75}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &449086367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449086365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &449086368
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449086365}
+  m_CullTransparentMesh: 0
 --- !u!1 &451492961
 GameObject:
   m_ObjectHideFlags: 0
@@ -3622,6 +3821,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &456186965
 Rigidbody2D:
   serializedVersion: 4
@@ -3764,6 +3964,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &500545976
 Rigidbody2D:
   serializedVersion: 4
@@ -4013,6 +4214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &514372251
 Rigidbody2D:
   serializedVersion: 4
@@ -4155,6 +4357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &518241039
 Rigidbody2D:
   serializedVersion: 4
@@ -4297,6 +4500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &524201925
 Rigidbody2D:
   serializedVersion: 4
@@ -4439,6 +4643,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &543465548
 Rigidbody2D:
   serializedVersion: 4
@@ -4660,6 +4865,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &649834373
 Rigidbody2D:
   serializedVersion: 4
@@ -4802,6 +5008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &689817779
 Rigidbody2D:
   serializedVersion: 4
@@ -4944,6 +5151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &714641283
 Rigidbody2D:
   serializedVersion: 4
@@ -5086,6 +5294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &717390437
 Rigidbody2D:
   serializedVersion: 4
@@ -5228,6 +5437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &723393953
 Rigidbody2D:
   serializedVersion: 4
@@ -5356,6 +5566,7 @@ RectTransform:
   m_Children:
   - {fileID: 159630036}
   - {fileID: 1745895260}
+  - {fileID: 1102448339}
   m_Father: {fileID: 912848230}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5470,6 +5681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &745444866
 Rigidbody2D:
   serializedVersion: 4
@@ -5684,6 +5896,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &833384215
 Rigidbody2D:
   serializedVersion: 4
@@ -5970,6 +6183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &866064109
 Rigidbody2D:
   serializedVersion: 4
@@ -6129,6 +6343,8 @@ MonoBehaviour:
   m_numGoals: 2
   m_VictoryText: {fileID: 159630034}
   m_VictoryMessage: You Did It!
+  m_MoveSpeedSlider: {fileID: 1102448338}
+  m_defaultSpeed: 0.7
   playersCanMove: 1
 --- !u!4 &912848230
 Transform:
@@ -6229,6 +6445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &934724330
 Rigidbody2D:
   serializedVersion: 4
@@ -6371,6 +6588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &947532787
 Rigidbody2D:
   serializedVersion: 4
@@ -6513,6 +6731,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &950380490
 Rigidbody2D:
   serializedVersion: 4
@@ -6702,8 +6921,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa0740d66de7b3c4e8d2fcf41681753f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_speed: 1
   move_Dist: 1
+  conveyorDirection: 0
+  m_speed: 1
 --- !u!212 &960525296
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6799,6 +7019,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &968399803
 Rigidbody2D:
   serializedVersion: 4
@@ -6941,6 +7162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &982645285
 Rigidbody2D:
   serializedVersion: 4
@@ -7083,6 +7305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &1001565201
 Rigidbody2D:
   serializedVersion: 4
@@ -7225,6 +7448,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &1011254210
 Rigidbody2D:
   serializedVersion: 4
@@ -7367,6 +7591,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &1044440958
 Rigidbody2D:
   serializedVersion: 4
@@ -7509,6 +7734,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &1081418155
 Rigidbody2D:
   serializedVersion: 4
@@ -7605,6 +7831,95 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1102448337
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1102448339}
+  - component: {fileID: 1102448338}
+  m_Layer: 5
+  m_Name: MoveSpeedSlider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1102448338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102448337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: -1
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 1}
+    m_PressedColor: {r: 0.4339623, g: 0.4339623, b: 0.4339623, a: 1}
+    m_SelectedColor: {r: 1, g: 0.4481132, b: 0.4481132, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 444710393}
+  m_FillRect: {fileID: 1256210250}
+  m_HandleRect: {fileID: 444710391}
+  m_Direction: 0
+  m_MinValue: 0
+  m_MaxValue: 10
+  m_WholeNumbers: 1
+  m_Value: 5
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!224 &1102448339
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102448337}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 449086366}
+  - {fileID: 321360634}
+  - {fileID: 1414973978}
+  m_Father: {fileID: 730101812}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -300, y: 200}
+  m_SizeDelta: {x: 160, y: 20}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1107588839
 GameObject:
   m_ObjectHideFlags: 0
@@ -7651,6 +7966,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &1107588842
 Rigidbody2D:
   serializedVersion: 4
@@ -7793,6 +8109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &1111127855
 Rigidbody2D:
   serializedVersion: 4
@@ -7935,6 +8252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &1120689874
 Rigidbody2D:
   serializedVersion: 4
@@ -8077,6 +8395,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &1139698437
 Rigidbody2D:
   serializedVersion: 4
@@ -8219,6 +8538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &1175712577
 Rigidbody2D:
   serializedVersion: 4
@@ -8361,6 +8681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &1192300991
 Rigidbody2D:
   serializedVersion: 4
@@ -8610,6 +8931,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &1236395704
 Rigidbody2D:
   serializedVersion: 4
@@ -8752,6 +9074,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &1241107799
 Rigidbody2D:
   serializedVersion: 4
@@ -8894,6 +9217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &1242691485
 Rigidbody2D:
   serializedVersion: 4
@@ -9036,6 +9360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &1251799084
 Rigidbody2D:
   serializedVersion: 4
@@ -9132,6 +9457,79 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1256210249
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1256210250}
+  - component: {fileID: 1256210252}
+  - component: {fileID: 1256210251}
+  m_Layer: 5
+  m_Name: Fill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1256210250
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1256210249}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 321360634}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 10, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1256210251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1256210249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1256210252
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1256210249}
+  m_CullTransparentMesh: 0
 --- !u!1 &1366201785
 GameObject:
   m_ObjectHideFlags: 0
@@ -9178,6 +9576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &1366201788
 Rigidbody2D:
   serializedVersion: 4
@@ -9397,6 +9796,42 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1414973977
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1414973978}
+  m_Layer: 5
+  m_Name: Handle Slide Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1414973978
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414973977}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 444710391}
+  m_Father: {fileID: 1102448339}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -20, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1458705789
 GameObject:
   m_ObjectHideFlags: 0
@@ -9443,6 +9878,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &1458705792
 Rigidbody2D:
   serializedVersion: 4
@@ -9585,6 +10021,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &1465979691
 Rigidbody2D:
   serializedVersion: 4
@@ -9727,6 +10164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &1487054436
 Rigidbody2D:
   serializedVersion: 4
@@ -9869,6 +10307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &1488143462
 Rigidbody2D:
   serializedVersion: 4
@@ -10011,6 +10450,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &1492865659
 Rigidbody2D:
   serializedVersion: 4
@@ -10153,6 +10593,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &1507067329
 Rigidbody2D:
   serializedVersion: 4
@@ -10295,6 +10736,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &1520517274
 Rigidbody2D:
   serializedVersion: 4
@@ -10437,6 +10879,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &1536228751
 Rigidbody2D:
   serializedVersion: 4
@@ -10579,6 +11022,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &1538189843
 Rigidbody2D:
   serializedVersion: 4
@@ -10752,6 +11196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &1564609693
 Rigidbody2D:
   serializedVersion: 4
@@ -10894,6 +11339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &1601672697
 Rigidbody2D:
   serializedVersion: 4
@@ -11036,6 +11482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &1640024841
 Rigidbody2D:
   serializedVersion: 4
@@ -11178,6 +11625,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &1647959269
 Rigidbody2D:
   serializedVersion: 4
@@ -11320,6 +11768,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &1681285699
 Rigidbody2D:
   serializedVersion: 4
@@ -11462,6 +11911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &1700919899
 Rigidbody2D:
   serializedVersion: 4
@@ -11604,6 +12054,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &1704122577
 Rigidbody2D:
   serializedVersion: 4
@@ -11852,6 +12303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &1737713947
 Rigidbody2D:
   serializedVersion: 4
@@ -12180,6 +12632,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &1777886361
 Rigidbody2D:
   serializedVersion: 4
@@ -12322,6 +12775,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &1805948208
 Rigidbody2D:
   serializedVersion: 4
@@ -12511,8 +12965,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa0740d66de7b3c4e8d2fcf41681753f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_speed: 1
   move_Dist: 1
+  conveyorDirection: 0
+  m_speed: 1
 --- !u!212 &1848855053
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12608,6 +13063,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &1854695181
 Rigidbody2D:
   serializedVersion: 4
@@ -12750,6 +13206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &1861322112
 Rigidbody2D:
   serializedVersion: 4
@@ -12892,6 +13349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &1913462311
 Rigidbody2D:
   serializedVersion: 4
@@ -13117,6 +13575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &1958993718
 Rigidbody2D:
   serializedVersion: 4
@@ -13259,6 +13718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &2014435925
 Rigidbody2D:
   serializedVersion: 4
@@ -13545,6 +14005,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308e3fa9a8214594184cac813fc9d2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bridgeGO: {fileID: 0}
 --- !u!50 &2096249223
 Rigidbody2D:
   serializedVersion: 4

@@ -20,8 +20,13 @@ public class GameManager : MonoBehaviour
     private string m_VictoryMessage;
 
     [SerializeField]
+    [Tooltip("The slider to adjust move speed")]
+    private Slider m_MoveSpeedSlider;
+
+    [SerializeField]
     [Tooltip("The speed of player")]
-    private float m_speed;
+    private float m_defaultSpeed;
+
     #endregion
 
     #region Private Variables
@@ -30,6 +35,7 @@ public class GameManager : MonoBehaviour
     private int numInGoal;
     private GameObject[] boxes;
     private GameObject[] players;
+    private float m_speed;
     #endregion
 
     #region Public Variables
@@ -46,6 +52,17 @@ public class GameManager : MonoBehaviour
         m_VictoryText.text = "";
         boxes = GameObject.FindGameObjectsWithTag("Box");
         players = GameObject.FindGameObjectsWithTag("Player");
+        m_MoveSpeedSlider.onValueChanged.AddListener(delegate { SliderValueChanged(m_MoveSpeedSlider); });
+        m_speed = m_defaultSpeed;
+        foreach (GameObject player in players)
+        {
+            player.GetComponent<PlayerController>().m_speed = m_defaultSpeed;
+        }
+
+        foreach (GameObject box in boxes)
+        {
+            box.GetComponent<BoxController>().m_speed = m_defaultSpeed;
+        }
     }
 
     // Update is called once per frame
@@ -64,6 +81,21 @@ public class GameManager : MonoBehaviour
         if (Input.GetKey(KeyCode.E)&&playersCanMove)
         {
             Wait();   
+        }
+    }
+
+    void SliderValueChanged(Slider changed)
+    {
+        float newMoveSpeed = m_defaultSpeed + (5 - changed.value) * 0.1f;
+        m_speed = newMoveSpeed;
+        foreach(GameObject player in players)
+        {
+            player.GetComponent<PlayerController>().m_speed = newMoveSpeed;
+        }
+
+        foreach (GameObject box in boxes)
+        {
+            box.GetComponent<BoxController>().m_speed = newMoveSpeed;
         }
     }
 

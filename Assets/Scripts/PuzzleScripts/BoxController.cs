@@ -4,11 +4,7 @@ using UnityEngine;
 
 public class BoxController : MonoBehaviour
 {
-    [SerializeField]
-    [Tooltip("The time it takes the player to move (in seconds)")]
-    private float m_speed;
-
-
+    public float m_speed;
     public int conveyorDirection; //0=none, 1=up, 2=right, 3=down, 4=left
 
     private Vector2 upV = new Vector2(0, 1);
