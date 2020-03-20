@@ -7,6 +7,15 @@ public class ButtonController : MonoBehaviour
     [SerializeField]
     [Tooltip("The Door this button controls")]
     private GameObject[] m_doors;
+    [SerializeField]
+    [Tooltip("The SpriteRenderer for the button")]
+    private SpriteRenderer m_sprRend;
+    [SerializeField]
+    [Tooltip("Sprite for button on")]
+    private Sprite m_spriteOn;
+    [SerializeField]
+    [Tooltip("Sprite for button off")]
+    private Sprite m_spriteOff;
 
     private DoorController[] p_doorCons;
     // Start is called before the first frame update
@@ -32,6 +41,7 @@ public class ButtonController : MonoBehaviour
             foreach(DoorController doorCon in p_doorCons)
             {
                 doorCon.SwapOpenClose();
+                m_sprRend.sprite = m_spriteOn;
             }
         }
     }
@@ -42,6 +52,7 @@ public class ButtonController : MonoBehaviour
             foreach (DoorController doorCon in p_doorCons)
             {
                 doorCon.SwapOpenClose();
+                m_sprRend.sprite = m_spriteOff;
             }
         }      
     }
