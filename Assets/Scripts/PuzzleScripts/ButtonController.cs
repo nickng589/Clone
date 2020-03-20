@@ -41,7 +41,10 @@ public class ButtonController : MonoBehaviour
             foreach(DoorController doorCon in p_doorCons)
             {
                 doorCon.SwapOpenClose();
-                m_sprRend.sprite = m_spriteOn;
+                if (m_sprRend != null) {
+                    m_sprRend.sprite = m_spriteOn;
+                }
+                
             }
         }
     }
@@ -52,7 +55,10 @@ public class ButtonController : MonoBehaviour
             foreach (DoorController doorCon in p_doorCons)
             {
                 doorCon.SwapOpenClose();
-                m_sprRend.sprite = m_spriteOff;
+                if (m_sprRend != null)
+                {
+                    m_sprRend.sprite = m_spriteOff;
+                }
             }
         }      
     }
