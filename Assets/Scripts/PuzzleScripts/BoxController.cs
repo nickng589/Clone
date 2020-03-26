@@ -17,6 +17,8 @@ public class BoxController : MonoBehaviour
     private LayerMask p_playerMask;
     private int distanceToBox;
     private int distanceToWall;
+    private int distanceToPlayer;
+    private int distanceAfterPlayer;
     private int distanceAfterBox;
     private bool moving = false;
     // Start is called before the first frame update
@@ -63,48 +65,59 @@ public class BoxController : MonoBehaviour
         {
             return 0;
         }
+
         RaycastHit2D rayBox = Physics2D.Raycast((Vector2)gameObject.transform.position+upV, upV, distance-1, p_boxMask);
-        if (rayBox.transform != null)
+        RaycastHit2D rayWall = Physics2D.Raycast(gameObject.transform.position, upV, distance, p_wallMask);
+        RaycastHit2D rayPlayer = Physics2D.Raycast(gameObject.transform.position, upV, distance, p_playerMask);
+
+        distanceToBox = 100;
+        distanceToWall = 100;
+        distanceToPlayer = 100;
+        if(rayBox.transform != null)
         {
             distanceToBox = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayBox.transform.position));
-            RaycastHit2D rayWall = Physics2D.Raycast(gameObject.transform.position, upV, distanceToBox, p_wallMask);
-            if (rayWall.transform != null)
-            {
-                distanceToWall = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayWall.transform.position)); 
-                if(distanceToWall -1 > 0)
-                {
-                    StartCoroutine(MoveUpCoroutine(distanceToWall - 1));
-                }  
-                return distanceToWall - 1;
-            }
-            else
-            {
-                distanceAfterBox = rayBox.transform.gameObject.GetComponent<BoxController>().PushUp(distance - distanceToBox + 1);
-                if(distanceToBox + distanceAfterBox - 1 > 0)
-                {
-                    StartCoroutine(MoveUpCoroutine(distanceToBox + distanceAfterBox - 1));
-                }
-                return distanceToBox + distanceAfterBox-1;
-            }
         }
-        else
+        if(rayWall.transform != null)
         {
-            RaycastHit2D rayWall = Physics2D.Raycast(gameObject.transform.position, upV, distance, p_wallMask);
-            if (rayWall.transform != null)
-            {
-                distanceToWall = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayWall.transform.position));
-                if(distanceToWall - 1 > 0)
-                {
-                    StartCoroutine(MoveUpCoroutine(distanceToWall - 1));
-                }        
-                return distanceToWall - 1;
-            }
-            if(distance > 0)
-            {
-                StartCoroutine(MoveUpCoroutine(distance));
-            }  
+            distanceToWall = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayWall.transform.position));
+        }
+        if (rayPlayer.transform != null)
+        {
+            distanceToPlayer = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayPlayer.transform.position));
+        }
+        if(distanceToBox+distanceToWall+distanceToPlayer == 300)//Only triggers if all rayCasts hit nothing
+        {
+            StartCoroutine(MoveUpCoroutine(distance));
             return distance;
-        } 
+        }
+        else if (Mathf.Min(distanceToBox, distanceToPlayer, distanceToWall) == distanceToWall)//closest object is Wall
+        {
+            distanceToWall = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayWall.transform.position));
+            if (distanceToWall - 1 > 0)
+            {
+                StartCoroutine(MoveUpCoroutine(distanceToWall - 1));
+            }
+            return distanceToWall - 1;
+        }
+        else if (Mathf.Min(distanceToBox,distanceToPlayer,distanceToWall)==distanceToBox)//closest object is Box
+        {
+            distanceAfterBox = rayBox.transform.gameObject.GetComponent<BoxController>().PushUp(distance - distanceToBox + 1);
+            if (distanceToBox + distanceAfterBox - 1 > 0)
+            {
+                StartCoroutine(MoveUpCoroutine(distanceToBox + distanceAfterBox - 1));
+            }
+            return distanceToBox + distanceAfterBox - 1;
+        }
+        else if(Mathf.Min(distanceToBox, distanceToPlayer, distanceToWall) == distanceToPlayer)//closetst object is Player
+        {
+            distanceAfterPlayer = rayPlayer.transform.gameObject.GetComponent<PlayerController>().PushUp(distance - distanceToPlayer + 1);
+            if (distanceToPlayer + distanceAfterPlayer - 1 > 0)
+            {
+                StartCoroutine(MoveUpCoroutine(distanceToPlayer + distanceAfterPlayer - 1));
+            }
+            return distanceToPlayer + distanceAfterPlayer - 1;
+        }
+        return 0;
     }
 
     public int PushDown(int distance)
@@ -113,48 +126,59 @@ public class BoxController : MonoBehaviour
         {
             return 0;
         }
+
         RaycastHit2D rayBox = Physics2D.Raycast((Vector2)gameObject.transform.position + downV, downV, distance - 1, p_boxMask);
+        RaycastHit2D rayWall = Physics2D.Raycast(gameObject.transform.position, downV, distance, p_wallMask);
+        RaycastHit2D rayPlayer = Physics2D.Raycast(gameObject.transform.position, downV, distance, p_playerMask);
+
+        distanceToBox = 100;
+        distanceToWall = 100;
+        distanceToPlayer = 100;
         if (rayBox.transform != null)
         {
             distanceToBox = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayBox.transform.position));
-            RaycastHit2D rayWall = Physics2D.Raycast(gameObject.transform.position, downV, distanceToBox, p_wallMask);
-            if (rayWall.transform != null)
-            {
-                distanceToWall = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayWall.transform.position));
-                if(distanceToWall -1 >0)
-                {
-                    StartCoroutine(MoveDownCoroutine(distanceToWall - 1));
-                }
-                return distanceToWall - 1;
-            }
-            else
-            {
-                distanceAfterBox = rayBox.transform.gameObject.GetComponent<BoxController>().PushDown(distance - distanceToBox + 1);
-                if(distanceToBox + distanceAfterBox - 1 > 0)
-                {
-                    StartCoroutine(MoveDownCoroutine(distanceToBox + distanceAfterBox - 1));
-                }
-                return distanceToBox + distanceAfterBox - 1;
-            }
         }
-        else
+        if (rayWall.transform != null)
         {
-            RaycastHit2D rayWall = Physics2D.Raycast(gameObject.transform.position, downV, distance, p_wallMask);
-            if (rayWall.transform != null)
-            {
-                distanceToWall = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayWall.transform.position));
-                if(distanceToWall -1 >0)
-                {
-                    StartCoroutine(MoveDownCoroutine(distanceToWall - 1));
-                }
-                return distanceToWall - 1;
-            }
-            if (distance > 0)
-            {
-                StartCoroutine(MoveDownCoroutine(distance));
-            }
+            distanceToWall = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayWall.transform.position));
+        }
+        if (rayPlayer.transform != null)
+        {
+            distanceToPlayer = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayPlayer.transform.position));
+        }
+        if (distanceToBox + distanceToWall + distanceToPlayer == 300)//Only triggers if all rayCasts hit nothing
+        {
+            StartCoroutine(MoveDownCoroutine(distance));
             return distance;
         }
+        if (Mathf.Min(distanceToBox, distanceToPlayer, distanceToWall) == distanceToWall)//closest object is Wall
+        {
+            distanceToWall = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayWall.transform.position));
+            if (distanceToWall - 1 > 0)
+            {
+                StartCoroutine(MoveDownCoroutine(distanceToWall - 1));
+            }
+            return distanceToWall - 1;
+        }
+        else if (Mathf.Min(distanceToBox, distanceToPlayer, distanceToWall) == distanceToBox)//closest object is Box
+        {
+            distanceAfterBox = rayBox.transform.gameObject.GetComponent<BoxController>().PushDown(distance - distanceToBox + 1);
+            if (distanceToBox + distanceAfterBox - 1 > 0)
+            {
+                StartCoroutine(MoveDownCoroutine(distanceToBox + distanceAfterBox - 1));
+            }
+            return distanceToBox + distanceAfterBox - 1;
+        }
+        else if (Mathf.Min(distanceToBox, distanceToPlayer, distanceToWall) == distanceToPlayer)//closetst object is Player
+        {
+            distanceAfterPlayer = rayPlayer.transform.gameObject.GetComponent<PlayerController>().PushDown(distance - distanceToPlayer + 1);
+            if (distanceToPlayer + distanceAfterPlayer - 1 > 0)
+            {
+                StartCoroutine(MoveDownCoroutine(distanceToPlayer + distanceAfterPlayer - 1));
+            }
+            return distanceToPlayer + distanceAfterPlayer - 1;
+        }
+        return 0;
     }
 
     public int PushRight(int distance)
@@ -163,48 +187,59 @@ public class BoxController : MonoBehaviour
         {
             return 0;
         }
+
         RaycastHit2D rayBox = Physics2D.Raycast((Vector2)gameObject.transform.position + rightV, rightV, distance - 1, p_boxMask);
+        RaycastHit2D rayWall = Physics2D.Raycast(gameObject.transform.position, rightV, distance, p_wallMask);
+        RaycastHit2D rayPlayer = Physics2D.Raycast(gameObject.transform.position, rightV, distance, p_playerMask);
+
+        distanceToBox = 100;
+        distanceToWall = 100;
+        distanceToPlayer = 100;
         if (rayBox.transform != null)
         {
             distanceToBox = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayBox.transform.position));
-            RaycastHit2D rayWall = Physics2D.Raycast(gameObject.transform.position, rightV, distanceToBox, p_wallMask);
-            if (rayWall.transform != null)
-            {
-                distanceToWall = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayWall.transform.position));
-                if(distanceToWall -1 >0)
-                {
-                    StartCoroutine(MoveRightCoroutine(distanceToWall - 1));
-                }
-                return distanceToWall - 1;
-            }
-            else
-            {
-                distanceAfterBox = rayBox.transform.gameObject.GetComponent<BoxController>().PushRight(distance - distanceToBox + 1);
-                if(distanceToBox + distanceAfterBox - 1 >0)
-                {
-                    StartCoroutine(MoveRightCoroutine(distanceToBox + distanceAfterBox - 1));
-                }
-                return distanceToBox + distanceAfterBox - 1;
-            }
         }
-        else
+        if (rayWall.transform != null)
         {
-            RaycastHit2D rayWall = Physics2D.Raycast(gameObject.transform.position, rightV, distance, p_wallMask);
-            if (rayWall.transform != null)
-            {
-                distanceToWall = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayWall.transform.position));
-                if (distanceToWall - 1 > 0)
-                {
-                    StartCoroutine(MoveRightCoroutine(distanceToWall - 1));
-                }
-                return distanceToWall - 1;
-            }
-            if (distance > 0)
-            {
-                StartCoroutine(MoveRightCoroutine(distance));
-            }
+            distanceToWall = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayWall.transform.position));
+        }
+        if (rayPlayer.transform != null)
+        {
+            distanceToPlayer = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayPlayer.transform.position));
+        }
+        if (distanceToBox + distanceToWall + distanceToPlayer == 300)//Only triggers if all rayCasts hit nothing
+        {
+            StartCoroutine(MoveRightCoroutine(distance));
             return distance;
         }
+        if (Mathf.Min(distanceToBox, distanceToPlayer, distanceToWall) == distanceToWall)//closest object is Wall
+        {
+            distanceToWall = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayWall.transform.position));
+            if (distanceToWall - 1 > 0)
+            {
+                StartCoroutine(MoveRightCoroutine(distanceToWall - 1));
+            }
+            return distanceToWall - 1;
+        }
+        else if (Mathf.Min(distanceToBox, distanceToBox, distanceToWall) == distanceToBox)//closest object is Box
+        {
+            distanceAfterBox = rayBox.transform.gameObject.GetComponent<BoxController>().PushRight(distance - distanceToBox + 1);
+            if (distanceToBox + distanceAfterBox - 1 > 0)
+            {
+                StartCoroutine(MoveRightCoroutine(distanceToBox + distanceAfterBox - 1));
+            }
+            return distanceToBox + distanceAfterBox - 1;
+        }
+        else if (Mathf.Min(distanceToBox, distanceToPlayer, distanceToWall) == distanceToPlayer)//closetst object is Player
+        {
+            distanceAfterPlayer = rayPlayer.transform.gameObject.GetComponent<PlayerController>().PushRight(distance - distanceToPlayer + 1);
+            if (distanceToPlayer + distanceAfterPlayer - 1 > 0)
+            {
+                StartCoroutine(MoveRightCoroutine(distanceToPlayer + distanceAfterPlayer - 1));
+            }
+            return distanceToPlayer + distanceAfterPlayer - 1;
+        }
+        return 0;
     }
 
     public int PushLeft(int distance)
@@ -213,48 +248,59 @@ public class BoxController : MonoBehaviour
         {
             return 0;
         }
+
         RaycastHit2D rayBox = Physics2D.Raycast((Vector2)gameObject.transform.position + leftV, leftV, distance - 1, p_boxMask);
+        RaycastHit2D rayWall = Physics2D.Raycast(gameObject.transform.position, leftV, distance, p_wallMask);
+        RaycastHit2D rayPlayer = Physics2D.Raycast(gameObject.transform.position, leftV, distance, p_playerMask);
+
+        distanceToBox = 100;
+        distanceToWall = 100;
+        distanceToPlayer = 100;
         if (rayBox.transform != null)
         {
             distanceToBox = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayBox.transform.position));
-            RaycastHit2D rayWall = Physics2D.Raycast(gameObject.transform.position, leftV, distanceToBox, p_wallMask);
-            if (rayWall.transform != null)
-            {
-                distanceToWall = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayWall.transform.position));
-                if(distanceToWall - 1 >0)
-                {
-                    StartCoroutine(MoveLeftCoroutine(distanceToWall - 1));
-                } 
-                return distanceToWall - 1;
-            }
-            else
-            {
-                distanceAfterBox = rayBox.transform.gameObject.GetComponent<BoxController>().PushLeft(distance - distanceToBox + 1);
-                if(distanceToBox + distanceAfterBox - 1 >0)
-                {
-                    StartCoroutine(MoveLeftCoroutine(distanceToBox + distanceAfterBox - 1));
-                } 
-                return distanceToBox + distanceAfterBox - 1;
-            }
         }
-        else
+        if (rayWall.transform != null)
         {
-            RaycastHit2D rayWall = Physics2D.Raycast(gameObject.transform.position, leftV, distance, p_wallMask);
-            if (rayWall.transform != null)
-            {
-                distanceToWall = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayWall.transform.position));
-                if(distanceToWall - 1 <0)
-                {
-                    StartCoroutine(MoveLeftCoroutine(distanceToWall - 1));
-                }
-                return distanceToWall - 1;
-            }
-            if (distance > 0)
-            {
-                StartCoroutine(MoveLeftCoroutine(distance));
-            }
+            distanceToWall = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayWall.transform.position));
+        }
+        if (rayPlayer.transform != null)
+        {
+            distanceToPlayer = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayPlayer.transform.position));
+        }
+        if (distanceToBox + distanceToWall + distanceToPlayer == 300)//Only triggers if all rayCasts hit nothing
+        {
+            StartCoroutine(MoveLeftCoroutine(distance));
             return distance;
         }
+        if (Mathf.Min(distanceToBox, distanceToPlayer, distanceToWall) == distanceToWall)//closest object is Wall
+        {
+            distanceToWall = (int)Mathf.Round(Vector2.Distance(gameObject.transform.position, rayWall.transform.position));
+            if (distanceToWall - 1 > 0)
+            {
+                StartCoroutine(MoveLeftCoroutine(distanceToWall - 1));
+            }
+            return distanceToWall - 1;
+        }
+        else if (Mathf.Min(distanceToBox, distanceToPlayer, distanceToWall) == distanceToBox)//closest object is Box
+        {
+            distanceAfterBox = rayBox.transform.gameObject.GetComponent<BoxController>().PushLeft(distance - distanceToBox + 1);
+            if (distanceToBox + distanceAfterBox - 1 > 0)
+            {
+                StartCoroutine(MoveLeftCoroutine(distanceToBox + distanceAfterBox - 1));
+            }
+            return distanceToBox + distanceAfterBox - 1;
+        }
+        else if (Mathf.Min(distanceToBox, distanceToPlayer, distanceToWall) == distanceToPlayer)//closetst object is Player
+        {
+            distanceAfterPlayer = rayPlayer.transform.gameObject.GetComponent<PlayerController>().PushLeft(distance - distanceToPlayer + 1);
+            if (distanceToPlayer + distanceAfterPlayer - 1 > 0)
+            {
+                StartCoroutine(MoveLeftCoroutine(distanceToPlayer + distanceAfterPlayer - 1));
+            }
+            return distanceToPlayer + distanceAfterPlayer - 1;
+        }
+        return 0;
     }
 
 
