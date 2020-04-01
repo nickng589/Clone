@@ -17,6 +17,25 @@ public class NPCBehavior : MonoBehaviour
     HubPlayerController player;
     #endregion
 
+    public bool canMove;
+
+    public float walkTimer;
+
+    void Start()
+    {
+        canMove = true;
+        walkTimer = 1;
+    }
+
+    void Update()
+    {
+        walkTimer -= Time.deltaTime;
+        if(walkTimer <= 0)
+        {
+            Debug.Log("do Something");
+        }
+    }
+
     void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("Player") && Input.GetKeyDown("space") && player.canMove == true)
