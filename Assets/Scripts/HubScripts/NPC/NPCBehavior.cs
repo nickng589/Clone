@@ -21,19 +21,12 @@ public class NPCBehavior : MonoBehaviour
 
     public float walkTimer;
 
+    Rigidbody2D npcRigidBody;
+
     void Start()
     {
         canMove = true;
         walkTimer = 1;
-    }
-
-    void Update()
-    {
-        walkTimer -= Time.deltaTime;
-        if(walkTimer <= 0)
-        {
-            Debug.Log("do Something");
-        }
     }
 
     void OnTriggerStay2D(Collider2D other)
