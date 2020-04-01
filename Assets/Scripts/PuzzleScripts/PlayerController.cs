@@ -46,11 +46,11 @@ public class PlayerController : MonoBehaviour
         {
             float right = Input.GetAxis("Horizontal");
             float up = Input.GetAxis("Vertical");
-            if (move_Dist == -1)
+            /*if (move_Dist == -1)
             {
                 right *= -1.0f;
                 up *= -1.0f;
-            }
+            }*/
             //Else ifs insure that the game doesnt register 2 directions at the same time
             if (up > 0.01) //Up
             {
