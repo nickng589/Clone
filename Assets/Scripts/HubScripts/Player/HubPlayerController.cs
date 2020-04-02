@@ -1,6 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HubPlayerController : MonoBehaviour
 {
@@ -35,8 +39,11 @@ public class HubPlayerController : MonoBehaviour
         }
     }
 
-    public void test()
+    void OnTriggerStay2D(Collider2D other)
     {
-
+        if (other.CompareTag("Finish") && Input.GetKeyDown("space") && canMove == true)
+        {
+            SceneManager.LoadScene("Level1");
+        }
     }
 }
