@@ -33,6 +33,7 @@ public class NPCBehavior : MonoBehaviour
     {
         if (other.CompareTag("Player") && Input.GetKeyDown("space") && player.canMove == true)
         {
+            GetComponentInParent<NPCMovement>().canMove = false;
             StartCoroutine("Example");
         }
     }

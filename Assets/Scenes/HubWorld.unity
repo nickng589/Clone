@@ -1863,6 +1863,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 914970713}
   m_CullTransparentMesh: 0
+--- !u!1 &927391096 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5023649119384983902, guid: a3d330f25fe34c048bb1383dd3730c7c,
+    type: 3}
+  m_PrefabInstance: {fileID: 5729357836300847246}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &927391101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927391096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26b6a5fb0ca80164cb12320b36722911, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canMove: 0
+  walking: 0
+  walkTimer: 0
+  ydir: 0
 --- !u!1 &985737454
 GameObject:
   m_ObjectHideFlags: 0
@@ -2973,6 +2995,14 @@ PrefabInstance:
     - target: {fileID: 334112451, guid: a3d330f25fe34c048bb1383dd3730c7c, type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 832782614, guid: a3d330f25fe34c048bb1383dd3730c7c, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 832782614, guid: a3d330f25fe34c048bb1383dd3730c7c, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5023649119384983902, guid: a3d330f25fe34c048bb1383dd3730c7c,
         type: 3}
