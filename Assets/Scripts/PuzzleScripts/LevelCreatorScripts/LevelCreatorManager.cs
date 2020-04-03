@@ -79,7 +79,10 @@ public class LevelCreatorManager : MonoBehaviour
             RaycastHit2D[] hits = Physics2D.RaycastAll(spawnPos, new Vector2(0, 0), 0.1f);  //remove all objects in a location before placing the next object
             foreach (RaycastHit2D hit in hits)
             {
-                Destroy(hit.transform.gameObject);
+                if(hit.transform.gameObject.tag == currPlaceGO.tag)
+                {
+                    Destroy(hit.transform.gameObject);
+                } 
             }
             var newObj = Instantiate(currPlaceGO, spawnPos, Quaternion.identity);
             newObj.transform.parent = p_parent.transform;

@@ -681,6 +681,8 @@ MonoBehaviour:
   npcmanager: {fileID: 1488484682}
   dm: {fileID: 2107836493}
   player: {fileID: 1570358044}
+  canMove: 0
+  walkTimer: 0
 --- !u!114 &334112453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1601,6 +1603,10 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: level8
       m_Image: {fileID: 0}
+    - m_Text: Level9(NEW)
+      m_Image: {fileID: 0}
+    - m_Text: Level10(NEW)
+      m_Image: {fileID: 0}
     - m_Text: TestLevel
       m_Image: {fileID: 0}
   m_OnValueChanged:
@@ -1766,6 +1772,8 @@ MonoBehaviour:
   - Level2
   - Level3
   - Box Intro Level
+  - Level4
+  - Level5
   - TestScene
 --- !u!1 &914970713
 GameObject:

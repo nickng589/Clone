@@ -7,6 +7,7 @@ TagManager:
   - Box
   - Conveyor
   - DeathZone
+  - Floor
   layers:
   - Default
   - TransparentFX
