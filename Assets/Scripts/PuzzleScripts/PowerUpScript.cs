@@ -35,9 +35,7 @@ public class PowerUpScript : MonoBehaviour
             player = collision.gameObject;
             player.GetComponent<PlayerController>().move_Dist *= m_mul;
             p_GM.addPowerUp(this);
-            Destroy(GetComponent<Rigidbody2D>());
-            Destroy(GetComponent<SpriteRenderer>());
-            Destroy(GetComponent<BoxCollider2D>());
+            gameObject.SetActive(false);
         }
     }
 

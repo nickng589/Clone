@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
 
     #region Private Variables
     private int numMovingPlayers;
-    private ArrayList activePowerUps = new ArrayList();
+    private List<PowerUpScript> activePowerUps = new List<PowerUpScript>();
     private int numInGoal;
     private GameObject[] boxes;
     private GameObject[] players;
@@ -142,9 +142,10 @@ public class GameManager : MonoBehaviour
         {
             numMovingPlayers = 0;
             playersCanMove = true;
-            foreach(PowerUpScript pow in activePowerUps)
+            //iterate through list backward to prevent modification while iteration issue
+            for (int i = activePowerUps.Count - 1; i >= 0; i--)
             {
-                pow.increaseMoveCount();
+                activePowerUps[i].increaseMoveCount();
             }
         }   
     }
