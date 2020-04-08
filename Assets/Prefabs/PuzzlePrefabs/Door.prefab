@@ -212,6 +212,7 @@ MonoBehaviour:
   m_OpenSprite: {fileID: 21300000, guid: 01328b860787d3d4c93fb2aa974fa82f, type: 3}
   m_ClosedSprite: {fileID: 21300000, guid: 7c295be5cc65dd643bf685a83f7ab0f6, type: 3}
   m_startOpen: 0
+  m_Animator: {fileID: 1705921343}
 --- !u!61 &608330968721659870
 BoxCollider2D:
   m_ObjectHideFlags: 0

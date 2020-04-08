@@ -16,24 +16,49 @@ public class DoorController : MonoBehaviour
     [Tooltip("Whether or not the door starts open")]
     bool m_startOpen;
 
+    [SerializeField]
+    [Tooltip("Animator")]
+    Animator m_Animator;
+
     private bool open;
     // Start is called before the first frame update
     void Start()
     {
-        open = m_startOpen;
-        DoorUpdate(); 
+        if (m_Animator == null) {
+            open = m_startOpen;
+            DoorUpdate();
+        }
+        else if (m_startOpen) {
+            m_Animator.SetTrigger("Open");
+        }
     }
 
     private void DoorUpdate()
     {
         if(open)
         {
-            gameObject.GetComponent<SpriteRenderer>().sprite = m_OpenSprite;
+            if (m_Animator == null)
+            {
+                gameObject.GetComponent<SpriteRenderer>().sprite = m_OpenSprite;
+            }
+            else
+            {
+                m_Animator.ResetTrigger("Close");
+                m_Animator.SetTrigger("Open");
+            }
             gameObject.layer = 0;
         }
         else
         {
-            gameObject.GetComponent<SpriteRenderer>().sprite = m_ClosedSprite;
+            if (m_Animator == null)
+            {
+                gameObject.GetComponent<SpriteRenderer>().sprite = m_ClosedSprite;
+            }
+            else
+            {
+                m_Animator.ResetTrigger("Open");
+                m_Animator.SetTrigger("Close");
+            }
             gameObject.layer = 9;
         }
         
