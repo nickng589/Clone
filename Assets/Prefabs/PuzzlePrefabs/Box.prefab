@@ -121,6 +121,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 0.7
-  m_bridgeGO: {fileID: 3392996753918847589, guid: 8c4eb3023722e2341a8ba63fd235f0bd,
-    type: 3}
   conveyorDirection: 0
