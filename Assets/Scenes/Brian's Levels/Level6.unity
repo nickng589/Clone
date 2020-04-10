@@ -459,7 +459,7 @@ GameObject:
   - component: {fileID: 15130172}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -673,7 +673,7 @@ GameObject:
   - component: {fileID: 17280455}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -887,7 +887,7 @@ GameObject:
   - component: {fileID: 22974890}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1288,9 +1288,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa0740d66de7b3c4e8d2fcf41681753f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  move_Dist: 1
-  conveyorDirection: 0
+  stillMoving: 1
   m_speed: 0.5
+  moveDist: 1
+  moveDistLeft: 1
 --- !u!212 &40234872
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1354,7 +1355,7 @@ GameObject:
   - component: {fileID: 51201158}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1461,7 +1462,7 @@ GameObject:
   - component: {fileID: 53892565}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1568,7 +1569,7 @@ GameObject:
   - component: {fileID: 60625974}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1675,7 +1676,7 @@ GameObject:
   - component: {fileID: 76436093}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2103,7 +2104,7 @@ GameObject:
   - component: {fileID: 119886617}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2290,9 +2291,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa0740d66de7b3c4e8d2fcf41681753f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  move_Dist: 1
-  conveyorDirection: 0
+  stillMoving: 1
   m_speed: 0.5
+  moveDist: 1
+  moveDistLeft: 1
 --- !u!212 &128711865
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2389,7 +2391,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 0.7
-  conveyorDirection: 0
+  stillMoving: 0
 --- !u!61 &129326758
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2551,7 +2553,7 @@ GameObject:
   - component: {fileID: 136462894}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2765,7 +2767,7 @@ GameObject:
   - component: {fileID: 153289315}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3720,7 +3722,7 @@ GameObject:
   - component: {fileID: 185052209}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3934,7 +3936,7 @@ GameObject:
   - component: {fileID: 194728420}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5007,7 +5009,7 @@ GameObject:
   - component: {fileID: 277077119}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5681,7 +5683,7 @@ GameObject:
   - component: {fileID: 313752901}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5788,7 +5790,7 @@ GameObject:
   - component: {fileID: 319792332}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6198,7 +6200,7 @@ GameObject:
   - component: {fileID: 338185940}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6412,7 +6414,7 @@ GameObject:
   - component: {fileID: 351374228}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6840,7 +6842,7 @@ GameObject:
   - component: {fileID: 404099112}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6947,7 +6949,7 @@ GameObject:
   - component: {fileID: 412196481}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7054,7 +7056,7 @@ GameObject:
   - component: {fileID: 415865352}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7589,7 +7591,7 @@ GameObject:
   - component: {fileID: 453499036}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7923,7 +7925,7 @@ GameObject:
   - component: {fileID: 456040733}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9030,7 +9032,7 @@ GameObject:
   - component: {fileID: 478633375}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9565,7 +9567,7 @@ GameObject:
   - component: {fileID: 539998767}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9886,7 +9888,7 @@ GameObject:
   - component: {fileID: 561256654}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10207,7 +10209,7 @@ GameObject:
   - component: {fileID: 576986481}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10860,7 +10862,7 @@ GameObject:
   - component: {fileID: 606350733}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11151,7 +11153,7 @@ GameObject:
   - component: {fileID: 620069026}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11398,7 +11400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 0.7
-  conveyorDirection: 0
+  stillMoving: 0
 --- !u!61 &630645425
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12449,7 +12451,7 @@ GameObject:
   - component: {fileID: 694650583}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12658,7 +12660,7 @@ GameObject:
   - component: {fileID: 711028961}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13052,7 +13054,7 @@ GameObject:
   - component: {fileID: 726516628}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13516,7 +13518,7 @@ GameObject:
   - component: {fileID: 760926305}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14191,7 +14193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 0.7
-  conveyorDirection: 0
+  stillMoving: 0
 --- !u!61 &790259197
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14387,7 +14389,7 @@ GameObject:
   - component: {fileID: 805073029}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14601,7 +14603,7 @@ GameObject:
   - component: {fileID: 816770943}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14708,7 +14710,7 @@ GameObject:
   - component: {fileID: 827050807}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15430,7 +15432,7 @@ GameObject:
   - component: {fileID: 876440867}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15644,7 +15646,7 @@ GameObject:
   - component: {fileID: 890621819}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16072,7 +16074,7 @@ GameObject:
   - component: {fileID: 926736414}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16179,7 +16181,7 @@ GameObject:
   - component: {fileID: 933230477}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16461,7 +16463,7 @@ GameObject:
   - component: {fileID: 950254173}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17201,6 +17203,8 @@ MonoBehaviour:
   m_OpenSprite: {fileID: 21300000, guid: 01328b860787d3d4c93fb2aa974fa82f, type: 3}
   m_ClosedSprite: {fileID: 21300000, guid: 7c295be5cc65dd643bf685a83f7ab0f6, type: 3}
   m_startOpen: 0
+  m_Animator: {fileID: 0}
+  open: 0
 --- !u!212 &988223867
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18003,6 +18007,8 @@ MonoBehaviour:
   m_OpenSprite: {fileID: 21300000, guid: 01328b860787d3d4c93fb2aa974fa82f, type: 3}
   m_ClosedSprite: {fileID: 21300000, guid: 7c295be5cc65dd643bf685a83f7ab0f6, type: 3}
   m_startOpen: 0
+  m_Animator: {fileID: 0}
+  open: 0
 --- !u!212 &1035087220
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18172,7 +18178,7 @@ GameObject:
   - component: {fileID: 1040987026}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18386,7 +18392,7 @@ GameObject:
   - component: {fileID: 1080269281}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18744,7 +18750,7 @@ GameObject:
   - component: {fileID: 1093944808}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19279,7 +19285,7 @@ GameObject:
   - component: {fileID: 1147322470}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19814,7 +19820,7 @@ GameObject:
   - component: {fileID: 1160766309}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20670,7 +20676,7 @@ GameObject:
   - component: {fileID: 1225316101}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20884,7 +20890,7 @@ GameObject:
   - component: {fileID: 1252809642}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20991,7 +20997,7 @@ GameObject:
   - component: {fileID: 1256890294}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21098,7 +21104,7 @@ GameObject:
   - component: {fileID: 1260813542}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21205,7 +21211,7 @@ GameObject:
   - component: {fileID: 1267399556}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21740,7 +21746,7 @@ GameObject:
   - component: {fileID: 1310053694}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22061,7 +22067,7 @@ GameObject:
   - component: {fileID: 1324990874}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22275,7 +22281,7 @@ GameObject:
   - component: {fileID: 1337080688}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22415,7 +22421,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 0.7
-  conveyorDirection: 0
+  stillMoving: 0
 --- !u!61 &1342745869
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22611,7 +22617,7 @@ GameObject:
   - component: {fileID: 1355354667}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23146,7 +23152,7 @@ GameObject:
   - component: {fileID: 1408973616}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23718,7 +23724,7 @@ GameObject:
   - component: {fileID: 1456865806}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23825,7 +23831,7 @@ GameObject:
   - component: {fileID: 1457152854}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24393,7 +24399,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 0.7
-  conveyorDirection: 0
+  stillMoving: 0
 --- !u!61 &1494753084
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24482,7 +24488,7 @@ GameObject:
   - component: {fileID: 1501915141}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24995,7 +25001,7 @@ GameObject:
   - component: {fileID: 1510486857}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25209,7 +25215,7 @@ GameObject:
   - component: {fileID: 1516514928}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25530,7 +25536,7 @@ GameObject:
   - component: {fileID: 1546995892}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25995,7 +26001,7 @@ GameObject:
   - component: {fileID: 1561207103}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26637,7 +26643,7 @@ GameObject:
   - component: {fileID: 1609534802}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26744,7 +26750,7 @@ GameObject:
   - component: {fileID: 1614382492}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26884,7 +26890,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 0.7
-  conveyorDirection: 0
+  stillMoving: 0
 --- !u!61 &1619784548
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27829,7 +27835,7 @@ GameObject:
   - component: {fileID: 1690457055}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27936,7 +27942,7 @@ GameObject:
   - component: {fileID: 1692550840}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28043,7 +28049,7 @@ GameObject:
   - component: {fileID: 1692798551}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28292,7 +28298,7 @@ GameObject:
   - component: {fileID: 1706933628}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28399,7 +28405,7 @@ GameObject:
   - component: {fileID: 1707326026}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29011,7 +29017,7 @@ GameObject:
   - component: {fileID: 1744760839}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29617,7 +29623,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 0.7
-  conveyorDirection: 0
+  stillMoving: 0
 --- !u!61 &1772824982
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29920,7 +29926,7 @@ GameObject:
   - component: {fileID: 1781923866}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30027,7 +30033,7 @@ GameObject:
   - component: {fileID: 1785188284}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30630,7 +30636,7 @@ GameObject:
   - component: {fileID: 1829856941}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30844,7 +30850,7 @@ GameObject:
   - component: {fileID: 1867340233}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31202,7 +31208,7 @@ GameObject:
   - component: {fileID: 1882589424}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31667,7 +31673,7 @@ GameObject:
   - component: {fileID: 1901085768}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31881,7 +31887,7 @@ GameObject:
   - component: {fileID: 1916393927}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32010,6 +32016,7 @@ MonoBehaviour:
   m_MoveSpeedSlider: {fileID: 320418675}
   m_defaultSpeed: 0.7
   playersCanMove: 1
+  moveDist: 0
 --- !u!4 &1929901167
 Transform:
   m_ObjectHideFlags: 0
@@ -32050,7 +32057,7 @@ GameObject:
   - component: {fileID: 1939828523}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32793,7 +32800,7 @@ GameObject:
   - component: {fileID: 1980736940}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33221,7 +33228,7 @@ GameObject:
   - component: {fileID: 1992650343}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33649,7 +33656,7 @@ GameObject:
   - component: {fileID: 2003967257}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33756,7 +33763,7 @@ GameObject:
   - component: {fileID: 2013916334}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33863,7 +33870,7 @@ GameObject:
   - component: {fileID: 2014907198}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33970,7 +33977,7 @@ GameObject:
   - component: {fileID: 2025698860}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34268,7 +34275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 0.7
-  conveyorDirection: 0
+  stillMoving: 0
 --- !u!61 &2037774021
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -34714,7 +34721,7 @@ GameObject:
   - component: {fileID: 2060880042}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35179,7 +35186,7 @@ GameObject:
   - component: {fileID: 2081864388}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35537,7 +35544,7 @@ GameObject:
   - component: {fileID: 2100886636}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35644,7 +35651,7 @@ GameObject:
   - component: {fileID: 2107677626}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 2457906}
   - component: {fileID: 2457905}
   - component: {fileID: 2457904}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConveyorBelt(Clone)
   m_TagString: Conveyor
   m_Icon: {fileID: 0}
@@ -1630,7 +1630,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 0.7
-  conveyorDirection: 0
+  stillMoving: 0
 --- !u!61 &58070684
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1771,7 +1771,7 @@ GameObject:
   - component: {fileID: 65098268}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1985,7 +1985,7 @@ GameObject:
   - component: {fileID: 70178187}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2092,7 +2092,7 @@ GameObject:
   - component: {fileID: 79944598}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2446,7 +2446,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 0.7
-  conveyorDirection: 0
+  stillMoving: 0
 --- !u!61 &99525210
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2642,7 +2642,7 @@ GameObject:
   - component: {fileID: 103976048}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3000,7 +3000,7 @@ GameObject:
   - component: {fileID: 109495415}
   - component: {fileID: 109495414}
   - component: {fileID: 109495413}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConveyorBelt(Clone)
   m_TagString: Conveyor
   m_Icon: {fileID: 0}
@@ -3143,7 +3143,7 @@ GameObject:
   - component: {fileID: 110068503}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3250,7 +3250,7 @@ GameObject:
   - component: {fileID: 121856561}
   - component: {fileID: 121856560}
   - component: {fileID: 121856559}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConveyorBelt(Clone)
   m_TagString: Conveyor
   m_Icon: {fileID: 0}
@@ -3393,7 +3393,7 @@ GameObject:
   - component: {fileID: 124012508}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3533,7 +3533,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 0.7
-  conveyorDirection: 0
+  stillMoving: 0
 --- !u!61 &147585463
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3729,7 +3729,7 @@ GameObject:
   - component: {fileID: 162810717}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3943,7 +3943,7 @@ GameObject:
   - component: {fileID: 165908879}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4157,7 +4157,7 @@ GameObject:
   - component: {fileID: 175106609}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4791,9 +4791,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa0740d66de7b3c4e8d2fcf41681753f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  move_Dist: 1
-  conveyorDirection: 0
+  stillMoving: 0
   m_speed: 0.5
+  moveDist: 1
+  moveDistLeft: 1
 --- !u!212 &211135379
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4857,7 +4858,7 @@ GameObject:
   - component: {fileID: 211536826}
   - component: {fileID: 211536825}
   - component: {fileID: 211536824}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConveyorBelt(Clone)
   m_TagString: Conveyor
   m_Icon: {fileID: 0}
@@ -5000,7 +5001,7 @@ GameObject:
   - component: {fileID: 212413751}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5428,7 +5429,7 @@ GameObject:
   - component: {fileID: 235747851}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5642,7 +5643,7 @@ GameObject:
   - component: {fileID: 241953670}
   - component: {fileID: 241953669}
   - component: {fileID: 241953668}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConveyorBelt(Clone)
   m_TagString: Conveyor
   m_Icon: {fileID: 0}
@@ -5785,7 +5786,7 @@ GameObject:
   - component: {fileID: 251254912}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6250,7 +6251,7 @@ GameObject:
   - component: {fileID: 264263419}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6678,7 +6679,7 @@ GameObject:
   - component: {fileID: 277673649}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6999,7 +7000,7 @@ GameObject:
   - component: {fileID: 289272805}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7106,7 +7107,7 @@ GameObject:
   - component: {fileID: 300793642}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7213,7 +7214,7 @@ GameObject:
   - component: {fileID: 307522227}
   - component: {fileID: 307522226}
   - component: {fileID: 307522225}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConveyorBelt(Clone)
   m_TagString: Conveyor
   m_Icon: {fileID: 0}
@@ -7891,7 +7892,7 @@ GameObject:
   - component: {fileID: 325926828}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8105,7 +8106,7 @@ GameObject:
   - component: {fileID: 330156841}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8426,7 +8427,7 @@ GameObject:
   - component: {fileID: 337995467}
   - component: {fileID: 337995466}
   - component: {fileID: 337995465}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConveyorBelt(Clone)
   m_TagString: Conveyor
   m_Icon: {fileID: 0}
@@ -8569,7 +8570,7 @@ GameObject:
   - component: {fileID: 338050422}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8676,7 +8677,7 @@ GameObject:
   - component: {fileID: 341703613}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9104,7 +9105,7 @@ GameObject:
   - component: {fileID: 358605246}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9848,7 +9849,7 @@ GameObject:
   - component: {fileID: 375996555}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10062,7 +10063,7 @@ GameObject:
   - component: {fileID: 388730057}
   - component: {fileID: 388730056}
   - component: {fileID: 388730055}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConveyorBelt(Clone)
   m_TagString: Conveyor
   m_Icon: {fileID: 0}
@@ -10419,7 +10420,7 @@ GameObject:
   - component: {fileID: 398950527}
   - component: {fileID: 398950526}
   - component: {fileID: 398950525}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConveyorBelt(Clone)
   m_TagString: Conveyor
   m_Icon: {fileID: 0}
@@ -10809,7 +10810,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 0.7
-  conveyorDirection: 0
+  stillMoving: 0
 --- !u!61 &425671368
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10898,7 +10899,7 @@ GameObject:
   - component: {fileID: 428089033}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11297,7 +11298,7 @@ GameObject:
   - component: {fileID: 451119934}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11404,7 +11405,7 @@ GameObject:
   - component: {fileID: 452907251}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11511,7 +11512,7 @@ GameObject:
   - component: {fileID: 463568822}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11804,7 +11805,7 @@ GameObject:
   - component: {fileID: 474638856}
   m_Layer: 9
   m_Name: Wall(Clone) (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12339,7 +12340,7 @@ GameObject:
   - component: {fileID: 490191557}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12553,7 +12554,7 @@ GameObject:
   - component: {fileID: 499146986}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12660,7 +12661,7 @@ GameObject:
   - component: {fileID: 508136776}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13018,7 +13019,7 @@ GameObject:
   - component: {fileID: 520012012}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13446,7 +13447,7 @@ GameObject:
   - component: {fileID: 529400461}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13737,7 +13738,7 @@ GameObject:
   - component: {fileID: 566429279}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14058,7 +14059,7 @@ GameObject:
   - component: {fileID: 576123118}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14304,7 +14305,7 @@ GameObject:
   - component: {fileID: 577560603}
   - component: {fileID: 577560602}
   - component: {fileID: 577560601}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConveyorBelt(Clone)
   m_TagString: Conveyor
   m_Icon: {fileID: 0}
@@ -14591,7 +14592,7 @@ GameObject:
   - component: {fileID: 580647876}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14838,7 +14839,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 0.7
-  conveyorDirection: 0
+  stillMoving: 0
 --- !u!61 &581767527
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15034,7 +15035,7 @@ GameObject:
   - component: {fileID: 591757901}
   - component: {fileID: 591757900}
   - component: {fileID: 591757899}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConveyorBelt(Clone)
   m_TagString: Conveyor
   m_Icon: {fileID: 0}
@@ -15428,7 +15429,7 @@ GameObject:
   - component: {fileID: 602167317}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15535,7 +15536,7 @@ GameObject:
   - component: {fileID: 604609645}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15642,7 +15643,7 @@ GameObject:
   - component: {fileID: 610586723}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16033,7 +16034,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 0.7
-  conveyorDirection: 0
+  stillMoving: 0
 --- !u!61 &615984720
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16262,7 +16263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 0.7
-  conveyorDirection: 0
+  stillMoving: 0
 --- !u!61 &621886012
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16351,7 +16352,7 @@ GameObject:
   - component: {fileID: 622160160}
   - component: {fileID: 622160159}
   - component: {fileID: 622160158}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConveyorBelt(Clone)
   m_TagString: Conveyor
   m_Icon: {fileID: 0}
@@ -16494,7 +16495,7 @@ GameObject:
   - component: {fileID: 625342777}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16601,7 +16602,7 @@ GameObject:
   - component: {fileID: 629807319}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16708,7 +16709,7 @@ GameObject:
   - component: {fileID: 630239238}
   m_Layer: 9
   m_Name: Wall(Clone) (2)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16922,7 +16923,7 @@ GameObject:
   - component: {fileID: 639514554}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17029,7 +17030,7 @@ GameObject:
   - component: {fileID: 641473696}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17136,7 +17137,7 @@ GameObject:
   - component: {fileID: 653628939}
   - component: {fileID: 653628938}
   - component: {fileID: 653628937}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConveyorBelt(Clone)
   m_TagString: Conveyor
   m_Icon: {fileID: 0}
@@ -17419,7 +17420,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 0.7
-  conveyorDirection: 0
+  stillMoving: 0
 --- !u!61 &672854408
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17508,7 +17509,7 @@ GameObject:
   - component: {fileID: 674494621}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17862,7 +17863,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 0.7
-  conveyorDirection: 0
+  stillMoving: 0
 --- !u!61 &691754263
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17951,7 +17952,7 @@ GameObject:
   - component: {fileID: 713129275}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18058,7 +18059,7 @@ GameObject:
   - component: {fileID: 719859414}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18165,7 +18166,7 @@ GameObject:
   - component: {fileID: 728620508}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18807,7 +18808,7 @@ GameObject:
   - component: {fileID: 771307082}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18914,7 +18915,7 @@ GameObject:
   - component: {fileID: 772943392}
   - component: {fileID: 772943391}
   - component: {fileID: 772943390}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConveyorBelt(Clone)
   m_TagString: Conveyor
   m_Icon: {fileID: 0}
@@ -19057,7 +19058,7 @@ GameObject:
   - component: {fileID: 783124709}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20010,7 +20011,7 @@ GameObject:
   - component: {fileID: 829386098}
   - component: {fileID: 829386097}
   - component: {fileID: 829386096}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConveyorBelt(Clone)
   m_TagString: Conveyor
   m_Icon: {fileID: 0}
@@ -20153,7 +20154,7 @@ GameObject:
   - component: {fileID: 835138653}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20367,7 +20368,7 @@ GameObject:
   - component: {fileID: 846881613}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21116,7 +21117,7 @@ GameObject:
   - component: {fileID: 887915361}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21223,7 +21224,7 @@ GameObject:
   - component: {fileID: 889661663}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21474,7 +21475,7 @@ GameObject:
   - component: {fileID: 917101636}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21581,7 +21582,7 @@ GameObject:
   - component: {fileID: 917860616}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21688,7 +21689,7 @@ GameObject:
   - component: {fileID: 926519075}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22147,7 +22148,7 @@ GameObject:
   - component: {fileID: 939215032}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22727,7 +22728,7 @@ GameObject:
   - component: {fileID: 951578023}
   - component: {fileID: 951578022}
   - component: {fileID: 951578021}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConveyorBelt(Clone)
   m_TagString: Conveyor
   m_Icon: {fileID: 0}
@@ -23084,7 +23085,7 @@ GameObject:
   - component: {fileID: 955493148}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23191,7 +23192,7 @@ GameObject:
   - component: {fileID: 965799861}
   - component: {fileID: 965799860}
   - component: {fileID: 965799859}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConveyorBelt(Clone)
   m_TagString: Conveyor
   m_Icon: {fileID: 0}
@@ -23655,7 +23656,7 @@ GameObject:
   - component: {fileID: 985591443}
   - component: {fileID: 985591442}
   - component: {fileID: 985591441}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConveyorBelt(Clone)
   m_TagString: Conveyor
   m_Icon: {fileID: 0}
@@ -23798,7 +23799,7 @@ GameObject:
   - component: {fileID: 992967500}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24366,7 +24367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 0.7
-  conveyorDirection: 0
+  stillMoving: 0
 --- !u!61 &1018032047
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24562,7 +24563,7 @@ GameObject:
   - component: {fileID: 1031413528}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25311,7 +25312,7 @@ GameObject:
   - component: {fileID: 1071991462}
   - component: {fileID: 1071991461}
   - component: {fileID: 1071991460}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConveyorBelt(Clone)
   m_TagString: Conveyor
   m_Icon: {fileID: 0}
@@ -25668,7 +25669,7 @@ GameObject:
   - component: {fileID: 1087025499}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25775,7 +25776,7 @@ GameObject:
   - component: {fileID: 1093560171}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25989,7 +25990,7 @@ GameObject:
   - component: {fileID: 1117648197}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26496,7 +26497,7 @@ GameObject:
   - component: {fileID: 1135582683}
   - component: {fileID: 1135582682}
   - component: {fileID: 1135582681}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConveyorBelt(Clone)
   m_TagString: Conveyor
   m_Icon: {fileID: 0}
@@ -26746,7 +26747,7 @@ GameObject:
   - component: {fileID: 1157128825}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26853,7 +26854,7 @@ GameObject:
   - component: {fileID: 1158097821}
   - component: {fileID: 1158097820}
   - component: {fileID: 1158097819}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConveyorBelt(Clone)
   m_TagString: Conveyor
   m_Icon: {fileID: 0}
@@ -26996,7 +26997,7 @@ GameObject:
   - component: {fileID: 1173808131}
   - component: {fileID: 1173808130}
   - component: {fileID: 1173808129}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConveyorBelt(Clone)
   m_TagString: Conveyor
   m_Icon: {fileID: 0}
@@ -27279,7 +27280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 0.7
-  conveyorDirection: 0
+  stillMoving: 0
 --- !u!61 &1180836403
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27796,7 +27797,7 @@ GameObject:
   - component: {fileID: 1210802880}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28043,7 +28044,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 0.7
-  conveyorDirection: 0
+  stillMoving: 0
 --- !u!61 &1220653067
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28286,6 +28287,8 @@ MonoBehaviour:
   m_OpenSprite: {fileID: 21300000, guid: 01328b860787d3d4c93fb2aa974fa82f, type: 3}
   m_ClosedSprite: {fileID: 21300000, guid: 7c295be5cc65dd643bf685a83f7ab0f6, type: 3}
   m_startOpen: 0
+  m_Animator: {fileID: 0}
+  open: 0
 --- !u!212 &1226528234
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -28362,7 +28365,7 @@ GameObject:
   - component: {fileID: 1227136719}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28469,7 +28472,7 @@ GameObject:
   - component: {fileID: 1229234812}
   - component: {fileID: 1229234811}
   - component: {fileID: 1229234810}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConveyorBelt(Clone)
   m_TagString: Conveyor
   m_Icon: {fileID: 0}
@@ -28634,6 +28637,7 @@ MonoBehaviour:
   m_MoveSpeedSlider: {fileID: 191016477}
   m_defaultSpeed: 0.7
   playersCanMove: 1
+  moveDist: 0
 --- !u!4 &1230323183
 Transform:
   m_ObjectHideFlags: 0
@@ -28674,7 +28678,7 @@ GameObject:
   - component: {fileID: 1234271916}
   - component: {fileID: 1234271915}
   - component: {fileID: 1234271914}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConveyorBelt(Clone)
   m_TagString: Conveyor
   m_Icon: {fileID: 0}
@@ -28924,7 +28928,7 @@ GameObject:
   - component: {fileID: 1243078370}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29175,7 +29179,7 @@ GameObject:
   - component: {fileID: 1252512744}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29282,7 +29286,7 @@ GameObject:
   - component: {fileID: 1256346311}
   - component: {fileID: 1256346310}
   - component: {fileID: 1256346309}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConveyorBelt(Clone)
   m_TagString: Conveyor
   m_Icon: {fileID: 0}
@@ -29425,7 +29429,7 @@ GameObject:
   - component: {fileID: 1258060450}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29674,7 +29678,7 @@ GameObject:
   - component: {fileID: 1269825893}
   - component: {fileID: 1269825892}
   - component: {fileID: 1269825891}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConveyorBelt(Clone)
   m_TagString: Conveyor
   m_Icon: {fileID: 0}
@@ -30223,7 +30227,7 @@ GameObject:
   - component: {fileID: 1293484869}
   - component: {fileID: 1293484868}
   - component: {fileID: 1293484867}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConveyorBelt(Clone)
   m_TagString: Conveyor
   m_Icon: {fileID: 0}
@@ -30399,7 +30403,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 0.7
-  conveyorDirection: 0
+  stillMoving: 0
 --- !u!61 &1312796743
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30488,7 +30492,7 @@ GameObject:
   - component: {fileID: 1313708854}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30702,7 +30706,7 @@ GameObject:
   - component: {fileID: 1330457004}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30916,7 +30920,7 @@ GameObject:
   - component: {fileID: 1344630213}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31130,7 +31134,7 @@ GameObject:
   - component: {fileID: 1349134172}
   - component: {fileID: 1349134171}
   - component: {fileID: 1349134170}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConveyorBelt(Clone)
   m_TagString: Conveyor
   m_Icon: {fileID: 0}
@@ -31417,7 +31421,7 @@ GameObject:
   - component: {fileID: 1355573442}
   - component: {fileID: 1355573441}
   - component: {fileID: 1355573440}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConveyorBelt(Clone)
   m_TagString: Conveyor
   m_Icon: {fileID: 0}
@@ -31777,7 +31781,7 @@ GameObject:
   - component: {fileID: 1381835387}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32349,7 +32353,7 @@ GameObject:
   - component: {fileID: 1412106467}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32777,7 +32781,7 @@ GameObject:
   - component: {fileID: 1421237587}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32884,7 +32888,7 @@ GameObject:
   - component: {fileID: 1434636212}
   - component: {fileID: 1434636211}
   - component: {fileID: 1434636210}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConveyorBelt(Clone)
   m_TagString: Conveyor
   m_Icon: {fileID: 0}
@@ -33090,7 +33094,7 @@ GameObject:
   - component: {fileID: 1445100002}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33197,7 +33201,7 @@ GameObject:
   - component: {fileID: 1448529443}
   - component: {fileID: 1448529442}
   - component: {fileID: 1448529441}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConveyorBelt(Clone)
   m_TagString: Conveyor
   m_Icon: {fileID: 0}
@@ -33554,7 +33558,7 @@ GameObject:
   - component: {fileID: 1463179421}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33875,7 +33879,7 @@ GameObject:
   - component: {fileID: 1472452437}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33982,7 +33986,7 @@ GameObject:
   - component: {fileID: 1482832117}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34196,7 +34200,7 @@ GameObject:
   - component: {fileID: 1485678941}
   - component: {fileID: 1485678940}
   - component: {fileID: 1485678939}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConveyorBelt(Clone)
   m_TagString: Conveyor
   m_Icon: {fileID: 0}
@@ -34446,7 +34450,7 @@ GameObject:
   - component: {fileID: 1497941878}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35018,7 +35022,7 @@ GameObject:
   - component: {fileID: 1525991779}
   - component: {fileID: 1525991778}
   - component: {fileID: 1525991777}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConveyorBelt(Clone)
   m_TagString: Conveyor
   m_Icon: {fileID: 0}
@@ -35161,7 +35165,7 @@ GameObject:
   - component: {fileID: 1531230966}
   - component: {fileID: 1531230965}
   - component: {fileID: 1531230964}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConveyorBelt(Clone)
   m_TagString: Conveyor
   m_Icon: {fileID: 0}
@@ -35411,7 +35415,7 @@ GameObject:
   - component: {fileID: 1542431676}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35518,7 +35522,7 @@ GameObject:
   - component: {fileID: 1552425997}
   - component: {fileID: 1552425996}
   - component: {fileID: 1552425995}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConveyorBelt(Clone)
   m_TagString: Conveyor
   m_Icon: {fileID: 0}
@@ -36624,7 +36628,7 @@ GameObject:
   - component: {fileID: 1624544816}
   - component: {fileID: 1624544815}
   - component: {fileID: 1624544814}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConveyorBelt(Clone)
   m_TagString: Conveyor
   m_Icon: {fileID: 0}
@@ -37051,7 +37055,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 0.7
-  conveyorDirection: 0
+  stillMoving: 0
 --- !u!61 &1629436912
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37173,7 +37177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 0.7
-  conveyorDirection: 0
+  stillMoving: 0
 --- !u!61 &1635244744
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37903,7 +37907,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 0.7
-  conveyorDirection: 0
+  stillMoving: 0
 --- !u!61 &1682046655
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38169,7 +38173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 0.7
-  conveyorDirection: 0
+  stillMoving: 0
 --- !u!61 &1700435112
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38258,7 +38262,7 @@ GameObject:
   - component: {fileID: 1707577792}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38365,7 +38369,7 @@ GameObject:
   - component: {fileID: 1707771085}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39007,7 +39011,7 @@ GameObject:
   - component: {fileID: 1738850790}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39114,7 +39118,7 @@ GameObject:
   - component: {fileID: 1740745856}
   - component: {fileID: 1740745855}
   - component: {fileID: 1740745854}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConveyorBelt(Clone)
   m_TagString: Conveyor
   m_Icon: {fileID: 0}
@@ -39257,7 +39261,7 @@ GameObject:
   - component: {fileID: 1742028182}
   - component: {fileID: 1742028181}
   - component: {fileID: 1742028180}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConveyorBelt(Clone)
   m_TagString: Conveyor
   m_Icon: {fileID: 0}
@@ -39433,7 +39437,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 0.7
-  conveyorDirection: 0
+  stillMoving: 0
 --- !u!61 &1747659681
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39522,7 +39526,7 @@ GameObject:
   - component: {fileID: 1751151559}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39629,7 +39633,7 @@ GameObject:
   - component: {fileID: 1754639384}
   - component: {fileID: 1754639383}
   - component: {fileID: 1754639382}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConveyorBelt(Clone)
   m_TagString: Conveyor
   m_Icon: {fileID: 0}
@@ -40019,7 +40023,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 0.7
-  conveyorDirection: 0
+  stillMoving: 0
 --- !u!61 &1773114322
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -40215,7 +40219,7 @@ GameObject:
   - component: {fileID: 1776852105}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40466,7 +40470,7 @@ GameObject:
   - component: {fileID: 1784982999}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40573,7 +40577,7 @@ GameObject:
   - component: {fileID: 1788960754}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40894,7 +40898,7 @@ GameObject:
   - component: {fileID: 1805098550}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41609,7 +41613,7 @@ GameObject:
   - component: {fileID: 1838699288}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41716,7 +41720,7 @@ GameObject:
   - component: {fileID: 1845731669}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42251,7 +42255,7 @@ GameObject:
   - component: {fileID: 1859020494}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42358,7 +42362,7 @@ GameObject:
   - component: {fileID: 1871621938}
   - component: {fileID: 1871621937}
   - component: {fileID: 1871621936}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConveyorBelt(Clone)
   m_TagString: Conveyor
   m_Icon: {fileID: 0}
@@ -42608,7 +42612,7 @@ GameObject:
   - component: {fileID: 1884447878}
   - component: {fileID: 1884447877}
   - component: {fileID: 1884447876}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConveyorBelt(Clone)
   m_TagString: Conveyor
   m_Icon: {fileID: 0}
@@ -42751,7 +42755,7 @@ GameObject:
   - component: {fileID: 1885075587}
   - component: {fileID: 1885075586}
   - component: {fileID: 1885075585}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConveyorBelt(Clone)
   m_TagString: Conveyor
   m_Icon: {fileID: 0}
@@ -42894,7 +42898,7 @@ GameObject:
   - component: {fileID: 1885549855}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43001,7 +43005,7 @@ GameObject:
   - component: {fileID: 1890085389}
   - component: {fileID: 1890085388}
   - component: {fileID: 1890085387}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConveyorBelt(Clone)
   m_TagString: Conveyor
   m_Icon: {fileID: 0}
@@ -43465,7 +43469,7 @@ GameObject:
   - component: {fileID: 1902172119}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43786,7 +43790,7 @@ GameObject:
   - component: {fileID: 1910566528}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44535,7 +44539,7 @@ GameObject:
   - component: {fileID: 1945677904}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44642,7 +44646,7 @@ GameObject:
   - component: {fileID: 1955157539}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44856,7 +44860,7 @@ GameObject:
   - component: {fileID: 1967125458}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45177,7 +45181,7 @@ GameObject:
   - component: {fileID: 1977172645}
   - component: {fileID: 1977172644}
   - component: {fileID: 1977172643}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConveyorBelt(Clone)
   m_TagString: Conveyor
   m_Icon: {fileID: 0}
@@ -45320,7 +45324,7 @@ GameObject:
   - component: {fileID: 1981875523}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45641,7 +45645,7 @@ GameObject:
   - component: {fileID: 1993865796}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45855,7 +45859,7 @@ GameObject:
   - component: {fileID: 1999153588}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45962,7 +45966,7 @@ GameObject:
   - component: {fileID: 2006500074}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46069,7 +46073,7 @@ GameObject:
   - component: {fileID: 2011694476}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46711,7 +46715,7 @@ GameObject:
   - component: {fileID: 2027596192}
   - component: {fileID: 2027596191}
   - component: {fileID: 2027596190}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConveyorBelt(Clone)
   m_TagString: Conveyor
   m_Icon: {fileID: 0}
@@ -46854,7 +46858,7 @@ GameObject:
   - component: {fileID: 2029603797}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47105,7 +47109,7 @@ GameObject:
   - component: {fileID: 2032845056}
   - component: {fileID: 2032845055}
   - component: {fileID: 2032845054}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConveyorBelt(Clone)
   m_TagString: Conveyor
   m_Icon: {fileID: 0}
@@ -47355,7 +47359,7 @@ GameObject:
   - component: {fileID: 2038000593}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47569,7 +47573,7 @@ GameObject:
   - component: {fileID: 2050515860}
   - component: {fileID: 2050515859}
   - component: {fileID: 2050515858}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConveyorBelt(Clone)
   m_TagString: Conveyor
   m_Icon: {fileID: 0}
@@ -47995,7 +47999,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 0.7
-  conveyorDirection: 0
+  stillMoving: 0
 --- !u!61 &2066745757
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -48164,9 +48168,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa0740d66de7b3c4e8d2fcf41681753f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  move_Dist: 1
-  conveyorDirection: 0
+  stillMoving: 0
   m_speed: 0.5
+  moveDist: 1
+  moveDistLeft: 1
 --- !u!212 &2068582748
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -48230,7 +48235,7 @@ GameObject:
   - component: {fileID: 2092093364}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48337,7 +48342,7 @@ GameObject:
   - component: {fileID: 2106510100}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48588,7 +48593,7 @@ GameObject:
   - component: {fileID: 2119324230}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48695,7 +48700,7 @@ GameObject:
   - component: {fileID: 2119437904}
   m_Layer: 9
   m_Name: Wall(Clone)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48835,7 +48840,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 0.7
-  conveyorDirection: 0
+  stillMoving: 0
 --- !u!61 &2119466080
 BoxCollider2D:
   m_ObjectHideFlags: 0

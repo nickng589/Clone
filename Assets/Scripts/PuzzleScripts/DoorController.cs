@@ -20,10 +20,12 @@ public class DoorController : MonoBehaviour
     [Tooltip("Animator")]
     Animator m_Animator;
 
-    private bool open;
+    private GameManager p_GM;
+    public bool open;
     // Start is called before the first frame update
     void Start()
     {
+        p_GM = GameObject.Find("GameManager").GetComponent<GameManager>();
         if (m_Animator == null) {
             open = m_startOpen;
             DoorUpdate();
@@ -46,7 +48,7 @@ public class DoorController : MonoBehaviour
                 m_Animator.ResetTrigger("Close");
                 m_Animator.SetTrigger("Open");
             }
-            gameObject.layer = 0;
+            p_GM.removeFromMatrix(gameObject);
         }
         else
         {
@@ -59,7 +61,7 @@ public class DoorController : MonoBehaviour
                 m_Animator.ResetTrigger("Open");
                 m_Animator.SetTrigger("Close");
             }
-            gameObject.layer = 9;
+            p_GM.addToMatrix(gameObject);
         }
         
     }

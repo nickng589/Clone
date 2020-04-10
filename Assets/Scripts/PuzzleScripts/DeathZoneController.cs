@@ -33,20 +33,12 @@ public class DeathZoneController : MonoBehaviour
         {
             Instantiate(m_bridgeGO, gameObject.transform.position, Quaternion.identity);
             p_GM.DecreaseNumMoving();
+            p_GM.DecreaseNumMoving();
+            p_GM.removeFromMatrix(collision.gameObject);
             Destroy(collision.gameObject);
-            StartCoroutine(waitOneUpdateCoroutine());
+            Destroy(gameObject);
         }
     }
 
-    IEnumerator waitOneUpdateCoroutine() // wait one update to change the players can move value (without this, only the first player can move)
-    {
-        int i = 0;
-        while (i < 1)
-        {
-            i++;
-            yield return null;
-        }
-        p_GM.BoxRemoved();
-        Destroy(gameObject);
-    }
+
 }

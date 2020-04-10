@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 880458975}
   - component: {fileID: 880458976}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: water-surf-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1031992336}
   - component: {fileID: 1031992337}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: water-base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,7 +170,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1615351341}
   - component: {fileID: 1615351342}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: water-surf-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -255,7 +255,7 @@ GameObject:
   - component: {fileID: 263905911}
   - component: {fileID: 263905910}
   - component: {fileID: 2427766519859314747}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConveyorBelt
   m_TagString: Conveyor
   m_Icon: {fileID: 0}

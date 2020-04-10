@@ -8,6 +8,8 @@ TagManager:
   - Conveyor
   - DeathZone
   - Floor
+  - Wall
+  - Door
   layers:
   - Default
   - TransparentFX
@@ -20,8 +22,8 @@ TagManager:
   - Player
   - Wall
   - Box
-  - 
-  - 
+  - Conveyor
+  - Door
   - 
   - 
   - 

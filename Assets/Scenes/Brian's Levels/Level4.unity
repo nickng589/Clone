@@ -1188,6 +1188,7 @@ MonoBehaviour:
   move_Dist: 1
   conveyorDirection: 0
   m_speed: 0.5
+  stillMoving: 0
 --- !u!212 &47933858
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2642,7 +2643,7 @@ GameObject:
   - component: {fileID: 96215394}
   - component: {fileID: 96215393}
   - component: {fileID: 96215392}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConveyorBelt(Clone)
   m_TagString: Conveyor
   m_Icon: {fileID: 0}
@@ -2799,13 +2800,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 98865697}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 5, y: 5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2022087957}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!61 &98865699
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5103,6 +5104,7 @@ MonoBehaviour:
   move_Dist: 1
   conveyorDirection: 0
   m_speed: 0.5
+  stillMoving: 0
 --- !u!212 &232712881
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6646,6 +6648,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1774874279}
     m_Modifications:
+    - target: {fileID: 8267150127978301270, guid: 8e25abc1b15d37f4fae61c8869a99acd,
+        type: 3}
+      propertyPath: direction
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8267150127978301271, guid: 8e25abc1b15d37f4fae61c8869a99acd,
         type: 3}
       propertyPath: m_Name
@@ -6674,22 +6681,22 @@ PrefabInstance:
     - target: {fileID: 8267150127978301274, guid: 8e25abc1b15d37f4fae61c8869a99acd,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8267150127978301274, guid: 8e25abc1b15d37f4fae61c8869a99acd,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8267150127978301274, guid: 8e25abc1b15d37f4fae61c8869a99acd,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 8267150127978301274, guid: 8e25abc1b15d37f4fae61c8869a99acd,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 8267150127978301274, guid: 8e25abc1b15d37f4fae61c8869a99acd,
         type: 3}
@@ -6709,7 +6716,7 @@ PrefabInstance:
     - target: {fileID: 8267150127978301274, guid: 8e25abc1b15d37f4fae61c8869a99acd,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e25abc1b15d37f4fae61c8869a99acd, type: 3}
@@ -15316,6 +15323,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_speed: 0.7
   conveyorDirection: 0
+  stillMoving: 0
 --- !u!61 &809345886
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27099,13 +27107,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1613613832}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: -10, y: 5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2022087957}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!61 &1613613834
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -34991,6 +34999,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_speed: 0.7
   conveyorDirection: 0
+  stillMoving: 0
 --- !u!61 &1988963242
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -33,7 +33,7 @@ public class PowerUpScript : MonoBehaviour
         if(collision.gameObject.tag=="Player")
         {
             player = collision.gameObject;
-            player.GetComponent<PlayerController>().move_Dist *= m_mul;
+            player.GetComponent<PlayerController>().moveDist *= m_mul;
             p_GM.addPowerUp(this);
             gameObject.SetActive(false);
         }
@@ -46,11 +46,13 @@ public class PowerUpScript : MonoBehaviour
         {
             if(m_mul == 0)
             {
-                player.GetComponent<PlayerController>().move_Dist = 1;
+                player.GetComponent<PlayerController>().moveDist = 1;
+              
             }
             else
             {
-                player.GetComponent<PlayerController>().move_Dist /= m_mul;
+                player.GetComponent<PlayerController>().moveDist /= m_mul;
+         
             }
             p_GM.removePowerUp(this);
             Destroy(gameObject);
