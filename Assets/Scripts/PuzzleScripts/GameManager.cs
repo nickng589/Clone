@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
     private int offsetY;
     private GameObject[,] worldMatrix;
     private GameObject[,] conveyorMatrix;
+    private GameObject[,] telepMatrix;
     private int dimX;
     private int dimY;
     private GameObject[,] prevLocations;
@@ -103,6 +104,7 @@ public class GameManager : MonoBehaviour
         offsetY = (int)Math.Round(minY);
         worldMatrix = new GameObject[dimX,dimY];
         conveyorMatrix = new GameObject[dimX, dimY];
+        telepMatrix = new GameObject[dimX, dimY];
         foreach (object o in obj)
         {
             GameObject g = (GameObject)o;
@@ -117,6 +119,12 @@ public class GameManager : MonoBehaviour
                 int gX = (int)Math.Round(g.transform.position.x) - offsetX;
                 int gY = (int)Math.Round(g.transform.position.y) - offsetY;
                 conveyorMatrix[gX, gY] = g;
+            }
+            else if (g.layer == LayerMask.NameToLayer("Teleporter"))
+            {
+                int gX = (int)Math.Round(g.transform.position.x) - offsetX;
+                int gY = (int)Math.Round(g.transform.position.y) - offsetY;
+                telepMatrix[gX, gY] = g;
             }
         }
 
@@ -543,6 +551,18 @@ public class GameManager : MonoBehaviour
                             else if (worldMatrix[x, y].tag == "Box")
                             {
                                 Vector3 finalPos = new Vector3(x + offsetX, y + offsetY);
+                                if (telepMatrix[x,y]!=null)
+                                {
+                                    int[] tpLoc = telepMatrix[x, y].GetComponent<TeleportController>().getTPLoc();
+                                    int tpX = tpLoc[0];
+                                    int tpY = tpLoc[1];
+                                    if(worldMatrix[x+tpX,y+tpY]==null)
+                                    {
+                                        worldMatrix[x + tpX, y + tpY] = worldMatrix[x, y];
+                                        worldMatrix[x, y] = null; 
+                                        finalPos = new Vector3(x+offsetX+tpX,y+offsetY+tpY);
+                                    }
+                                }
                                 worldMatrix[x, y].GetComponent<BoxController>().MoveTo(finalPos);
                                 worldMatrix[x, y].GetComponent<BoxController>().stillMoving = true;
                             }

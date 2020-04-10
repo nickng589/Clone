@@ -282,6 +282,36 @@ Transform:
   m_Father: {fileID: 292336006}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &292033541
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 292033542}
+  m_Layer: 0
+  m_Name: Teleporters
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &292033542
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292033541}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.362189, y: -1.0865827, z: -180.09544}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 292336006}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &292336004
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,6 +347,7 @@ MonoBehaviour:
   m_MoveSpeedSlider: {fileID: 1941739453}
   m_defaultSpeed: 0.7
   playersCanMove: 1
+  moveDist: 0
 --- !u!4 &292336006
 Transform:
   m_ObjectHideFlags: 0
@@ -341,6 +372,7 @@ Transform:
   - {fileID: 712465291}
   - {fileID: 433655080}
   - {fileID: 386959013}
+  - {fileID: 292033542}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1056,6 +1088,9 @@ MonoBehaviour:
     - m_Text: Floor
       m_Image: {fileID: -1552414145816237958, guid: 727ab6bde9fe848eea0512985c473bfe,
         type: 3}
+    - m_Text: Teleporter
+      m_Image: {fileID: -1552414145816237958, guid: 727ab6bde9fe848eea0512985c473bfe,
+        type: 3}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1287,6 +1322,7 @@ MonoBehaviour:
   - {fileID: 2891341129465043007, guid: f19a33f44d2175a44afb578d1b780fc0, type: 3}
   - {fileID: 8267150127978301271, guid: 8e25abc1b15d37f4fae61c8869a99acd, type: 3}
   - {fileID: 3993044763213589543, guid: e6a60028d8fd64fc18115442edb271db, type: 3}
+  - {fileID: 6423241798387394822, guid: 0d691c43b4092704eb402b2086b3342a, type: 3}
   m_Parents:
   - {fileID: 1330533483}
   - {fileID: 218274491}
@@ -1301,6 +1337,7 @@ MonoBehaviour:
   - {fileID: 420796806}
   - {fileID: 712465290}
   - {fileID: 386959012}
+  - {fileID: 292033541}
 --- !u!4 &1154902948
 Transform:
   m_ObjectHideFlags: 0
