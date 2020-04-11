@@ -34,6 +34,10 @@ public class PowerUpScript : MonoBehaviour
         {
             player = collision.gameObject;
             player.GetComponent<PlayerController>().moveDist *= m_mul;
+            if(m_mul<0)
+            {
+                player.GetComponent<PlayerController>().inverted = true;
+            }
             p_GM.addPowerUp(this);
             gameObject.SetActive(false);
         }
@@ -47,7 +51,10 @@ public class PowerUpScript : MonoBehaviour
             if(m_mul == 0)
             {
                 player.GetComponent<PlayerController>().moveDist = 1;
-              
+            }
+            else if(m_mul < 0)
+            {
+                player.GetComponent<PlayerController>().inverted = false;
             }
             else
             {

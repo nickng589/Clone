@@ -44,7 +44,6 @@ public class ButtonController : MonoBehaviour
                 if (m_sprRend != null) {
                     m_sprRend.sprite = m_spriteOn;
                 }
-                
             }
         }
     }

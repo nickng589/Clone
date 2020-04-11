@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7070132196444874472}
   - component: {fileID: 7070132196444874475}
   - component: {fileID: 7070132196444874473}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: DeathZone
   m_TagString: DeathZone
   m_Icon: {fileID: 0}
@@ -144,3 +144,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_bridgeGO: {fileID: 3392996753918847589, guid: 8c4eb3023722e2341a8ba63fd235f0bd,
     type: 3}
+  sprite: {fileID: 21300000, guid: 1abcd076e239f08489c79a91d937b384, type: 3}
+  spriteT: {fileID: 21300000, guid: e7249f6e6d5ce88419618bb67d8cc70f, type: 3}
+  spriteL: {fileID: 21300000, guid: f41a7f490f0a1a04aad7d3ad979e3e3d, type: 3}
+  spriteR: {fileID: 21300000, guid: 4d0abb9e55913a5448633ad2aa20ac6d, type: 3}
+  spriteTR: {fileID: 21300000, guid: 2202bd535a63cdf4bb676a123b2cceff, type: 3}
+  spriteTL: {fileID: 21300000, guid: f04b695f3edb08143835e08934ea058a, type: 3}
+  spriteTRL: {fileID: 21300000, guid: aa0ac0a212f29564b9a1842a0b105e8c, type: 3}
+  spriteRL: {fileID: 21300000, guid: baa51718effd95b4f851f1e4d9154cc7, type: 3}
+  spriteB: {fileID: 21300000, guid: 7e15cd03389bee149bc0145f5d3d9cbe, type: 3}
+  spriteBR: {fileID: 21300000, guid: 2d8a2492ce1101244962d5b30f7113ce, type: 3}
+  spriteBL: {fileID: 21300000, guid: 3085acfd634c73e49b91b505b487ac04, type: 3}
+  spriteBRL: {fileID: 21300000, guid: 7e68abf6d88c63e4bbb492a5dfb9303c, type: 3}
+  spriteTB: {fileID: 21300000, guid: b538cc59ae8bf5a4a8762055ebdf0425, type: 3}
+  spriteTBL: {fileID: 21300000, guid: c4ee1b9734e158045855e833849573e1, type: 3}
+  spriteTBRL: {fileID: 21300000, guid: 53b58f770fa003b4e9c43f8760007863, type: 3}
+  spriteTBR: {fileID: 21300000, guid: 86666f104c4a76f44896508df25b5120, type: 3}
+  m_sprRend: {fileID: 7070132196444874477}

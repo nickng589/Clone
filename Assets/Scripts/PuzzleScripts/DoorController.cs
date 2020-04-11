@@ -31,6 +31,8 @@ public class DoorController : MonoBehaviour
             DoorUpdate();
         }
         else if (m_startOpen) {
+            open = m_startOpen;
+            DoorUpdate();
             m_Animator.SetTrigger("Open");
         }
     }
@@ -48,6 +50,7 @@ public class DoorController : MonoBehaviour
                 m_Animator.ResetTrigger("Close");
                 m_Animator.SetTrigger("Open");
             }
+            p_GM.addToMatrix(gameObject);
             p_GM.removeFromMatrix(gameObject);
         }
         else

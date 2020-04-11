@@ -86,6 +86,20 @@ public class LevelCreatorManager : MonoBehaviour
             }
             var newObj = Instantiate(currPlaceGO, spawnPos, Quaternion.identity);
             newObj.transform.parent = p_parent.transform;
+            if (currPlaceGO.tag == "Wall")
+            {
+                foreach (GameObject wall in GameObject.FindGameObjectsWithTag("Wall"))
+                {
+                    wall.GetComponent<WallSetupScript>().updateVisuals();
+                }
+            }
+            if (currPlaceGO.tag == "DeathZone")
+            {
+                foreach (GameObject dz in GameObject.FindGameObjectsWithTag("DeathZone"))
+                {
+                    dz.GetComponent<DeathZoneController>().updateVisuals();
+                }
+            }
         }
         if (Input.GetMouseButton(1))
         {
@@ -95,6 +109,14 @@ public class LevelCreatorManager : MonoBehaviour
             foreach (RaycastHit2D hit in hits)
             {
                 Destroy(hit.transform.gameObject);
+            }
+            foreach (GameObject wall in GameObject.FindGameObjectsWithTag("Wall"))
+            {
+                wall.GetComponent<WallSetupScript>().updateVisuals();
+            }
+            foreach (GameObject dz in GameObject.FindGameObjectsWithTag("DeathZone"))
+            {
+                dz.GetComponent<DeathZoneController>().updateVisuals();
             }
         }
 

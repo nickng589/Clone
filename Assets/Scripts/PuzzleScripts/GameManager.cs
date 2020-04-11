@@ -47,6 +47,8 @@ public class GameManager : MonoBehaviour
     private int dimY;
     private GameObject[,] prevLocations;
     private bool movingConveyors = false;
+    private float slowAnimSpeed=0.1f;
+    private float fastAnimSpeed=1;
     #endregion
 
     #region Public Variables
@@ -66,6 +68,7 @@ public class GameManager : MonoBehaviour
         players = GameObject.FindGameObjectsWithTag("Player");
         m_MoveSpeedSlider.onValueChanged.AddListener(delegate { SliderValueChanged(m_MoveSpeedSlider); });
         m_speed = m_defaultSpeed;
+        
 
         float minX = 100;//the X coordinate of the furthest left object
         float minY = 100;//the Y coordinate of the furthest down object
@@ -119,6 +122,7 @@ public class GameManager : MonoBehaviour
                 int gX = (int)Math.Round(g.transform.position.x) - offsetX;
                 int gY = (int)Math.Round(g.transform.position.y) - offsetY;
                 conveyorMatrix[gX, gY] = g;
+                g.GetComponent<Animator>().speed = slowAnimSpeed;
             }
             else if (g.layer == LayerMask.NameToLayer("Teleporter"))
             {
@@ -127,7 +131,6 @@ public class GameManager : MonoBehaviour
                 telepMatrix[gX, gY] = g;
             }
         }
-
         for (int x = 0; x < dimX; x++)
         {
             for (int y = 0; y < dimY; y++)
@@ -180,6 +183,7 @@ public class GameManager : MonoBehaviour
             }
             if(!playersCanMove)
             {
+                
                 //Calculate Player movements
                 #region Player Movement
                 for (int x = 0; x < dimX; x++)
@@ -190,14 +194,12 @@ public class GameManager : MonoBehaviour
                         {
                             if (worldMatrix[x, y].tag == "Player")
                             {
-                                if(worldMatrix[x, y].GetComponent<PlayerController>().moveDist<0)
-                                {
-                                    dX *= -1;
-                                    dY *= -1;
-                                }
                                 worldMatrix[x, y].GetComponent<PlayerController>().moveDistLeft = Math.Abs(worldMatrix[x,y].GetComponent<PlayerController>().moveDist);
-                            }
-
+                            } 
+                        }
+                        if (conveyorMatrix[x, y] != null)
+                        {
+                            conveyorMatrix[x, y].GetComponent<Animator>().speed = fastAnimSpeed;
                         }
                     }
                 }
@@ -213,6 +215,12 @@ public class GameManager : MonoBehaviour
                         {
                             if (worldMatrix[x, y] != null && worldMatrix[x, y].tag == "Player" && worldMatrix[x, y].GetComponent<PlayerController>().moveDistLeft>0)
                             {
+                                GameObject player = worldMatrix[x, y];
+                                if (player.GetComponent<PlayerController>().inverted)
+                                {
+                                    dX *= -1;
+                                    dY *= -1;
+                                }
                                 if (worldMatrix[x + dX, y + dY] == null)//there is no object in front of player, they can move and be donw
                                 {
                                     worldMatrix[x, y].GetComponent<PlayerController>().moveDistLeft -= 1;
@@ -281,13 +289,18 @@ public class GameManager : MonoBehaviour
                                         }
                                     //}
                                 }
+                                if (player.GetComponent<PlayerController>().inverted)
+                                {
+                                    dX *= -1;
+                                    dY *= -1;
+                                }
                             }
                         }
                     }
                 }
                 #endregion
 
-                //Tell of the objects to move to their new spots
+                //Tell objects what the midpoint of their movement is
                 for (int x = 0; x < dimX; x++)
                 {
                     for (int y = 0; y < dimY; y++)
@@ -296,14 +309,14 @@ public class GameManager : MonoBehaviour
                         {
                             if (worldMatrix[x, y].tag == "Player")
                             {
-                                Vector3 finalPos = new Vector3(x + offsetX, y + offsetY);
-                                worldMatrix[x, y].GetComponent<PlayerController>().MoveTo(finalPos);
+                                Vector3 midPos = new Vector3(x + offsetX, y + offsetY);
+                                worldMatrix[x, y].GetComponent<PlayerController>().midpoint = midPos;
                                 worldMatrix[x, y].GetComponent<PlayerController>().stillMoving = true;
                             }
                             else if (worldMatrix[x, y].tag == "Box")
                             {
-                                Vector3 finalPos = new Vector3(x + offsetX, y + offsetY);
-                                worldMatrix[x, y].GetComponent<BoxController>().MoveTo(finalPos);
+                                Vector3 midPos = new Vector3(x + offsetX, y + offsetY);
+                                worldMatrix[x, y].GetComponent<BoxController>().midpoint = midPos;
                                 worldMatrix[x, y].GetComponent<BoxController>().stillMoving = true;
                             }
                         }
@@ -545,11 +558,12 @@ public class GameManager : MonoBehaviour
                             if(worldMatrix[x,y].tag=="Player")
                             {
                                 Vector3 finalPos = new Vector3(x + offsetX, y + offsetY);
-                                worldMatrix[x, y].GetComponent<PlayerController>().MoveTo(finalPos);
+                                worldMatrix[x, y].GetComponent<PlayerController>().MoveTo(worldMatrix[x, y].transform.position, finalPos);
                                 worldMatrix[x, y].GetComponent<PlayerController>().stillMoving = true;
                             }
                             else if (worldMatrix[x, y].tag == "Box")
                             {
+                                GameObject box = worldMatrix[x, y];
                                 Vector3 finalPos = new Vector3(x + offsetX, y + offsetY);
                                 if (telepMatrix[x,y]!=null)
                                 {
@@ -563,8 +577,8 @@ public class GameManager : MonoBehaviour
                                         finalPos = new Vector3(x+offsetX+tpX,y+offsetY+tpY);
                                     }
                                 }
-                                worldMatrix[x, y].GetComponent<BoxController>().MoveTo(finalPos);
-                                worldMatrix[x, y].GetComponent<BoxController>().stillMoving = true;
+                                box.GetComponent<BoxController>().MoveTo(box.transform.position, finalPos);
+                                box.GetComponent<BoxController>().stillMoving = true;
                             }
                         }
                     }
@@ -584,35 +598,6 @@ public class GameManager : MonoBehaviour
 
     }
     
-    /*public void readyToMoveConveyors()
-    {
-        if(!movingConveyors)
-        {
-            movingConveyors = true;
-            //Tell of the objects to move to their new spots
-            for (int x = 0; x < dimX; x++)
-            {
-                for (int y = 0; y < dimY; y++)
-                {
-                    if (worldMatrix[x, y] != null)
-                    {
-                        if (worldMatrix[x, y].tag == "Player")
-                        {
-                            Vector3 finalPos = new Vector3(x + offsetX, y + offsetY);
-                            worldMatrix[x, y].GetComponent<PlayerController>().MoveTo(finalPos);
-                            worldMatrix[x, y].GetComponent<PlayerController>().stillMoving = true;
-                        }
-                        else if (worldMatrix[x, y].tag == "Box")
-                        {
-                            Vector3 finalPos = new Vector3(x + offsetX, y + offsetY);
-                            worldMatrix[x, y].GetComponent<BoxController>().MoveTo(finalPos);
-                            worldMatrix[x, y].GetComponent<BoxController>().stillMoving = true;
-                        }
-                    }
-                }
-            }
-        }
-    }*/
 
     bool arraysEqual(GameObject[,] a1, GameObject[,]a2)
     {
@@ -631,7 +616,7 @@ public class GameManager : MonoBehaviour
 
     void SliderValueChanged(Slider changed)
     {
-        float newMoveSpeed = m_defaultSpeed + (5 - changed.value) * 0.1f;
+        float newMoveSpeed = m_defaultSpeed + (7 - changed.value) * 0.05f;
         m_speed = newMoveSpeed;
         for (int x = 0; x < dimX; x++)
         {
@@ -665,9 +650,16 @@ public class GameManager : MonoBehaviour
         int gY = (int)Math.Round(g.transform.position.y) - offsetY;
         if(gX>=0 && gX<dimX && gY>=0 && gY<dimY)
         {
-            if(worldMatrix[gX, gY]!=null && worldMatrix[gX, gY].tag=="Player")
+            if(worldMatrix[gX, gY]!=null)
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                if (worldMatrix[gX, gY].tag == "Player")
+                {
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                }
+                if (worldMatrix[gX, gY].tag == "Box")
+                {
+                    Destroy(worldMatrix[gX, gY]);
+                }
             }
             worldMatrix[gX, gY] = g;
         }
@@ -702,6 +694,16 @@ public class GameManager : MonoBehaviour
             for (int i = activePowerUps.Count - 1; i >= 0; i--)
             {
                 activePowerUps[i].increaseMoveCount();
+            }
+            for (int x = 0; x < dimX; x++)
+            {
+                for (int y = 0; y < dimY; y++)
+                {
+                    if (conveyorMatrix[x, y] != null)
+                    {
+                        conveyorMatrix[x, y].GetComponent<Animator>().speed = slowAnimSpeed;
+                    }
+                }
             }
         }   
     }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7635147447330043330}
   - component: {fileID: 7635147447330043329}
   - component: {fileID: 7635147447330043331}
+  - component: {fileID: -5297234134533499903}
   m_Layer: 9
   m_Name: Wall
   m_TagString: Wall
@@ -107,3 +108,32 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-5297234134533499903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7635147447330043328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7e8dbef1fb1e4c4981bcea614177a63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_leafSprite: {fileID: 21300000, guid: f19c1124d3fb242968f6f439e232d84c, type: 3}
+  m_leafSpriteT: {fileID: 21300000, guid: ee40781c3ff15a042b4b0b78e83a6e34, type: 3}
+  m_leafSpriteL: {fileID: 21300000, guid: e0b5da5793f2ff943b382a7db62f8e22, type: 3}
+  m_leafSpriteR: {fileID: 21300000, guid: 933702c6b55df8b4a96cad66500514bb, type: 3}
+  m_leafSpriteTR: {fileID: 21300000, guid: dd111283dedb3b149b4abc19b9b1eb90, type: 3}
+  m_leafSpriteTL: {fileID: 21300000, guid: 03ec2bdd0819f09439445217ff242875, type: 3}
+  m_leafSpriteTRL: {fileID: 21300000, guid: 4fd3e0ecff0293e4aa257e65441a6c91, type: 3}
+  m_leafSpriteRL: {fileID: 21300000, guid: 21e47cec6456df84980ec4da42f469b7, type: 3}
+  m_treeSprite: {fileID: 21300000, guid: d37ec530c4a92e846b96a6604cd7aca5, type: 3}
+  m_treeSpriteR: {fileID: 21300000, guid: 48070f0d6c188094084d9a953b44a98a, type: 3}
+  m_treeSpriteL: {fileID: 21300000, guid: 0c7eeaa2ad6e0294d9292f9066173b2f, type: 3}
+  m_treeSpriteRL: {fileID: 21300000, guid: 0ee0eace5fb04e84c9a4653d781827f7, type: 3}
+  m_treeSpriteT: {fileID: 21300000, guid: 7674ede2c86837040b4b4420b8891863, type: 3}
+  m_treeSpriteTL: {fileID: 21300000, guid: 402b82b34bb0ae14ba3b68b5ba7e6796, type: 3}
+  m_treeSpriteTRL: {fileID: 21300000, guid: 27ee5a09fa7d26142b3f3ba548b09164, type: 3}
+  m_treeSpriteTR: {fileID: 21300000, guid: 681e1277a05401f499903703868ef737, type: 3}
+  m_sprRend: {fileID: 7635147447330043329}

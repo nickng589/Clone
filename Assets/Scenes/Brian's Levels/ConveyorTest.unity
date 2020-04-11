@@ -8737,6 +8737,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_speed: 0.7
   stillMoving: 1
+  midpoint: {x: 0, y: 0, z: 0}
 --- !u!61 &375643134
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10274,6 +10275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_speed: 0.7
   stillMoving: 1
+  midpoint: {x: 0, y: 0, z: 0}
 --- !u!61 &429679690
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14672,7 +14674,7 @@ MonoBehaviour:
   m_VictoryText: {fileID: 447546567}
   m_VictoryMessage: You Did It!
   m_MoveSpeedSlider: {fileID: 1871290106}
-  m_defaultSpeed: 0.7
+  m_defaultSpeed: 0.2
   playersCanMove: 0
   moveDist: 1
 --- !u!4 &597575392
@@ -15043,6 +15045,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_speed: 0.7
   stillMoving: 1
+  midpoint: {x: 0, y: 0, z: 0}
 --- !u!61 &628197002
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16784,7 +16787,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 290, y: 180}
-  m_SizeDelta: {x: 200, y: 80}
+  m_SizeDelta: {x: 220, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &688084370
 MonoBehaviour:
@@ -16799,17 +16802,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 0.9481132, b: 0.9481132, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 1
     m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 2
+    m_BestFit: 1
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -32514,6 +32517,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_speed: 0.7
   stillMoving: 1
+  midpoint: {x: 0, y: 0, z: 0}
 --- !u!61 &1439740682
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38360,6 +38364,7 @@ MonoBehaviour:
   m_speed: 0.5
   moveDist: 1
   moveDistLeft: 1
+  midpoint: {x: 0, y: 0, z: 0}
 --- !u!212 &1711941197
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -39615,6 +39620,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_speed: 0.7
   stillMoving: 1
+  midpoint: {x: 0, y: 0, z: 0}
 --- !u!61 &1771171924
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -42116,7 +42122,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 10
   m_WholeNumbers: 1
-  m_Value: 5
+  m_Value: 7
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -45795,6 +45801,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_speed: 0.7
   stillMoving: 1
+  midpoint: {x: 0, y: 0, z: 0}
 --- !u!61 &2027373561
 BoxCollider2D:
   m_ObjectHideFlags: 0
