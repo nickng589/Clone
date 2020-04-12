@@ -10,6 +10,7 @@ TagManager:
   - Floor
   - Wall
   - Door
+  - Teleporter
   layers:
   - Default
   - TransparentFX

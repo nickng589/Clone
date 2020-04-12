@@ -44,4 +44,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Brian's Levels/Level5.unity
     guid: e8a842d4297ddeb4496a5072e5104b5d
+  - enabled: 1
+    path: Assets/Scenes/Brian's Levels/Level6.unity
+    guid: a43da27edac2dc5419376eaf6440b8b1
+  - enabled: 1
+    path: Assets/Scenes/Brian's Levels/Level7.unity
+    guid: 2520f8877f1fd3f4099152af57533388
   m_configObjects: {}
