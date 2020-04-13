@@ -384,6 +384,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_bridgeGO: {fileID: 3392996753918847589, guid: 8c4eb3023722e2341a8ba63fd235f0bd,
     type: 3}
+  sprite: {fileID: 0}
+  spriteT: {fileID: 0}
+  spriteL: {fileID: 0}
+  spriteR: {fileID: 0}
+  spriteTR: {fileID: 0}
+  spriteTL: {fileID: 0}
+  spriteTRL: {fileID: 0}
+  spriteRL: {fileID: 0}
+  spriteB: {fileID: 0}
+  spriteBR: {fileID: 0}
+  spriteBL: {fileID: 0}
+  spriteBRL: {fileID: 0}
+  spriteTB: {fileID: 0}
+  spriteTBL: {fileID: 0}
+  spriteTBRL: {fileID: 0}
+  spriteTBR: {fileID: 0}
+  m_sprRend: {fileID: 0}
 --- !u!50 &93802709
 Rigidbody2D:
   serializedVersion: 4
@@ -911,6 +928,7 @@ MonoBehaviour:
   m_ClosedSprite: {fileID: 21300000, guid: 7c295be5cc65dd643bf685a83f7ab0f6, type: 3}
   m_startOpen: 0
   m_Animator: {fileID: 0}
+  open: 0
 --- !u!212 &304702239
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1720,6 +1738,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_bridgeGO: {fileID: 3392996753918847589, guid: 8c4eb3023722e2341a8ba63fd235f0bd,
     type: 3}
+  sprite: {fileID: 0}
+  spriteT: {fileID: 0}
+  spriteL: {fileID: 0}
+  spriteR: {fileID: 0}
+  spriteTR: {fileID: 0}
+  spriteTL: {fileID: 0}
+  spriteTRL: {fileID: 0}
+  spriteRL: {fileID: 0}
+  spriteB: {fileID: 0}
+  spriteBR: {fileID: 0}
+  spriteBL: {fileID: 0}
+  spriteBRL: {fileID: 0}
+  spriteTB: {fileID: 0}
+  spriteTBL: {fileID: 0}
+  spriteTBRL: {fileID: 0}
+  spriteTBR: {fileID: 0}
+  m_sprRend: {fileID: 0}
 --- !u!50 &404794970
 Rigidbody2D:
   serializedVersion: 4
@@ -2608,6 +2643,12 @@ RectTransform:
   m_AnchoredPosition: {x: -300, y: 200}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!4 &571607889 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6426931050532469745, guid: b9065a07027974d81965d8a50b5128e3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1412417457}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &593589944
 GameObject:
   m_ObjectHideFlags: 0
@@ -2623,7 +2664,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &593589945
 Transform:
   m_ObjectHideFlags: 0
@@ -2693,7 +2734,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &612594745
 Transform:
   m_ObjectHideFlags: 0
@@ -2745,6 +2786,7 @@ MonoBehaviour:
   m_MoveSpeedSlider: {fileID: 520891966}
   m_defaultSpeed: 0.7
   playersCanMove: 1
+  moveDist: 0
 --- !u!4 &656012953
 Transform:
   m_ObjectHideFlags: 0
@@ -3171,6 +3213,7 @@ MonoBehaviour:
   m_ClosedSprite: {fileID: 21300000, guid: 7c295be5cc65dd643bf685a83f7ab0f6, type: 3}
   m_startOpen: 0
   m_Animator: {fileID: 0}
+  open: 0
 --- !u!212 &715274752
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3268,6 +3311,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_bridgeGO: {fileID: 3392996753918847589, guid: 8c4eb3023722e2341a8ba63fd235f0bd,
     type: 3}
+  sprite: {fileID: 0}
+  spriteT: {fileID: 0}
+  spriteL: {fileID: 0}
+  spriteR: {fileID: 0}
+  spriteTR: {fileID: 0}
+  spriteTL: {fileID: 0}
+  spriteTRL: {fileID: 0}
+  spriteRL: {fileID: 0}
+  spriteB: {fileID: 0}
+  spriteBR: {fileID: 0}
+  spriteBL: {fileID: 0}
+  spriteBRL: {fileID: 0}
+  spriteTB: {fileID: 0}
+  spriteTBL: {fileID: 0}
+  spriteTBRL: {fileID: 0}
+  spriteTBR: {fileID: 0}
+  m_sprRend: {fileID: 0}
 --- !u!50 &720910628
 Rigidbody2D:
   serializedVersion: 4
@@ -3616,6 +3676,7 @@ Transform:
   m_Children:
   - {fileID: 1758054873}
   - {fileID: 1354228410}
+  - {fileID: 571607889}
   m_Father: {fileID: 656012953}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6137,6 +6198,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_bridgeGO: {fileID: 3392996753918847589, guid: 8c4eb3023722e2341a8ba63fd235f0bd,
     type: 3}
+  sprite: {fileID: 0}
+  spriteT: {fileID: 0}
+  spriteL: {fileID: 0}
+  spriteR: {fileID: 0}
+  spriteTR: {fileID: 0}
+  spriteTL: {fileID: 0}
+  spriteTRL: {fileID: 0}
+  spriteRL: {fileID: 0}
+  spriteB: {fileID: 0}
+  spriteBR: {fileID: 0}
+  spriteBL: {fileID: 0}
+  spriteBRL: {fileID: 0}
+  spriteTB: {fileID: 0}
+  spriteTBL: {fileID: 0}
+  spriteTBRL: {fileID: 0}
+  spriteTBR: {fileID: 0}
+  m_sprRend: {fileID: 0}
 --- !u!50 &1273022849
 Rigidbody2D:
   serializedVersion: 4
@@ -6759,7 +6837,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1354228410
 Transform:
   m_ObjectHideFlags: 0
@@ -6833,9 +6911,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa0740d66de7b3c4e8d2fcf41681753f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  move_Dist: 1
-  conveyorDirection: 0
+  p_Anim: {fileID: 0}
+  stillMoving: 1
+  inverted: 0
   m_speed: 0
+  moveDist: 1
+  moveDistLeft: 1
+  midpoint: {x: 0, y: 0, z: 0}
 --- !u!212 &1354228414
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7061,6 +7143,75 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1412417457
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 787256989}
+    m_Modifications:
+    - target: {fileID: 5630359315414020189, guid: b9065a07027974d81965d8a50b5128e3,
+        type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6426931050532469745, guid: b9065a07027974d81965d8a50b5128e3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6426931050532469745, guid: b9065a07027974d81965d8a50b5128e3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6426931050532469745, guid: b9065a07027974d81965d8a50b5128e3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6426931050532469745, guid: b9065a07027974d81965d8a50b5128e3,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6426931050532469745, guid: b9065a07027974d81965d8a50b5128e3,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6426931050532469745, guid: b9065a07027974d81965d8a50b5128e3,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6426931050532469745, guid: b9065a07027974d81965d8a50b5128e3,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6426931050532469745, guid: b9065a07027974d81965d8a50b5128e3,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6426931050532469745, guid: b9065a07027974d81965d8a50b5128e3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6426931050532469745, guid: b9065a07027974d81965d8a50b5128e3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6426931050532469745, guid: b9065a07027974d81965d8a50b5128e3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b9065a07027974d81965d8a50b5128e3, type: 3}
 --- !u!1 &1418248693
 GameObject:
   m_ObjectHideFlags: 0
@@ -8404,9 +8555,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa0740d66de7b3c4e8d2fcf41681753f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  move_Dist: 1
-  conveyorDirection: 0
+  p_Anim: {fileID: 0}
+  stillMoving: 1
+  inverted: 0
   m_speed: 0
+  moveDist: 1
+  moveDistLeft: 1
+  midpoint: {x: 0, y: 0, z: 0}
 --- !u!212 &1758054877
 SpriteRenderer:
   m_ObjectHideFlags: 0

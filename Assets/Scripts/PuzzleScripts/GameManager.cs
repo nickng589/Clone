@@ -157,24 +157,32 @@ public class GameManager : MonoBehaviour
         {
             int dX = 0;
             int dY = 0;
-            if(Input.GetKey(KeyCode.W))
+            bool anim_left = false;
+            bool anim_right = false;
+            bool anim_up = false;
+            bool anim_down = false;
+            if (Input.GetKey(KeyCode.W))
             {
                 dY = 1;
+                anim_up = true;
                 playersCanMove = false;
             }
             else if (Input.GetKey(KeyCode.A))
             {
                 dX = -1;
+                anim_left = true;
                 playersCanMove = false;
             }
             else if (Input.GetKey(KeyCode.S))
             {
                 dY = -1;
+                anim_down = true;
                 playersCanMove = false;
             }
             else if (Input.GetKey(KeyCode.D))
             {
                 dX = 1;
+                anim_right = true;
                 playersCanMove = false;
             }
             else if (Input.GetKey(KeyCode.E))
@@ -558,8 +566,10 @@ public class GameManager : MonoBehaviour
                             if(worldMatrix[x,y].tag=="Player")
                             {
                                 Vector3 finalPos = new Vector3(x + offsetX, y + offsetY);
-                                worldMatrix[x, y].GetComponent<PlayerController>().MoveTo(worldMatrix[x, y].transform.position, finalPos);
-                                worldMatrix[x, y].GetComponent<PlayerController>().stillMoving = true;
+                                PlayerController pc = worldMatrix[x, y].GetComponent<PlayerController>();
+                                pc.AnimatePlayer(anim_up, anim_down, anim_left, anim_right);
+                                pc.MoveTo(worldMatrix[x, y].transform.position, finalPos);
+                                pc.stillMoving = true;
                             }
                             else if (worldMatrix[x, y].tag == "Box")
                             {
