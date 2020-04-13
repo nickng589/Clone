@@ -111,7 +111,13 @@ public class GameManager : MonoBehaviour
         foreach (object o in obj)
         {
             GameObject g = (GameObject)o;
-            if(g.layer ==LayerMask.NameToLayer("Player") || g.layer == LayerMask.NameToLayer("Box") || g.layer == LayerMask.NameToLayer("Wall") || g.layer == LayerMask.NameToLayer("Door"))
+            if(g.layer ==LayerMask.NameToLayer("Player") || g.layer == LayerMask.NameToLayer("Box") || g.layer == LayerMask.NameToLayer("Wall"))
+            {
+                int gX = (int)Math.Round(g.transform.position.x) - offsetX;
+                int gY = (int)Math.Round(g.transform.position.y) - offsetY;
+                worldMatrix[gX, gY] = g;
+            }
+            else if(g.tag =="Door" && !g.GetComponent<DoorController>().open)
             {
                 int gX = (int)Math.Round(g.transform.position.x) - offsetX;
                 int gY = (int)Math.Round(g.transform.position.y) - offsetY;
@@ -325,46 +331,47 @@ public class GameManager : MonoBehaviour
                 //movingConveyors = false;
                 //Calculate Conveyor movements
                 #region Conveyor Movement
-                for (int x = 0; x < dimX; x++)
+                prevLocations = new GameObject[worldMatrix.GetLength(0), worldMatrix.GetLength(1)];
+                while (!arraysEqual(prevLocations, worldMatrix))
                 {
-                    for (int y = 0; y < dimY; y++)
+                    Array.Copy(worldMatrix, 0, prevLocations, 0, worldMatrix.Length);
+                    for (int x = 0; x < dimX; x++)
                     {
-                        if (worldMatrix[x, y] != null)
+                        for (int y = 0; y < dimY; y++)
                         {
-                            if (worldMatrix[x, y].tag == "Player" && worldMatrix[x, y].GetComponent<PlayerController>().stillMoving)
+                            if (worldMatrix[x, y] != null)
                             {
-                                GameObject player = worldMatrix[x, y];
-                                int convDir = 0;//0=none, 1=up, 2=right, 3=down, 4=left
-                                if (conveyorMatrix[x, y] != null)
+                                if (worldMatrix[x, y].tag == "Player" && worldMatrix[x, y].GetComponent<PlayerController>().stillMoving)
                                 {
-                                    convDir = conveyorMatrix[x, y].GetComponent<ConveyorBeltController>().direction;
-                                }
-                                if (convDir == 1)
-                                {
-                                    dX = 0;
-                                    dY = 1;
-                                }
-                                else if (convDir == 2)
-                                {
-                                    dX = 1;
-                                    dY = 0;
-                                }
-                                else if (convDir == 3)
-                                {
-                                    dX = 0;
-                                    dY = -1;
-                                }
-                                else if (convDir == 4)
-                                {
-                                    dX = -1;
-                                    dY = 0;
-                                }
-                                if (convDir != 0)
-                                {
-                                    prevLocations = new GameObject[worldMatrix.GetLength(0), worldMatrix.GetLength(1)];
-                                    while (!arraysEqual(prevLocations, worldMatrix))
+                                    GameObject player = worldMatrix[x, y];
+                                    int convDir = 0;//0=none, 1=up, 2=right, 3=down, 4=left
+                                    if (conveyorMatrix[x, y] != null)
                                     {
-                                        Array.Copy(worldMatrix, 0, prevLocations, 0, worldMatrix.Length);
+                                        convDir = conveyorMatrix[x, y].GetComponent<ConveyorBeltController>().direction;
+                                    }
+                                    if (convDir == 1)
+                                    {
+                                        dX = 0;
+                                        dY = 1;
+                                    }
+                                    else if (convDir == 2)
+                                    {
+                                        dX = 1;
+                                        dY = 0;
+                                    }
+                                    else if (convDir == 3)
+                                    {
+                                        dX = 0;
+                                        dY = -1;
+                                    }
+                                    else if (convDir == 4)
+                                    {
+                                        dX = -1;
+                                        dY = 0;
+                                    }
+                                    if (convDir != 0)
+                                    {
+
                                         if (worldMatrix[x + dX, y + dY] == null)//there is no object in front of player, they can move and be donw
                                         {
                                             worldMatrix[x, y].GetComponent<PlayerController>().stillMoving = false;
@@ -381,7 +388,7 @@ public class GameManager : MonoBehaviour
                                             {
                                                 worldMatrix[x, y].GetComponent<PlayerController>().stillMoving = false;
                                             }
-                                            else
+                                            /*else
                                             {
                                                 int dist = 2;
                                                 while ((x + dX * dist) >= 0 && (x + dX * dist) < dimX && (y + dY * dist) >= 0 && (y + dY * dist) < dimY)//should always end through break, but this is here just in case
@@ -431,45 +438,42 @@ public class GameManager : MonoBehaviour
                                                     }
                                                     dist += 1;
                                                 }
-                                            }
+                                            }*/
                                         }
                                     }
+                                    
                                 }
-                            }
-                            else if (worldMatrix[x, y].tag == "Box" && worldMatrix[x, y].GetComponent<BoxController>().stillMoving)
-                            {
-                                GameObject box = worldMatrix[x, y];
-                                int convDir = 0;//0=none, 1=up, 2=right, 3=down, 4=left
-                                if (conveyorMatrix[x, y] != null)
+                                else if (worldMatrix[x, y].tag == "Box" && worldMatrix[x, y].GetComponent<BoxController>().stillMoving)
                                 {
-                                    convDir = conveyorMatrix[x, y].GetComponent<ConveyorBeltController>().direction;
-                                }
-                                if (convDir == 1)
-                                {
-                                    dX = 0;
-                                    dY = 1;
-                                }
-                                else if (convDir == 2)
-                                {
-                                    dX = 1;
-                                    dY = 0;
-                                }
-                                else if (convDir == 3)
-                                {
-                                    dX = 0;
-                                    dY = -1;
-                                }
-                                else if (convDir == 4)
-                                {
-                                    dX = -1;
-                                    dY = 0;
-                                }
-                                if (convDir != 0)
-                                {
-                                    prevLocations = new GameObject[worldMatrix.GetLength(0), worldMatrix.GetLength(1)];
-                                    while (!arraysEqual(prevLocations, worldMatrix))
+                                    GameObject box = worldMatrix[x, y];
+                                    int convDir = 0;//0=none, 1=up, 2=right, 3=down, 4=left
+                                    if (conveyorMatrix[x, y] != null)
                                     {
-                                        Array.Copy(worldMatrix, 0, prevLocations, 0, worldMatrix.Length);
+                                        convDir = conveyorMatrix[x, y].GetComponent<ConveyorBeltController>().direction;
+                                    }
+                                    if (convDir == 1)
+                                    {
+                                        dX = 0;
+                                        dY = 1;
+                                    }
+                                    else if (convDir == 2)
+                                    {
+                                        dX = 1;
+                                        dY = 0;
+                                    }
+                                    else if (convDir == 3)
+                                    {
+                                        dX = 0;
+                                        dY = -1;
+                                    }
+                                    else if (convDir == 4)
+                                    {
+                                        dX = -1;
+                                        dY = 0;
+                                    }
+                                    if (convDir != 0)
+                                    {
+                                       
                                         if (worldMatrix[x + dX, y + dY] == null)//there is no object in front of player, they can move and be donw
                                         {
                                             worldMatrix[x, y].GetComponent<BoxController>().stillMoving = false;
@@ -486,7 +490,7 @@ public class GameManager : MonoBehaviour
                                             {
                                                 box.GetComponent<BoxController>().stillMoving = false;
                                             }
-                                            else
+                                            /*else
                                             {
                                                 int dist = 2;
                                                 while ((x + dX * dist) >= 0 && (x + dX * dist) < dimX && (y + dY * dist) >= 0 && (y + dY * dist) < dimY)//should always end through break, but this is here just in case
@@ -536,17 +540,227 @@ public class GameManager : MonoBehaviour
                                                     }
                                                     dist += 1;
                                                 }
-                                            }
+                                            }*/
                                         }
                                     }
+                                    
                                 }
                             }
                         }
                     }
                 }
+
                 #endregion
 
+                //Calculate conveyor Pushes
+                #region Conveyor Pushes
+                prevLocations = new GameObject[worldMatrix.GetLength(0), worldMatrix.GetLength(1)];
+                while (!arraysEqual(prevLocations, worldMatrix))
+                {
+                    Array.Copy(worldMatrix, 0, prevLocations, 0, worldMatrix.Length);
+                    for (int x = 0; x < dimX; x++)
+                    {
+                        for (int y = 0; y < dimY; y++)
+                        {
+                            if (worldMatrix[x, y] != null)
+                            {
+                                if (worldMatrix[x, y].tag == "Player" && worldMatrix[x, y].GetComponent<PlayerController>().stillMoving)
+                                {
+                                    GameObject player = worldMatrix[x, y];
+                                    int convDir = 0;//0=none, 1=up, 2=right, 3=down, 4=left
+                                    if (conveyorMatrix[x, y] != null)
+                                    {
+                                        convDir = conveyorMatrix[x, y].GetComponent<ConveyorBeltController>().direction;
+                                    }
+                                    if (convDir == 1)
+                                    {
+                                        dX = 0;
+                                        dY = 1;
+                                    }
+                                    else if (convDir == 2)
+                                    {
+                                        dX = 1;
+                                        dY = 0;
+                                    }
+                                    else if (convDir == 3)
+                                    {
+                                        dX = 0;
+                                        dY = -1;
+                                    }
+                                    else if (convDir == 4)
+                                    {
+                                        dX = -1;
+                                        dY = 0;
+                                    }
+                                    if (convDir != 0)
+                                    {
 
+                                        if (worldMatrix[x + dX, y + dY] == null)//there is no object in front of player, they can move and be donw
+                                        {
+                                            worldMatrix[x, y].GetComponent<PlayerController>().stillMoving = false;
+                                            worldMatrix[x + dX, y + dY] = worldMatrix[x, y];
+                                            worldMatrix[x, y] = null;
+                                        }
+                                        else if (worldMatrix[x + dX, y + dY].tag == "Wall")//there is a wall in front of player, they can't move and they are done
+                                        {
+                                            worldMatrix[x, y].GetComponent<PlayerController>().stillMoving = false;
+                                        }
+                                        else if (worldMatrix[x + dX, y + dY].tag == "Box")//there is a box that must be pushed, tell the box to push and remember that the player isnt done moving
+                                        {
+                                            int dist = 2;
+                                            while ((x + dX * dist) >= 0 && (x + dX * dist) < dimX && (y + dY * dist) >= 0 && (y + dY * dist) < dimY)//should always end through break, but this is here just in case
+                                            {
+                                                if (worldMatrix[x + dX * dist, y + dY * dist] == null)
+                                                {
+                                                    for (int i = dist - 1; i >= 0; i--)
+                                                    {
+                                                        if (worldMatrix[x + dX * i, y + dY * i] == null)
+                                                        {
+                                                            print("error, somehow reaching null");
+                                                        }
+                                                        else if (worldMatrix[x + dX * i, y + dY * i].tag == "Box")
+                                                        {
+                                                            worldMatrix[x + dX * i, y + dY * i].GetComponent<BoxController>().stillMoving = false;
+                                                            worldMatrix[x + dX * (i + 1), y + dY * (i + 1)] = worldMatrix[x + dX * i, y + dY * i];
+                                                            worldMatrix[x + dX * i, y + dY * i] = null;
+
+                                                        }
+                                                        else if (worldMatrix[x + dX * i, y + dY * i].tag == "Player")
+                                                        {
+                                                            worldMatrix[x + dX * i, y + dY * i].GetComponent<PlayerController>().stillMoving = false;
+                                                            worldMatrix[x + dX * (i + 1), y + dY * (i + 1)] = worldMatrix[x + dX * i, y + dY * i];
+                                                            worldMatrix[x + dX * i, y + dY * i] = null;
+                                                        }
+                                                    }
+                                                    break;
+                                                }
+                                                else if (worldMatrix[x + dX * dist, y + dY * dist].tag == "Wall") //|| (worldMatrix[x + dX * dist, y + dY * dist].tag == "Box" && !worldMatrix[x + dX * dist, y + dY * dist].GetComponent<PlayerController> ().stillMoving))
+                                                {
+                                                    for (int i = dist - 1; i >= 0; i--)
+                                                    {
+                                                        if (worldMatrix[x + dX * i, y + dY * i] == null)
+                                                        {
+                                                            print("error, somehow reaching null");
+                                                        }
+                                                        else if (worldMatrix[x + dX * i, y + dY * i].tag == "Box")
+                                                        {
+                                                            worldMatrix[x + dX * i, y + dY * i].GetComponent<BoxController>().stillMoving = false;
+                                                        }
+                                                        else if (worldMatrix[x + dX * i, y + dY * i].tag == "Player")
+                                                        {
+                                                            worldMatrix[x + dX * i, y + dY * i].GetComponent<PlayerController>().stillMoving = false;
+                                                        }
+                                                    }
+                                                    break;
+                                                }
+                                                dist += 1;
+                                            }
+                                        }
+                                    }
+
+                                }
+                                else if (worldMatrix[x, y].tag == "Box" && worldMatrix[x, y].GetComponent<BoxController>().stillMoving)
+                                {
+                                    GameObject box = worldMatrix[x, y];
+                                    int convDir = 0;//0=none, 1=up, 2=right, 3=down, 4=left
+                                    if (conveyorMatrix[x, y] != null)
+                                    {
+                                        convDir = conveyorMatrix[x, y].GetComponent<ConveyorBeltController>().direction;
+                                    }
+                                    if (convDir == 1)
+                                    {
+                                        dX = 0;
+                                        dY = 1;
+                                    }
+                                    else if (convDir == 2)
+                                    {
+                                        dX = 1;
+                                        dY = 0;
+                                    }
+                                    else if (convDir == 3)
+                                    {
+                                        dX = 0;
+                                        dY = -1;
+                                    }
+                                    else if (convDir == 4)
+                                    {
+                                        dX = -1;
+                                        dY = 0;
+                                    }
+                                    if (convDir != 0)
+                                    {
+
+                                        if (worldMatrix[x + dX, y + dY] == null)//there is no object in front of player, they can move and be donw
+                                        {
+                                            worldMatrix[x, y].GetComponent<BoxController>().stillMoving = false;
+                                            worldMatrix[x + dX, y + dY] = worldMatrix[x, y];
+                                            worldMatrix[x, y] = null;
+                                        }
+                                        else if (worldMatrix[x + dX, y + dY].tag == "Wall")//there is a wall in front of player, they can't move and they are done
+                                        {
+                                            box.GetComponent<BoxController>().stillMoving = false;
+                                        }
+                                        else if (worldMatrix[x + dX, y + dY].tag == "Box")//there is a box that must be pushed, tell the box to push and remember that the player isnt done moving
+                                        {
+                                            int dist = 2;
+                                            while ((x + dX * dist) >= 0 && (x + dX * dist) < dimX && (y + dY * dist) >= 0 && (y + dY * dist) < dimY)//should always end through break, but this is here just in case
+                                            {
+                                                if (worldMatrix[x + dX * dist, y + dY * dist] == null)
+                                                {
+                                                    for (int i = dist - 1; i >= 0; i--)
+                                                    {
+                                                        if (worldMatrix[x + dX * i, y + dY * i] == null)
+                                                        {
+                                                            print("error, somehow reaching null");
+                                                        }
+                                                        else if (worldMatrix[x + dX * i, y + dY * i].tag == "Box")
+                                                        {
+                                                            worldMatrix[x + dX * i, y + dY * i].GetComponent<BoxController>().stillMoving = false;
+                                                            worldMatrix[x + dX * (i + 1), y + dY * (i + 1)] = worldMatrix[x + dX * i, y + dY * i];
+                                                            worldMatrix[x + dX * i, y + dY * i] = null;
+
+                                                        }
+                                                        else if (worldMatrix[x + dX * i, y + dY * i].tag == "Player")
+                                                        {
+                                                            worldMatrix[x + dX * i, y + dY * i].GetComponent<PlayerController>().stillMoving = false;
+                                                            worldMatrix[x + dX * (i + 1), y + dY * (i + 1)] = worldMatrix[x + dX * i, y + dY * i];
+                                                            worldMatrix[x + dX * i, y + dY * i] = null;
+                                                        }
+                                                    }
+                                                    break;
+                                                }
+                                                else if (worldMatrix[x + dX * dist, y + dY * dist].tag == "Wall") //|| (worldMatrix[x + dX * dist, y + dY * dist].tag == "Box" && !worldMatrix[x + dX * dist, y + dY * dist].GetComponent<PlayerController> ().stillMoving))
+                                                {
+                                                    for (int i = dist - 1; i >= 0; i--)
+                                                    {
+                                                        if (worldMatrix[x + dX * i, y + dY * i] == null)
+                                                        {
+                                                            print("error, somehow reaching null");
+                                                        }
+                                                        else if (worldMatrix[x + dX * i, y + dY * i].tag == "Box")
+                                                        {
+                                                            worldMatrix[x + dX * i, y + dY * i].GetComponent<BoxController>().stillMoving = false;
+                                                        }
+                                                        else if (worldMatrix[x + dX * i, y + dY * i].tag == "Player")
+                                                        {
+                                                            worldMatrix[x + dX * i, y + dY * i].GetComponent<PlayerController>().stillMoving = false;
+                                                        }
+                                                    }
+                                                    break;
+                                                }
+                                                dist += 1;
+                                            }
+                                        }
+                                        
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+                }
+
+                #endregion
 
                 //Tell of the objects to move to their new spots
                 for (int x = 0; x < dimX; x++)

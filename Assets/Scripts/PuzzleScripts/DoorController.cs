@@ -14,7 +14,7 @@ public class DoorController : MonoBehaviour
 
     [SerializeField]
     [Tooltip("Whether or not the door starts open")]
-    bool m_startOpen;
+    public bool m_startOpen;
 
     [SerializeField]
     [Tooltip("Animator")]
@@ -26,12 +26,13 @@ public class DoorController : MonoBehaviour
     void Start()
     {
         p_GM = GameObject.Find("GameManager").GetComponent<GameManager>();
+        p_GM.addToMatrix(gameObject);
         if (m_Animator == null) {
             open = m_startOpen;
             DoorUpdate();
         }
         else if (m_startOpen) {
-            open = m_startOpen;
+            open = m_startOpen; 
             DoorUpdate();
             m_Animator.SetTrigger("Open");
         }
@@ -50,7 +51,6 @@ public class DoorController : MonoBehaviour
                 m_Animator.ResetTrigger("Close");
                 m_Animator.SetTrigger("Open");
             }
-            p_GM.addToMatrix(gameObject);
             p_GM.removeFromMatrix(gameObject);
         }
         else
