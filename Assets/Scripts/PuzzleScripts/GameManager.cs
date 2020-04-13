@@ -882,6 +882,7 @@ public class GameManager : MonoBehaviour
                 }
                 if (worldMatrix[gX, gY].tag == "Box")
                 {
+                    DecreaseNumMoving();
                     Destroy(worldMatrix[gX, gY]);
                 }
             }
