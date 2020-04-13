@@ -5,6 +5,8 @@ public class PlayerController : MonoBehaviour
 {
     #region Private Variables
     private GameManager p_GM;
+    [SerializeField]
+    private Animator p_Anim;
     #endregion
     #region Public Variables
     public bool stillMoving = true;
@@ -21,12 +23,25 @@ public class PlayerController : MonoBehaviour
         stillMoving = true;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void AnimatePlayer(bool up, bool down, bool left, bool right)
     {
-
-
+        if (p_Anim == null) { return; }
+        p_Anim.SetTrigger("Walk");
+        p_Anim.SetBool("WalkUp", up);
+        p_Anim.SetBool("WalkDown", down);
+        p_Anim.SetBool("WalkLeft", left);
+        p_Anim.SetBool("WalkRight", right);
     }
+
+    public void FinishAnimatePlayer()
+    {
+        if (p_Anim == null) { return; }
+        p_Anim.SetBool("WalkUp", false);
+        p_Anim.SetBool("WalkDown", false);
+        p_Anim.SetBool("WalkLeft", false);
+        p_Anim.SetBool("WalkRight", false);
+    }
+
 
     public void MoveTo(Vector3 initialPos, Vector3 finalPos)
     {
@@ -59,6 +74,7 @@ public class PlayerController : MonoBehaviour
         }
         gameObject.transform.position = finalPos;
         p_GM.DecreaseNumMoving();
+        FinishAnimatePlayer();
         //p_GM.readyToMoveConveyors();
     }
 

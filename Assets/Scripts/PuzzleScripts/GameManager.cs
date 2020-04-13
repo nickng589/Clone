@@ -68,12 +68,12 @@ public class GameManager : MonoBehaviour
         players = GameObject.FindGameObjectsWithTag("Player");
         m_MoveSpeedSlider.onValueChanged.AddListener(delegate { SliderValueChanged(m_MoveSpeedSlider); });
         m_speed = m_defaultSpeed;
-        
 
-        float minX = 100;//the X coordinate of the furthest left object
-        float minY = 100;//the Y coordinate of the furthest down object
-        float maxX = -100;//the X coordinate of the furthest right object
-        float maxY = -100;//the Y coordinate of the furthest up object
+        float minX = float.MaxValue;//the X coordinate of the furthest left object
+        float minY = float.MaxValue;//the Y coordinate of the furthest down object
+        float maxX = float.MinValue;//the X coordinate of the furthest right object
+        float maxY = float.MinValue;//the Y coordinate of the furthest up object
+
 
         object[] obj = GameObject.FindObjectsOfType(typeof(GameObject));
         foreach (object o in obj)
@@ -163,24 +163,32 @@ public class GameManager : MonoBehaviour
         {
             int dX = 0;
             int dY = 0;
-            if(Input.GetKey(KeyCode.W))
+            bool anim_left = false;
+            bool anim_right = false;
+            bool anim_up = false;
+            bool anim_down = false;
+            if (Input.GetKey(KeyCode.W))
             {
                 dY = 1;
+                anim_up = true;
                 playersCanMove = false;
             }
             else if (Input.GetKey(KeyCode.A))
             {
                 dX = -1;
+                anim_left = true;
                 playersCanMove = false;
             }
             else if (Input.GetKey(KeyCode.S))
             {
                 dY = -1;
+                anim_down = true;
                 playersCanMove = false;
             }
             else if (Input.GetKey(KeyCode.D))
             {
                 dX = 1;
+                anim_right = true;
                 playersCanMove = false;
             }
             else if (Input.GetKey(KeyCode.E))
@@ -772,8 +780,10 @@ public class GameManager : MonoBehaviour
                             if(worldMatrix[x,y].tag=="Player")
                             {
                                 Vector3 finalPos = new Vector3(x + offsetX, y + offsetY);
-                                worldMatrix[x, y].GetComponent<PlayerController>().MoveTo(worldMatrix[x, y].transform.position, finalPos);
-                                worldMatrix[x, y].GetComponent<PlayerController>().stillMoving = true;
+                                PlayerController pc = worldMatrix[x, y].GetComponent<PlayerController>();
+                                pc.AnimatePlayer(anim_up, anim_down, anim_left, anim_right);
+                                pc.MoveTo(worldMatrix[x, y].transform.position, finalPos);
+                                pc.stillMoving = true;
                             }
                             else if (worldMatrix[x, y].tag == "Box")
                             {
