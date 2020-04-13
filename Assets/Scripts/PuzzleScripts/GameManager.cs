@@ -68,12 +68,12 @@ public class GameManager : MonoBehaviour
         players = GameObject.FindGameObjectsWithTag("Player");
         m_MoveSpeedSlider.onValueChanged.AddListener(delegate { SliderValueChanged(m_MoveSpeedSlider); });
         m_speed = m_defaultSpeed;
-        
 
-        float minX = 100;//the X coordinate of the furthest left object
-        float minY = 100;//the Y coordinate of the furthest down object
-        float maxX = -100;//the X coordinate of the furthest right object
-        float maxY = -100;//the Y coordinate of the furthest up object
+        float minX = float.MaxValue;//the X coordinate of the furthest left object
+        float minY = float.MaxValue;//the Y coordinate of the furthest down object
+        float maxX = float.MinValue;//the X coordinate of the furthest right object
+        float maxY = float.MinValue;//the Y coordinate of the furthest up object
+
 
         object[] obj = GameObject.FindObjectsOfType(typeof(GameObject));
         foreach (object o in obj)
