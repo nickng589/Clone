@@ -31,6 +31,10 @@ public class NPCBehavior : MonoBehaviour
     {
         canMove = true;
         walkTimer = 1;
+        if (!PlayerPrefs.HasKey("morality"))
+        {
+            PlayerPrefs.SetInt("morality", 0);
+        }
     }
 
     void OnTriggerStay2D(Collider2D other)
@@ -199,6 +203,7 @@ public class NPCBehavior : MonoBehaviour
         }
         dm.DisableTextBox();
         player.canMove = true;
+        GetComponentInParent<NPCMovement>().canMove = true;
         yield return null;
     }
 }
