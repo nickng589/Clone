@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System;
+using System.IO;
 
 public class GameManager : MonoBehaviour
 {
@@ -21,12 +22,12 @@ public class GameManager : MonoBehaviour
     private string m_VictoryMessage;
 
     [SerializeField]
-    [Tooltip("The slider to adjust move speed")]
-    private Slider m_MoveSpeedSlider;
-
-    [SerializeField]
     [Tooltip("The speed of player")]
     private float m_defaultSpeed;
+
+    [SerializeField]
+    [Tooltip("The Scene to go to after the level")]
+    private Scene m_nextScene;
 
 
     #endregion
@@ -46,7 +47,7 @@ public class GameManager : MonoBehaviour
     private int dimX;
     private int dimY;
     private GameObject[,] prevLocations;
-    private bool movingConveyors = false;
+
     private float slowAnimSpeed=0.1f;
     private float fastAnimSpeed=1;
     #endregion
@@ -66,14 +67,12 @@ public class GameManager : MonoBehaviour
         m_VictoryText.text = "";
         boxes = GameObject.FindGameObjectsWithTag("Box");
         players = GameObject.FindGameObjectsWithTag("Player");
-        m_MoveSpeedSlider.onValueChanged.AddListener(delegate { SliderValueChanged(m_MoveSpeedSlider); });
         m_speed = m_defaultSpeed;
 
         float minX = float.MaxValue;//the X coordinate of the furthest left object
         float minY = float.MaxValue;//the Y coordinate of the furthest down object
         float maxX = float.MinValue;//the X coordinate of the furthest right object
         float maxY = float.MinValue;//the Y coordinate of the furthest up object
-
 
         object[] obj = GameObject.FindObjectsOfType(typeof(GameObject));
         foreach (object o in obj)
@@ -838,9 +837,8 @@ public class GameManager : MonoBehaviour
         return true;
     }
 
-    void SliderValueChanged(Slider changed)
+    public void UpdateMoveSpeed(float newMoveSpeed)
     {
-        float newMoveSpeed = m_defaultSpeed + (7 - changed.value) * 0.05f;
         m_speed = newMoveSpeed;
         for (int x = 0; x < dimX; x++)
         {
@@ -961,7 +959,7 @@ public class GameManager : MonoBehaviour
     {
         m_VictoryText.text = m_VictoryMessage;
         playersCanMove = false;
-        StartCoroutine(freezeCoroutine(3));    
+        StartCoroutine(freezeCoroutine(1.5f));    
     }
 
     IEnumerator WaitCoroutine()
@@ -974,8 +972,36 @@ public class GameManager : MonoBehaviour
     IEnumerator freezeCoroutine(float seconds)
     {
         yield return new WaitForSeconds(seconds);
-        SceneManager.LoadScene("HubWorld");
+        if (!PlayerPrefs.HasKey("MoveSpeed"))
+        {
+            PlayerPrefs.SetFloat("MoveSpeed", m_defaultSpeed);
+        }
+        PlayerPrefs.SetInt("CurrentLevel", PlayerPrefs.GetInt("CurrentLevel") + 1);
+        readTextFile();
     }
+
+    void readTextFile()
+    {
+        string file_path = "Assets/LevelOrder.txt";
+        StreamReader inp_stm = new StreamReader(file_path);
+        bool next = false;
+        while (!inp_stm.EndOfStream)
+        {
+            string inp_ln = inp_stm.ReadLine();
+            if (next)
+            {
+                SceneManager.LoadScene(inp_ln);
+                next = false;
+            }
+            if (inp_ln == SceneManager.GetActiveScene().name)
+            {
+                next = true;
+            }     
+        }
+
+        inp_stm.Close();
+    }
+
     IEnumerator waitOneUpdateCoroutine() // wait one update to change the players can move value (without this, only the first player can move)
     {
         int i = 0;
