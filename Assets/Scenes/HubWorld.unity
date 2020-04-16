@@ -11001,6 +11001,7 @@ MonoBehaviour:
   walking: 0
   walkTimer: 0
   ydir: 0
+  ydist: 0
 --- !u!1 &288371785
 GameObject:
   m_ObjectHideFlags: 0
@@ -33281,7 +33282,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 927391096}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 26b6a5fb0ca80164cb12320b36722911, type: 3}
   m_Name: 
@@ -33290,6 +33291,7 @@ MonoBehaviour:
   walking: 0
   walkTimer: 0
   ydir: 0
+<<<<<<< HEAD
 --- !u!1 &927524227
 GameObject:
   m_ObjectHideFlags: 0
@@ -33326,6 +33328,9 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+=======
+  ydist: 0
+>>>>>>> 20ecbe012e69e6a7ae21e86fd451784ebb4120d1
 --- !u!1 &928430968
 GameObject:
   m_ObjectHideFlags: 0
@@ -40757,6 +40762,11 @@ PrefabInstance:
       propertyPath: m_SleepingMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -591144201883787164, guid: b9065a07027974d81965d8a50b5128e3,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5630359315414020189, guid: b9065a07027974d81965d8a50b5128e3,
         type: 3}
       propertyPath: m_Name
@@ -45700,6 +45710,7 @@ MonoBehaviour:
   walking: 0
   walkTimer: 0
   ydir: 0
+  ydist: 0
 --- !u!1 &1279704425
 GameObject:
   m_ObjectHideFlags: 0
@@ -53568,6 +53579,7 @@ MonoBehaviour:
   walking: 0
   walkTimer: 0
   ydir: 0
+  ydist: 0
 --- !u!1 &1484137648
 GameObject:
   m_ObjectHideFlags: 0
@@ -67670,6 +67682,10 @@ PrefabInstance:
       propertyPath: m_GravityScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 832782614, guid: a3d330f25fe34c048bb1383dd3730c7c, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5023649119384983902, guid: a3d330f25fe34c048bb1383dd3730c7c,
         type: 3}
       propertyPath: m_Name
@@ -74041,6 +74057,7 @@ MonoBehaviour:
   walking: 0
   walkTimer: 0
   ydir: 0
+  ydist: 0
 --- !u!1 &2055535224
 GameObject:
   m_ObjectHideFlags: 0
@@ -78098,6 +78115,10 @@ PrefabInstance:
     - target: {fileID: 832782614, guid: a3d330f25fe34c048bb1383dd3730c7c, type: 3}
       propertyPath: m_GravityScale
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 832782614, guid: a3d330f25fe34c048bb1383dd3730c7c, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5023649119384983902, guid: a3d330f25fe34c048bb1383dd3730c7c,
         type: 3}
