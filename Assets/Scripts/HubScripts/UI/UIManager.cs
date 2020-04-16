@@ -47,10 +47,9 @@ public class UIManager : MonoBehaviour
         {
             PlayerPrefs.SetFloat("MoveSpeed", m_defaultSpeed);
         }
-        else
-        {
-            m_MoveSpeedSlider.value = 7 - (PlayerPrefs.GetFloat("MoveSpeed") - m_defaultSpeed) / 0.0f;
-        }
+
+        m_MoveSpeedSlider.value = 7 - (PlayerPrefs.GetFloat("MoveSpeed") - m_defaultSpeed) / 0.0f;
+        
         if (m_resetButton != null)
         {
             m_resetButton.onClick.AddListener(delegate { ResetButtonPressed(); });

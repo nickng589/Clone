@@ -33291,7 +33291,6 @@ MonoBehaviour:
   walking: 0
   walkTimer: 0
   ydir: 0
-<<<<<<< HEAD
 --- !u!1 &927524227
 GameObject:
   m_ObjectHideFlags: 0
@@ -33328,9 +33327,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
-=======
-  ydist: 0
->>>>>>> 20ecbe012e69e6a7ae21e86fd451784ebb4120d1
 --- !u!1 &928430968
 GameObject:
   m_ObjectHideFlags: 0

@@ -67,7 +67,15 @@ public class GameManager : MonoBehaviour
         m_VictoryText.text = "";
         boxes = GameObject.FindGameObjectsWithTag("Box");
         players = GameObject.FindGameObjectsWithTag("Player");
-        m_speed = m_defaultSpeed;
+        if(PlayerPrefs.HasKey("MoveSpeed"))
+        {
+            m_speed = PlayerPrefs.GetFloat("MoveSpeed");
+        }
+        else
+        {
+            m_speed = m_defaultSpeed;
+        }
+       
 
         float minX = float.MaxValue;//the X coordinate of the furthest left object
         float minY = float.MaxValue;//the Y coordinate of the furthest down object
@@ -144,11 +152,11 @@ public class GameManager : MonoBehaviour
                 {
                     if (worldMatrix[x, y].tag == "Player")
                     {
-                        worldMatrix[x, y].GetComponent<PlayerController>().m_speed = m_defaultSpeed;
+                        worldMatrix[x, y].GetComponent<PlayerController>().m_speed = m_speed;
                     }
                     else if (worldMatrix[x, y].tag == "Box")
                     {
-                        worldMatrix[x, y].GetComponent<BoxController>().m_speed = m_defaultSpeed;
+                        worldMatrix[x, y].GetComponent<BoxController>().m_speed = m_speed;
                     }
                 }
             }
