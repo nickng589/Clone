@@ -10741,7 +10741,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &342914290
 GameObject:
@@ -39722,6 +39722,7 @@ MonoBehaviour:
   m_MoveSpeedText: {fileID: 2123702581}
   m_ControlsText: {fileID: 447291484}
   m_exitButton: {fileID: 861446948}
+  m_resetButton: {fileID: 0}
   m_menuBackgroundSprite: {fileID: 1380538255}
   m_defaultSpeed: 0.2
   m_GameManager: {fileID: 2008230510}
@@ -51031,75 +51032,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &1750273601
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8643019491139427190, guid: a476a9b55dd56eb49896fb612bcec28b,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8643019491139427190, guid: a476a9b55dd56eb49896fb612bcec28b,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8643019491139427190, guid: a476a9b55dd56eb49896fb612bcec28b,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8643019491139427190, guid: a476a9b55dd56eb49896fb612bcec28b,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8643019491139427190, guid: a476a9b55dd56eb49896fb612bcec28b,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8643019491139427190, guid: a476a9b55dd56eb49896fb612bcec28b,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8643019491139427190, guid: a476a9b55dd56eb49896fb612bcec28b,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8643019491139427190, guid: a476a9b55dd56eb49896fb612bcec28b,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8643019491139427190, guid: a476a9b55dd56eb49896fb612bcec28b,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8643019491139427190, guid: a476a9b55dd56eb49896fb612bcec28b,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8643019491139427190, guid: a476a9b55dd56eb49896fb612bcec28b,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8643019491139427195, guid: a476a9b55dd56eb49896fb612bcec28b,
-        type: 3}
-      propertyPath: m_Name
-      value: SpeedPowerUp
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a476a9b55dd56eb49896fb612bcec28b, type: 3}
 --- !u!1 &1750425834
 GameObject:
   m_ObjectHideFlags: 0
@@ -59192,6 +59124,8 @@ MonoBehaviour:
   m_VictoryText: {fileID: 192285402}
   m_VictoryMessage: You Did It!
   m_defaultSpeed: 0.2
+  m_nextScene:
+    m_Handle: 0
   playersCanMove: 1
   moveDist: 1
 --- !u!4 &2008230512
