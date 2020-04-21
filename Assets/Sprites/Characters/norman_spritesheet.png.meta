@@ -1,0 +1,379 @@
+fileFormatVersion: 2
+guid: 67291b3ac78ed40f5b814e16da5cd639
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7900733565318157989
+    second: norman_head
+  - first:
+      213: -7194664135744005238
+    second: norman_neck
+  - first:
+      213: 5307271601607654288
+    second: norman_hand
+  - first:
+      213: -4118219651207336062
+    second: norman_torso
+  - first:
+      213: 7922571481833056455
+    second: norman_pelvis
+  - first:
+      213: 7441157343084868713
+    second: norman_lowerarm
+  - first:
+      213: 2962539333213848921
+    second: norman_calf
+  - first:
+      213: -4701267049751735245
+    second: norman_thigh
+  - first:
+      213: 1083012689422489488
+    second: norman_foot
+  - first:
+      213: 5742818970948083617
+    second: norman_upperarm
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: norman_head
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 99
+        width: 19
+        height: 22
+      alignment: 9
+      pivot: {x: 0.43762186, y: 0.20909153}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61a0b655554cc46c68104f3952c9ba06
+      internalID: 7900733565318157989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: norman_neck
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 98
+        width: 11
+        height: 18
+      alignment: 9
+      pivot: {x: 0.50000036, y: 0.30246988}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a9f8d7315bb240a5b89d5252edca327
+      internalID: -7194664135744005238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: norman_hand
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 99
+        width: 7
+        height: 15
+      alignment: 9
+      pivot: {x: 0.46613857, y: 0.83185273}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f7b8010739424669a716a67185236ac
+      internalID: 5307271601607654288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: norman_torso
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 24
+        height: 54
+      alignment: 9
+      pivot: {x: 0.6086423, y: 0.35075462}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a907e1fbe75045b79f3a6d9134868ac
+      internalID: -4118219651207336062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: norman_pelvis
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 73
+        width: 22
+        height: 19
+      alignment: 9
+      pivot: {x: 0.5000002, y: 0.86179394}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c67c655ff678745eeb5b35188909b2a2
+      internalID: 7922571481833056455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: norman_lowerarm
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 43
+        width: 18
+        height: 25
+      alignment: 9
+      pivot: {x: 0.2234568, y: 0.8602966}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e273b92e55781416e984cadb9ece27f9
+      internalID: 7441157343084868713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: norman_calf
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 42
+        width: 13
+        height: 28
+      alignment: 9
+      pivot: {x: 0.51823395, y: 0.8894185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4f05e4fb2a52470699f4e9e08b623ee
+      internalID: 2962539333213848921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: norman_thigh
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 41
+        width: 18
+        height: 26
+      alignment: 9
+      pivot: {x: 0.5000004, y: 0.80085504}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0b43e69fd4884b84b90eacb0c2edb0d
+      internalID: -4701267049751735245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: norman_foot
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 41
+        width: 20
+        height: 10
+      alignment: 9
+      pivot: {x: 0.1420269, y: 0.68911743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3840b4105a7d44b778bea142c22442ce
+      internalID: 1083012689422489488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: norman_upperarm
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 72
+        width: 15
+        height: 23
+      alignment: 9
+      pivot: {x: 0.67382723, y: 0.8504032}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad77160299dda44918045d924abad38d
+      internalID: 5742818970948083617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

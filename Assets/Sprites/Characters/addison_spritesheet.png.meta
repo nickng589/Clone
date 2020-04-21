@@ -1,0 +1,403 @@
+fileFormatVersion: 2
+guid: 2b3ef2d69098f48d399e2d30fa75befe
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6060288355685198263
+    second: addison_head
+  - first:
+      213: 5843970286353863349
+    second: addison_neck
+  - first:
+      213: 2513652384623208016
+    second: addison_hand
+  - first:
+      213: 3774994577230906487
+    second: addison_pelvis
+  - first:
+      213: -845814339644405821
+    second: addison_spritesheet_4
+  - first:
+      213: -1019192941911030641
+    second: addison_upperarm
+  - first:
+      213: -7674264592378774054
+    second: addison_thigh
+  - first:
+      213: 8595769709825593904
+    second: addison_calf
+  - first:
+      213: -2913953616992759241
+    second: addison_torso
+  - first:
+      213: 4635939683991338447
+    second: addison_lowerarm
+  - first:
+      213: 4479856659973910585
+    second: addison_foot
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: addison_head
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 93
+        width: 24
+        height: 29
+      alignment: 9
+      pivot: {x: 0.4209877, y: 0.19757396}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f3a3cb05309e4157a55f4a9a0cbba04
+      internalID: -6060288355685198263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: addison_neck
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 95
+        width: 10
+        height: 18
+      alignment: 9
+      pivot: {x: 0.45259324, y: 0.3288074}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62632692eacf046dfb7a664ac4220dc2
+      internalID: 5843970286353863349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: addison_hand
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 97
+        width: 7
+        height: 14
+      alignment: 9
+      pivot: {x: 0.43227604, y: 0.8216945}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d6461b62afff4a4fba01673a667ef63
+      internalID: 2513652384623208016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: addison_pelvis
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 89
+        width: 24
+        height: 24
+      alignment: 9
+      pivot: {x: 0.5000003, y: 0.8555562}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 576a315c4c7fe4e5fb0bd1d7cd9fb355
+      internalID: 3774994577230906487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: addison_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 63
+        width: 4
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddd0c01f3683149ffb414262c9274c29
+      internalID: -845814339644405821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: addison_upperarm
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 66
+        width: 11
+        height: 21
+      alignment: 9
+      pivot: {x: 0.69393957, y: 0.83862484}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 828e8aae81da3425d8510c82acfe6e30
+      internalID: -1019192941911030641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: addison_thigh
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 56
+        width: 17
+        height: 26
+      alignment: 9
+      pivot: {x: 0.47211343, y: 0.8555559}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4514d7f276b044f7a3887e6b5d8d9e5
+      internalID: -7674264592378774054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: addison_calf
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 51
+        width: 13
+        height: 28
+      alignment: 9
+      pivot: {x: 0.4817669, y: 0.8724872}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d8499f916c2e4f4f9328036bcd97f09
+      internalID: 8595769709825593904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: addison_torso
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 47
+        width: 19
+        height: 31
+      alignment: 9
+      pivot: {x: 0.45009813, y: 0.04886529}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aaf6b84d71544f4abbd2e1b72b461ca
+      internalID: -2913953616992759241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: addison_lowerarm
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 36
+        width: 15
+        height: 20
+      alignment: 9
+      pivot: {x: 0.21555558, y: 0.8437042}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12a3362cf3b4646fb935fcac15325841
+      internalID: 4635939683991338447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: addison_foot
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 39
+        width: 20
+        height: 9
+      alignment: 9
+      pivot: {x: 0.12074089, y: 0.7633756}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25ff6daf9b8f348c0ad59af7a8fa90a2
+      internalID: 4479856659973910585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,379 @@
+fileFormatVersion: 2
+guid: f95ca4133178f433dafff3f0ad982c62
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3107750889956166266
+    second: timothy_head
+  - first:
+      213: -9205904175534470361
+    second: timothy_neck
+  - first:
+      213: -5479239944464963995
+    second: timothy_hand
+  - first:
+      213: 7038867227745249354
+    second: timothy_torso
+  - first:
+      213: 4162756664725383571
+    second: timothy_pelvis
+  - first:
+      213: -7452265361074120491
+    second: timothy_calf
+  - first:
+      213: -2952859285513166077
+    second: timothy_lowerarm
+  - first:
+      213: 2307178221622163454
+    second: timothy_thigh
+  - first:
+      213: 1467539140137540540
+    second: timothy_foot
+  - first:
+      213: 9088497502464153940
+    second: timothy_upperarm
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: timothy_head
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 98
+        width: 18
+        height: 21
+      alignment: 9
+      pivot: {x: 0.393539, y: 0.25361925}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ba66e2d7f42a4f8f8823fa0983facd4
+      internalID: -3107750889956166266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: timothy_neck
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 99
+        width: 9
+        height: 18
+      alignment: 9
+      pivot: {x: 0.39353943, y: 0.35095468}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25692ae19e10b4c60ad3f9d8a4c4586c
+      internalID: -9205904175534470361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: timothy_hand
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 101
+        width: 7
+        height: 12
+      alignment: 9
+      pivot: {x: 0.1988678, y: 0.86728925}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8c80ca536ff0443f86730e606d31eb4
+      internalID: -5479239944464963995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: timothy_torso
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 72
+        width: 24
+        height: 43
+      alignment: 9
+      pivot: {x: 0.4520928, y: 0.09000237}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8bb987334393494abf607790c8f79f1
+      internalID: 7038867227745249354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: timothy_pelvis
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 70
+        width: 22
+        height: 20
+      alignment: 9
+      pivot: {x: 0.49999982, y: 0.8736771}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc4dae9def2874c7bb1045d4fb3c4046
+      internalID: 4162756664725383571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: timothy_calf
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 37
+        width: 13
+        height: 28
+      alignment: 9
+      pivot: {x: 0.58844405, y: 0.8832587}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9cf2a616e4764de789d80d8d1cf2c1c
+      internalID: -7452265361074120491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: timothy_lowerarm
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 42
+        width: 15
+        height: 21
+      alignment: 9
+      pivot: {x: 0.21894354, y: 0.8376325}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaf99a12eebe84a03a5ad67a88c11a50
+      internalID: -2952859285513166077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: timothy_thigh
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 39
+        width: 14
+        height: 24
+      alignment: 9
+      pivot: {x: 0.44524902, y: 0.8273668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb89df86ccf6046a1a216b3c130fef91
+      internalID: 2307178221622163454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: timothy_foot
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 20
+        width: 17
+        height: 14
+      alignment: 9
+      pivot: {x: 0.2970985, y: 0.5410634}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66143a58747f447069e00b25c4cce246
+      internalID: 1467539140137540540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: timothy_upperarm
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 72
+        width: 13
+        height: 20
+      alignment: 9
+      pivot: {x: 0.6768887, y: 0.8640957}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b8c877d25ef84b22bb9b233214b7fb4
+      internalID: 9088497502464153940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,379 @@
+fileFormatVersion: 2
+guid: 928efc8adbb15428a9c7a9db7dc221e8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2430983661832803988
+    second: leon_head
+  - first:
+      213: 1510930893737380169
+    second: leon_neck
+  - first:
+      213: -2313916260285970111
+    second: leon_hand
+  - first:
+      213: 8315968816841061829
+    second: leon_torso
+  - first:
+      213: 3213940203792678891
+    second: leon_upperarm
+  - first:
+      213: 5706025438336039155
+    second: leon_pelvis
+  - first:
+      213: 4745342229037040059
+    second: leon_calf
+  - first:
+      213: -7266215439378324958
+    second: leon_lowerarm
+  - first:
+      213: -3861957666222355446
+    second: leon_foot
+  - first:
+      213: 5876467010955210926
+    second: leon_thigh
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: leon_head
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 98
+        width: 22
+        height: 26
+      alignment: 9
+      pivot: {x: 0.47845122, y: 0.15356182}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cac6524bdf0c4afcaf383c67e10aec9
+      internalID: 2430983661832803988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leon_neck
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 100
+        width: 10
+        height: 17
+      alignment: 9
+      pivot: {x: 0.50000036, y: 0.23507735}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dfb1278de5d746b19e2a0abb7854d51
+      internalID: 1510930893737380169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leon_hand
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 100
+        width: 7
+        height: 13
+      alignment: 9
+      pivot: {x: 0.3984135, y: 0.8282066}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34c0f1709e760417e83d8ed37f291288
+      internalID: -2313916260285970111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leon_torso
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 77
+        width: 25
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5379263, y: 0.09365118}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 071244e9d74dc434195f63151a8efd2e
+      internalID: 8315968816841061829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leon_upperarm
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 59
+        width: 15
+        height: 23
+      alignment: 9
+      pivot: {x: 0.62641984, y: 0.8297912}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aa8d041954804c5da291e31db91b35a
+      internalID: 3213940203792678891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leon_pelvis
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 67
+        width: 24
+        height: 19
+      alignment: 9
+      pivot: {x: 0.5000003, y: 0.836843}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b14c675d40a6549898532302a82e483a
+      internalID: 5706025438336039155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leon_calf
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 17
+        width: 13
+        height: 28
+      alignment: 9
+      pivot: {x: 0.5000001, y: 0.8640214}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15d31822299654e9a8c24bbe755292b7
+      internalID: 4745342229037040059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leon_lowerarm
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 27
+        width: 19
+        height: 27
+      alignment: 9
+      pivot: {x: 0.2504877, y: 0.85994554}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e7f2e821017b4d4a8bd7f42302a7941
+      internalID: -7266215439378324958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leon_foot
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 52
+        width: 19
+        height: 9
+      alignment: 9
+      pivot: {x: 0.15068296, y: 0.6316884}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 777f62918e4f04f9ab9ec3a85118782a
+      internalID: -3861957666222355446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leon_thigh
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 17
+        width: 18
+        height: 26
+      alignment: 9
+      pivot: {x: 0.5, y: 0.90576655}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 546b4d6a827de4e88825752f6c3c262c
+      internalID: 5876467010955210926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
