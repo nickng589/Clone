@@ -1,0 +1,379 @@
+fileFormatVersion: 2
+guid: 49dbafbe96cbc436aadff06d6b8abf13
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 49662404740374422
+    second: hazel_spritesheet_back_head
+  - first:
+      213: -442481248748321314
+    second: hazel_spritesheet_back_neck
+  - first:
+      213: -7382987234939352080
+    second: hazel_spritesheet_back_hand
+  - first:
+      213: -8264662192641636979
+    second: hazel_spritesheet_back_torso
+  - first:
+      213: 1381917886640630963
+    second: hazel_spritesheet_back_4
+  - first:
+      213: 4828909279395285593
+    second: hazel_spritesheet_back_pelvis
+  - first:
+      213: -4807165926376960508
+    second: hazel_spritesheet_back_calf
+  - first:
+      213: -4483811758448042882
+    second: hazel_spritesheet_back_7
+  - first:
+      213: 954904256113666016
+    second: hazel_spritesheet_back_thigh
+  - first:
+      213: 3104511144598711587
+    second: hazel_spritesheet_back_foot
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: hazel_spritesheet_back_head
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 93
+        width: 24
+        height: 28
+      alignment: 9
+      pivot: {x: 0.50423294, y: 0.14444542}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4dd1a26123a4490fa0cd106d12b94cf
+      internalID: 49662404740374422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hazel_spritesheet_back_neck
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 96
+        width: 11
+        height: 18
+      alignment: 9
+      pivot: {x: 0.47845146, y: 0.17078273}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe021a3bdc0c4477183a97a755305239
+      internalID: -442481248748321314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hazel_spritesheet_back_hand
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 97
+        width: 7
+        height: 15
+      alignment: 9
+      pivot: {x: 0.364551, y: 0.7686432}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a41878664599441fdb8138fab92750ee
+      internalID: -7382987234939352080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hazel_spritesheet_back_torso
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 71
+        width: 32
+        height: 50
+      alignment: 9
+      pivot: {x: 0.50000024, y: 0.30088913}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ded59164a431b46d798050db9f050f2e
+      internalID: -8264662192641636979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hazel_spritesheet_back_4
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 65
+        width: 15
+        height: 22
+      alignment: 9
+      pivot: {x: 0.18395068, y: 0.8232328}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3c1659d626ee4fd7aa8cedd2651443e
+      internalID: 1381917886640630963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hazel_spritesheet_back_pelvis
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 62
+        width: 29
+        height: 20
+      alignment: 9
+      pivot: {x: 0.48365283, y: 0.89111173}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd627dc0d3d1b40bc8cf874740e92138
+      internalID: 4828909279395285593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hazel_spritesheet_back_calf
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 34
+        width: 12
+        height: 29
+      alignment: 9
+      pivot: {x: 0.50000066, y: 0.8432954}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb62b2f6951d94f95b9241505fe9afee
+      internalID: -4807165926376960508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hazel_spritesheet_back_7
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 33
+        width: 15
+        height: 25
+      alignment: 9
+      pivot: {x: 0.16814817, y: 0.8508153}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fd446d4aad154c9987bb1ae2d83b665
+      internalID: -4483811758448042882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hazel_spritesheet_back_thigh
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 33
+        width: 18
+        height: 23
+      alignment: 9
+      pivot: {x: 0.4736629, y: 0.77826124}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c89eff9566c934613903aaf1d4c19d4c
+      internalID: 954904256113666016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hazel_spritesheet_back_foot
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 7
+        width: 19
+        height: 17
+      alignment: 9
+      pivot: {x: 0.26296294, y: 0.8625276}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd89ecd466f564534ada872d69a9a883
+      internalID: 3104511144598711587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

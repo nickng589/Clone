@@ -1,0 +1,379 @@
+fileFormatVersion: 2
+guid: 96dab08f9e8294c9ea7b6aa0eed7e0ec
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6417129160065436322
+    second: hazel_head
+  - first:
+      213: -4213113043099469507
+    second: hazel_neck
+  - first:
+      213: -4583259186148437969
+    second: hazel_hand
+  - first:
+      213: -7873693587946149146
+    second: hazel_torso
+  - first:
+      213: -159337864573476804
+    second: hazel_upperarm
+  - first:
+      213: -864776159078758670
+    second: hazel_pelvis
+  - first:
+      213: -2877869049288706355
+    second: hazel_calf
+  - first:
+      213: 4223598789143082304
+    second: hazel_lowerarm
+  - first:
+      213: 3704676522257728085
+    second: hazel_thigh
+  - first:
+      213: 620151574936664761
+    second: hazel_foot
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: hazel_head
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 93
+        width: 22
+        height: 27
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15761425}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c06cc48e66e444b469c41b78e6e85cd6
+      internalID: 6417129160065436322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hazel_neck
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 96
+        width: 11
+        height: 18
+      alignment: 9
+      pivot: {x: 0.50000036, y: 0.14444521}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a5269359964a457e9a9aa816ce48ba8
+      internalID: -4213113043099469507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hazel_hand
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 97
+        width: 7
+        height: 15
+      alignment: 9
+      pivot: {x: 0.33068848, y: 0.84765524}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e39f2b6737d1d4b1bb0c244fcea6a040
+      internalID: -4583259186148437969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hazel_torso
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 71
+        width: 32
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5164614, y: 0.27718568}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0091329818aa4f44912f1fd11106497
+      internalID: -7873693587946149146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hazel_upperarm
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 65
+        width: 15
+        height: 22
+      alignment: 9
+      pivot: {x: 0.1997532, y: 0.8124584}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2efb49a8d20d4c968237ba2351719fa
+      internalID: -159337864573476804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hazel_pelvis
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 62
+        width: 29
+        height: 20
+      alignment: 9
+      pivot: {x: 0.5000001, y: 0.808149}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d570eb2d403214e299941faaa00ee3b1
+      internalID: -864776159078758670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hazel_calf
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 34
+        width: 12
+        height: 36
+      alignment: 9
+      pivot: {x: 0.50000066, y: 0.69753116}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a5af733e2f564e25821756f12ca2ca2
+      internalID: -2877869049288706355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hazel_lowerarm
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 33
+        width: 15
+        height: 25
+      alignment: 9
+      pivot: {x: 0.21555558, y: 0.84133375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9fb7d479cdc741c8b0adcb29c60aa7d
+      internalID: 4223598789143082304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hazel_thigh
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 33
+        width: 18
+        height: 24
+      alignment: 9
+      pivot: {x: 0.47366375, y: 0.7962971}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f92d48c0a8f9e48998685deca25e0ee6
+      internalID: 3704676522257728085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hazel_foot
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 7
+        width: 19
+        height: 17
+      alignment: 9
+      pivot: {x: 0.3128655, y: 0.834641}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a337499657c24c1cbe516a824f4f50e
+      internalID: 620151574936664761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
