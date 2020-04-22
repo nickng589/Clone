@@ -18,9 +18,11 @@ public class ButtonController : MonoBehaviour
     private Sprite m_spriteOff;
 
     private DoorController[] p_doorCons;
+    private GameManager p_GM;
     // Start is called before the first frame update
     void Start()
     {
+        p_GM = GameObject.Find("GameManager").GetComponent<GameManager>();
         p_doorCons = new DoorController[m_doors.Length];
         for(int i =0; i< m_doors.Length;i++)
         {
@@ -38,7 +40,8 @@ public class ButtonController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Box")
         {
-            foreach(DoorController doorCon in p_doorCons)
+            p_GM.playButtonDown();
+            foreach (DoorController doorCon in p_doorCons)
             {
                 doorCon.SwapOpenClose();
                 if (m_sprRend != null) {
@@ -51,6 +54,7 @@ public class ButtonController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Box")
         {
+            p_GM.playButtonUp();
             foreach (DoorController doorCon in p_doorCons)
             {
                 doorCon.SwapOpenClose();

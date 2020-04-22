@@ -29,7 +29,12 @@ public class GameManager : MonoBehaviour
     [Tooltip("The Scene to go to after the level")]
     private Scene m_nextScene;
 
+    [SerializeField]
+    [Tooltip("The text file for level order")]
+    public TextAsset textFile;
 
+
+    
     #endregion
 
     #region Private Variables
@@ -47,9 +52,21 @@ public class GameManager : MonoBehaviour
     private int dimX;
     private int dimY;
     private GameObject[,] prevLocations;
+    private string text;
+    private string[] lines;
 
     private float slowAnimSpeed=0.1f;
     private float fastAnimSpeed=1;
+    private bool lockGame = false;
+
+    private AudioSource source;
+    private AudioClip footStep1;
+    private AudioClip footStep2;
+    private AudioClip footStep3;
+    private AudioClip doorOpenClose;
+    private AudioClip boxBreak;
+    private AudioClip buttonDown;
+    private AudioClip buttonUp;
     #endregion
 
     #region Public Variables
@@ -58,8 +75,20 @@ public class GameManager : MonoBehaviour
     #endregion
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        AudioSource[] audioSources = GetComponents<AudioSource>();
+        source = audioSources[0];
+        footStep1 = audioSources[0].clip;
+        footStep2 = audioSources[1].clip;
+        footStep3 = audioSources[2].clip;
+        doorOpenClose = audioSources[3].clip;
+        boxBreak = audioSources[4].clip;
+        buttonDown = audioSources[5].clip;
+        buttonUp = audioSources[6].clip;
+
+        text = textFile.text;
+        lines = text.Split('\n');
         numInGoal = 0;
         numMovingPlayers = 0;
         moveDist = 1;
@@ -124,12 +153,12 @@ public class GameManager : MonoBehaviour
                 int gY = (int)Math.Round(g.transform.position.y) - offsetY;
                 worldMatrix[gX, gY] = g;
             }
-            else if(g.tag =="Door" && !g.GetComponent<DoorController>().open)
+            /*else if(g.tag =="Door" && !g.GetComponent<DoorController>().m_startOpen)
             {
                 int gX = (int)Math.Round(g.transform.position.x) - offsetX;
                 int gY = (int)Math.Round(g.transform.position.y) - offsetY;
                 worldMatrix[gX, gY] = g;
-            }
+            }*/
             else if(g.layer == LayerMask.NameToLayer("Conveyor"))
             {
                 int gX = (int)Math.Round(g.transform.position.x) - offsetX;
@@ -824,6 +853,7 @@ public class GameManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.H))
         {
+            PlayerPrefs.SetInt("CurrentLevel", PlayerPrefs.GetInt("CurrentLevel") - 1);
             SceneManager.LoadScene("HubWorld");
         }
 
@@ -873,7 +903,6 @@ public class GameManager : MonoBehaviour
         StartCoroutine(waitOneUpdateCoroutine());
     }
 
-
     public void addToMatrix(GameObject g)
     {
         int gX = (int)Math.Round(g.transform.position.x) - offsetX;
@@ -888,6 +917,7 @@ public class GameManager : MonoBehaviour
                 }
                 if (worldMatrix[gX, gY].tag == "Box")
                 {
+                    source.PlayOneShot(boxBreak);
                     DecreaseNumMoving();
                     Destroy(worldMatrix[gX, gY]);
                 }
@@ -914,10 +944,56 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    #region sounds
+    private bool doorCanPlay = true;
+    public void playDoorSound()
+    {
+        if(doorCanPlay)
+        {
+            source.PlayOneShot(doorOpenClose);
+            doorCanPlay = false;
+            StartCoroutine(waitDoorCoroutine());
+        }
+    }
+
+    IEnumerator waitDoorCoroutine()
+    {
+        yield return new WaitForSeconds(0.5f);
+        doorCanPlay = true;
+    }
+
+    public void playPlayerSound()
+    {
+        float rand = UnityEngine.Random.Range(0f, 3f);
+        if (rand < 1f)
+        {
+            source.PlayOneShot(footStep1);
+        }
+        else if (rand < 2f)
+        {
+            source.PlayOneShot(footStep2);
+        }
+        else
+        {
+            source.PlayOneShot(footStep3);
+        }
+    }
+
+    public void playButtonDown()
+    {
+        source.PlayOneShot(buttonDown);
+    }
+    public void playButtonUp()
+    {
+        source.PlayOneShot(buttonUp);
+    }
+    #endregion
+
+
     public void DecreaseNumMoving()
     {
         numMovingPlayers -= 1;
-        if(numMovingPlayers <= 0)
+        if(numMovingPlayers <= 0 && !lockGame)
         {
             numMovingPlayers = 0;
             playersCanMove = true;
@@ -967,6 +1043,7 @@ public class GameManager : MonoBehaviour
     {
         m_VictoryText.text = m_VictoryMessage;
         playersCanMove = false;
+        lockGame = true;
         StartCoroutine(freezeCoroutine(1.5f));    
     }
 
@@ -990,24 +1067,20 @@ public class GameManager : MonoBehaviour
 
     void readTextFile()
     {
-        string file_path = "Assets/LevelOrder.txt";
-        StreamReader inp_stm = new StreamReader(file_path);
         bool next = false;
-        while (!inp_stm.EndOfStream)
+        for (int i = 0; i < lines.Length; i++)
         {
-            string inp_ln = inp_stm.ReadLine();
+            string name = lines[i].Trim().Replace("\r","");
             if (next)
             {
-                SceneManager.LoadScene(inp_ln);
+                SceneManager.LoadScene(name);
                 next = false;
             }
-            if (inp_ln == SceneManager.GetActiveScene().name)
+            if (name == SceneManager.GetActiveScene().name)
             {
                 next = true;
-            }     
+            }
         }
-
-        inp_stm.Close();
     }
 
     IEnumerator waitOneUpdateCoroutine() // wait one update to change the players can move value (without this, only the first player can move)

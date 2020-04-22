@@ -15,10 +15,14 @@ public class HubPlayerController : MonoBehaviour
     float yAxis;
 
     public bool canMove;
-
+    private bool moving = false;
+    private AudioSource source;
+    private AudioClip walking;
     // Start is called before the first frame update
     void Start()
     {
+        source = GetComponent<AudioSource>();
+        walking = source.clip;
         canMove = true;
         playerRB = GetComponent<Rigidbody2D>();
     }
@@ -31,6 +35,22 @@ public class HubPlayerController : MonoBehaviour
             xAxis = Input.GetAxisRaw("Horizontal");
             yAxis = Input.GetAxisRaw("Vertical");
             Vector2 movementVector = new Vector2(xAxis, yAxis);
+            if(Mathf.Abs(xAxis) > 0.1f || Mathf.Abs(yAxis) > 0.1f)
+            {
+                if(!moving)
+                {
+                    source.Play();
+                    moving = true;
+                }
+            }
+            else
+            {
+                if(moving)
+                {
+                    source.Stop();
+                    moving = false;
+                }
+            }
             movementVector = movementVector * 4;
             playerRB.velocity = movementVector;
         } else
@@ -41,9 +61,9 @@ public class HubPlayerController : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D other)
     {
-        if (other.CompareTag("Finish") && Input.GetKeyDown("space") && canMove == true)
+        /*if (other.CompareTag("Finish") && Input.GetKeyDown("space") && canMove == true)
         {
             SceneManager.LoadScene("Level1");
-        }
+        }*/
     }
 }

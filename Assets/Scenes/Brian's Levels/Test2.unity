@@ -19465,6 +19465,7 @@ MonoBehaviour:
   m_MoveSpeedText: {fileID: 561694232}
   m_ControlsText: {fileID: 1801703737}
   m_exitButton: {fileID: 842846669}
+  m_resetButton: {fileID: 0}
   m_menuBackgroundSprite: {fileID: 343413916}
   m_defaultSpeed: 0.2
   m_GameManager: {fileID: 1874092533}
@@ -25004,6 +25005,9 @@ MonoBehaviour:
   m_VictoryText: {fileID: 849920519}
   m_VictoryMessage: You Did It!
   m_defaultSpeed: 0.2
+  m_nextScene:
+    m_Handle: 0
+  textFile: {fileID: 4900000, guid: 48e3321451e7a4049a31d0eef9a27fe1, type: 3}
   playersCanMove: 1
   moveDist: 1
 --- !u!4 &1874092535

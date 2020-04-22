@@ -51,6 +51,10 @@ public class PlayerController : MonoBehaviour
             midpoint = (((initialPos + finalPos) * 0.5f + midpoint) * 0.5f + midpoint) * 0.5f;
         }
         p_GM.IncreaseNumMoving();
+        if(initialPos!=midpoint || initialPos != finalPos)
+        {
+            p_GM.playPlayerSound();
+        }
         StartCoroutine(MoveToCoroutine(initialPos, finalPos));
     }
 

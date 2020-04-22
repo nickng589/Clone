@@ -6,6 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class LevelTransitions : MonoBehaviour
 {
+    [SerializeField]
+    [Tooltip("The text file for level order")]
+    public TextAsset textFile;
+
+
+    private string text;
+    private string[] lines;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +20,8 @@ public class LevelTransitions : MonoBehaviour
         {
             PlayerPrefs.SetInt("CurrentLevel", 0);
         }
+        text = textFile.text;
+        lines = text.Split('\n');
     }
 
     // Update is called once per frame
@@ -25,24 +34,19 @@ public class LevelTransitions : MonoBehaviour
     {
         readTextFile();
     }
+
     void readTextFile()
     {
-        string file_path = "Assets/LevelOrder.txt";
-        StreamReader inp_stm = new StreamReader(file_path);
-        int count = 0;
         int currLevel = PlayerPrefs.GetInt("CurrentLevel");
-        while (!inp_stm.EndOfStream)
+        for(int i = 0; i<lines.Length; i++)
         {
-            string inp_ln = inp_stm.ReadLine();
-            if (count == currLevel+1)
+            if(i == currLevel + 1)
             {
+                string name = lines[i].Trim().Replace("\r", "");
                 PlayerPrefs.SetInt("CurrentLevel", currLevel + 1);
-                SceneManager.LoadScene(inp_ln);
+                SceneManager.LoadScene(name);
                 return;
             }
-            count += 1;
         }
-
-        inp_stm.Close();
     }
 }

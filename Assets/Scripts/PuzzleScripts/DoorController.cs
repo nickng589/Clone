@@ -26,20 +26,45 @@ public class DoorController : MonoBehaviour
     void Start()
     {
         p_GM = GameObject.Find("GameManager").GetComponent<GameManager>();
-        p_GM.addToMatrix(gameObject);
         if (m_Animator == null) {
-            open = m_startOpen;
-            DoorUpdate();
+            if(m_startOpen)
+            {
+                open = m_startOpen;
+                gameObject.GetComponent<SpriteRenderer>().sprite = m_OpenSprite;
+            }
+            else
+            {
+                open = m_startOpen;
+                gameObject.GetComponent<SpriteRenderer>().sprite = m_ClosedSprite;
+                p_GM.addToMatrix(gameObject);
+            }
+            //DoorUpdate();
         }
-        else if (m_startOpen) {
-            open = m_startOpen; 
-            DoorUpdate();
-            m_Animator.SetTrigger("Open");
-        }
+        else
+        {
+            m_Animator.speed = 1000;
+            if (m_startOpen)
+            {
+                open = m_startOpen;
+                //DoorUpdate();
+                m_Animator.ResetTrigger("Close");
+                m_Animator.SetTrigger("Open");
+                
+            }
+            else
+            {
+                open = m_startOpen;
+                m_Animator.ResetTrigger("Open");
+                m_Animator.ResetTrigger("Close");
+                p_GM.addToMatrix(gameObject);
+            }
+            m_Animator.speed = 1;
+        }         
     }
 
     private void DoorUpdate()
     {
+        p_GM.playDoorSound();
         if(open)
         {
             if (m_Animator == null)

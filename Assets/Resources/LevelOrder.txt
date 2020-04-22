@@ -11,6 +11,7 @@ Level4
 Level5
 Level6
 HubWorld
+Adder
 Level3
 Level7
 Level8
