@@ -26,10 +26,6 @@ public class GameManager : MonoBehaviour
     private float m_defaultSpeed;
 
     [SerializeField]
-    [Tooltip("The Scene to go to after the level")]
-    private Scene m_nextScene;
-
-    [SerializeField]
     [Tooltip("The text file for level order")]
     public TextAsset textFile;
 
@@ -316,7 +312,7 @@ public class GameManager : MonoBehaviour
                                                 }
                                                 break;
                                             }
-                                            else if (worldMatrix[x + dX * dist, y + dY * dist].tag == "Wall") //|| (worldMatrix[x + dX * dist, y + dY * dist].tag == "Box" && !worldMatrix[x + dX * dist, y + dY * dist].GetComponent<PlayerController> ().stillMoving))
+                                            else if (worldMatrix[x + dX * dist, y + dY * dist].tag == "Wall" || worldMatrix[x + dX * dist, y + dY * dist].tag == "Door") //|| (worldMatrix[x + dX * dist, y + dY * dist].tag == "Box" && !worldMatrix[x + dX * dist, y + dY * dist].GetComponent<PlayerController> ().stillMoving))
                                             {
                                                 for (int i = dist - 1; i >= 0; i--)
                                                 {
