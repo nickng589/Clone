@@ -6,7 +6,9 @@ HubWorld
 FreezePU Intro Level
 InvertPU Intro Level
 SpeedPU Intro Level
+Level10
 HubWorld
+Level9
 Level4
 Level5
 Level6
@@ -16,4 +18,4 @@ Level3
 Level7
 Level8
 HubWorld
-Level10
+
