@@ -234,6 +234,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1259791961}
     m_Modifications:
+    - target: {fileID: 699744354116439000, guid: 24690d38d1fd84c8ab1cebd73f24f126,
+        type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 1508448595}
     - target: {fileID: 8949204562409571398, guid: 24690d38d1fd84c8ab1cebd73f24f126,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18442,6 +18447,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1259791961}
     m_Modifications:
+    - target: {fileID: 8949204561836378360, guid: 24690d38d1fd84c8ab1cebd73f24f126,
+        type: 3}
+      propertyPath: m_Text
+      value: 'D:'
+      objectReference: {fileID: 0}
     - target: {fileID: 8949204562409571398, guid: 24690d38d1fd84c8ab1cebd73f24f126,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -22300,6 +22310,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 243380405}
     m_Modifications:
+    - target: {fileID: 8949204561836378360, guid: 24690d38d1fd84c8ab1cebd73f24f126,
+        type: 3}
+      propertyPath: m_Text
+      value: 'S:'
+      objectReference: {fileID: 0}
     - target: {fileID: 8949204562409571398, guid: 24690d38d1fd84c8ab1cebd73f24f126,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -55958,6 +55973,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1508448595 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1880176141500422272, guid: 24690d38d1fd84c8ab1cebd73f24f126,
+    type: 3}
+  m_PrefabInstance: {fileID: 5968610}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1513450353
 GameObject:
   m_ObjectHideFlags: 0
@@ -78485,11 +78512,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.x
       value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 8949204562409571398, guid: 24690d38d1fd84c8ab1cebd73f24f126,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 42
       objectReference: {fileID: 0}
     - target: {fileID: 8949204562409571398, guid: 24690d38d1fd84c8ab1cebd73f24f126,
         type: 3}
