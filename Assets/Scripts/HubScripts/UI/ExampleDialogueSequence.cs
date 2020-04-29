@@ -18,7 +18,7 @@ public class ExampleDialogueSequence: MonoBehaviour
      */
     IEnumerator ExampleCoroutineWithoutComments()
     {
-        dm.DisplayText(SceneDialogue.test);
+        dm.DisplayText("Hello");
         yield return new WaitWhile(() => dm.GrabInput() != ChoiceSystem.Choices.Right);
 
         dm.DisplayText("Here is the second text, press D to continue and see choices");

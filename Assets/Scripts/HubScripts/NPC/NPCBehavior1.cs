@@ -55,7 +55,7 @@ public class NPCBehavior1 : MonoBehaviour
         switch (player_num) 
         {
             case 2:
-                dm.DisplayText(SceneDialogue.test);
+                dm.DisplayText(SceneDialogue.World1_opening);
                 yield return new WaitWhile(() => Input.anyKeyDown == false);
                 yield return new WaitWhile(() => !Input.GetKeyDown("space"));
 
