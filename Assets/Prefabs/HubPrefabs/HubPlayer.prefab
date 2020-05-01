@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5646839903227495444}
   - component: {fileID: 5646839903227495454}
   m_Layer: 8
-  m_Name: Player
+  m_Name: HubPlayer
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -295,8 +295,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1344566756, guid: 630669b04f5274d24bb03d1f9111a3cb, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 630669b04f5274d24bb03d1f9111a3cb, type: 3}
 --- !u!4 &4209487108130176513 stripped
 Transform:
