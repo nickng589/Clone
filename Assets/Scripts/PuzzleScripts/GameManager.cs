@@ -365,21 +365,6 @@ public class GameManager : MonoBehaviour
                                 worldMatrix[x, y].GetComponent<BoxController>().midpoint = midPos;
                                 worldMatrix[x, y].GetComponent<BoxController>().stillMoving = true;
                                 GameObject box = worldMatrix[x, y];
-
-
-                                if (telepMatrix[x, y] != null)
-                                {
-                                    int[] tpLoc = telepMatrix[x, y].GetComponent<TeleportController>().getTPLoc();
-                                    int tpX = tpLoc[0];
-                                    int tpY = tpLoc[1];
-                                    if (worldMatrix[x + tpX, y + tpY] == null)
-                                    {
-                                        worldMatrix[x + tpX, y + tpY] = worldMatrix[x, y];
-                                        worldMatrix[x, y] = null;
-                                        box.GetComponent<BoxController>().teleportFirst = true;
-
-                                    }
-                                }
                             }
                         }
                     }
@@ -848,8 +833,9 @@ public class GameManager : MonoBehaviour
                                         {
                                             worldMatrix[x + tpX, y + tpY] = worldMatrix[x, y];
                                             worldMatrix[x, y] = null;
-                                            box.GetComponent<BoxController>().teleportSecond = true;
-                                            finalPos = new Vector3(x + offsetX + tpX, y + offsetY + tpY);
+                                            
+                                            Vector3 tpPos = new Vector3(x + offsetX + tpX, y + offsetY + tpY);
+                                            box.GetComponent<BoxController>().TeleportTo(tpPos);
                                         }
                                     }
                                     box.GetComponent<BoxController>().MoveTo(box.transform.position, finalPos);
@@ -882,11 +868,11 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
-        if (Input.GetKeyDown(KeyCode.H))
+        /*if (Input.GetKeyDown(KeyCode.H))
         {
             PlayerPrefs.SetInt("CurrentLevel", PlayerPrefs.GetInt("CurrentLevel") - 1);
             SceneManager.LoadScene("HubWorld");
-        }
+        }*/
 
     }
     
