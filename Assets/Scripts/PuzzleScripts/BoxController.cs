@@ -8,6 +8,9 @@ public class BoxController : MonoBehaviour
     public bool stillMoving;
     public Vector3 midpoint;
     public bool teleported = false;
+    public bool teleportFirst = false;
+    public bool teleportSecond = false;
+    public bool moved = false;
 
     private GameManager p_GM;
     // Start is called before the first frame update
@@ -31,15 +34,63 @@ public class BoxController : MonoBehaviour
     public void MoveTo(Vector3 initialPos, Vector3 finalPos)
     {
         //gameObject.transform.position = finalPos;
-        if(!teleported)
+        moved = true;
+        p_GM.IncreaseNumMoving();
+        if (teleportFirst)
+        {
+            TeleportTo(midpoint);
+            StartCoroutine(TPAnimCoroutine());
+            StartCoroutine(HalfMoveCoroutine(midpoint, finalPos));
+        }
+        else if(teleportSecond)
+        {
+            StartCoroutine(HalfMoveCoroutine(initialPos, midpoint));
+            TeleportTo(finalPos);
+            StartCoroutine(TPAnimCoroutine());
+            
+        }
+        else
         {
             if (midpoint != initialPos && midpoint != finalPos)
             {
                 midpoint = (((initialPos + finalPos) * 0.5f + midpoint) * 0.5f + midpoint) * 0.5f;
-            }
-            p_GM.IncreaseNumMoving();
+            }       
             StartCoroutine(MoveToCoroutine(initialPos, finalPos));
         }
+        teleportFirst = false;
+        teleportSecond = false;
+    }
+    IEnumerator HalfMoveCoroutine(Vector3 initialPos, Vector3 finalPos)
+    {
+        float elapsedTime = 0.0f;
+        while(elapsedTime <m_speed)
+        {
+            gameObject.transform.position = Vector3.Lerp(initialPos, finalPos, (Mathf.Sin(Mathf.PI * (elapsedTime / m_speed) - Mathf.PI / 2) + 1) / 2);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        gameObject.transform.position = finalPos;
+        p_GM.DecreaseNumMoving();
+    }
+
+    IEnumerator TPAnimCoroutine()
+    {
+        float elapsedTime = 0.0f;
+        Vector3 originalSize = gameObject.transform.localScale;
+        while (elapsedTime < 0.1f)
+        {
+            if(elapsedTime < 0.05f)
+            {
+                gameObject.transform.localScale = Vector3.Lerp(originalSize,originalSize + new Vector3(0.2f, 0.2f, 0.2f), elapsedTime / m_speed);
+            }
+            else
+            {
+                gameObject.transform.localScale = Vector3.Lerp(originalSize + new Vector3(0.2f, 0.2f, 0.2f), originalSize , elapsedTime / m_speed);
+            }
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        gameObject.transform.localScale = originalSize;
     }
 
 

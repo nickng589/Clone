@@ -40,7 +40,17 @@ public class LevelTransitions : MonoBehaviour
         int currLevel = PlayerPrefs.GetInt("CurrentLevel");
         for(int i = 0; i<lines.Length; i++)
         {
-            if(i == currLevel + 1)
+            if (i == currLevel)
+            {
+                string name = lines[i].Trim().Replace("\r", "");
+                if(!name.Contains("Hub"))
+                {
+                    PlayerPrefs.SetInt("CurrentLevel", currLevel );
+                    SceneManager.LoadScene(name);
+                    return;
+                }
+            }
+            else if(i == currLevel + 1)
             {
                 string name = lines[i].Trim().Replace("\r", "");
                 PlayerPrefs.SetInt("CurrentLevel", currLevel + 1);

@@ -122,7 +122,7 @@ public class UIManager : MonoBehaviour
     void ResetButtonPressed()
     {
         PlayerPrefs.DeleteAll();
-        SceneManager.LoadScene("HubWorld");
+        SceneManager.LoadScene("IntroCutscene");
     }
 
     #endregion

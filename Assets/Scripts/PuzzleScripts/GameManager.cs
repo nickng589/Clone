@@ -364,6 +364,22 @@ public class GameManager : MonoBehaviour
                                 Vector3 midPos = new Vector3(x + offsetX, y + offsetY);
                                 worldMatrix[x, y].GetComponent<BoxController>().midpoint = midPos;
                                 worldMatrix[x, y].GetComponent<BoxController>().stillMoving = true;
+                                GameObject box = worldMatrix[x, y];
+
+
+                                if (telepMatrix[x, y] != null)
+                                {
+                                    int[] tpLoc = telepMatrix[x, y].GetComponent<TeleportController>().getTPLoc();
+                                    int tpX = tpLoc[0];
+                                    int tpY = tpLoc[1];
+                                    if (worldMatrix[x + tpX, y + tpY] == null)
+                                    {
+                                        worldMatrix[x + tpX, y + tpY] = worldMatrix[x, y];
+                                        worldMatrix[x, y] = null;
+                                        box.GetComponent<BoxController>().teleportFirst = true;
+
+                                    }
+                                }
                             }
                         }
                     }
@@ -820,7 +836,7 @@ public class GameManager : MonoBehaviour
                             else if (worldMatrix[x, y].tag == "Box")
                             {
                                 GameObject box = worldMatrix[x, y];
-                                if (!box.GetComponent<BoxController>().teleported)
+                                if (!box.GetComponent<BoxController>().moved)
                                 {
                                     Vector3 finalPos = new Vector3(x + offsetX, y + offsetY);
                                     if (telepMatrix[x, y] != null)
@@ -832,7 +848,7 @@ public class GameManager : MonoBehaviour
                                         {
                                             worldMatrix[x + tpX, y + tpY] = worldMatrix[x, y];
                                             worldMatrix[x, y] = null;
-                                            box.GetComponent<BoxController>().TeleportTo(new Vector3(x + offsetX + tpX, y + offsetY + tpY));
+                                            box.GetComponent<BoxController>().teleportSecond = true;
                                             finalPos = new Vector3(x + offsetX + tpX, y + offsetY + tpY);
                                         }
                                     }
@@ -852,7 +868,7 @@ public class GameManager : MonoBehaviour
                             if (worldMatrix[x, y].tag == "Box")
                             {
                                 GameObject box = worldMatrix[x, y];
-                                box.GetComponent<BoxController>().teleported = false;
+                                box.GetComponent<BoxController>().moved = false;
                             }
                         }
                     }
