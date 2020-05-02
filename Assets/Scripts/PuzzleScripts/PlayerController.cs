@@ -58,6 +58,25 @@ public class PlayerController : MonoBehaviour
         StartCoroutine(MoveToCoroutine(initialPos, finalPos));
     }
 
+    public void Die()
+    {
+        StartCoroutine(DeathCoroutine());
+    }
+
+    IEnumerator DeathCoroutine()
+    {
+        float animSpeed = 0.2f;
+        float elapsedTime = 0.0f;
+        Vector3 originalSize = gameObject.transform.localScale;
+        while (elapsedTime < animSpeed)
+        {
+            //gameObject.transform.localRotation = Quaternion.Lerp(new Quaternion(0, 0, 360f, 0), new Quaternion(0, 0, 0, 0), elapsedTime / m_speed);
+            gameObject.transform.localScale = Vector3.Lerp(originalSize,Vector3.zero, elapsedTime / animSpeed);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        p_GM.PlayerDeath();
+    }
 
     IEnumerator MoveToCoroutine(Vector3 initialPos, Vector3 finalPos)
     {

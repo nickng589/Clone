@@ -930,7 +930,9 @@ public class GameManager : MonoBehaviour
             {
                 if (worldMatrix[gX, gY].tag == "Player")
                 {
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                    playersCanMove = false;
+                    lockGame = true;
+                    worldMatrix[gX, gY].GetComponent<PlayerController>().Die();
                 }
                 if (worldMatrix[gX, gY].tag == "Box")
                 {
@@ -942,6 +944,26 @@ public class GameManager : MonoBehaviour
             worldMatrix[gX, gY] = g;
         }
         
+    }
+
+    public void PlayerDeath()
+    {
+        StartCoroutine(DeathCoroutine());
+    }
+
+    IEnumerator DeathCoroutine()    
+    {
+        float elapsedTime = 0.0f;
+        float animSpeed = 1.5f;
+        m_VictoryText.text = "You Died";
+        m_VictoryText.color = Color.clear;
+        while (elapsedTime <animSpeed)
+        {
+            m_VictoryText.color = Color.Lerp(Color.clear, new Color(0.8f,0.0f,0.0f), elapsedTime / animSpeed);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void removeFromMatrix(GameObject g)
