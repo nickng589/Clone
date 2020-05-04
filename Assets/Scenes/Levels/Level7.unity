@@ -4083,6 +4083,10 @@ MonoBehaviour:
   m_speed: 0.7
   stillMoving: 1
   midpoint: {x: 0, y: 0, z: 0}
+  teleported: 0
+  teleport: 0
+  tpLoc: {x: 0, y: 0, z: 0}
+  moved: 0
 --- !u!61 &106517581
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5467,6 +5471,10 @@ MonoBehaviour:
   m_speed: 0.7
   stillMoving: 1
   midpoint: {x: 0, y: 0, z: 0}
+  teleported: 0
+  teleport: 0
+  tpLoc: {x: 0, y: 0, z: 0}
+  moved: 0
 --- !u!61 &134497935
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18720,6 +18728,10 @@ MonoBehaviour:
   m_speed: 0.7
   stillMoving: 1
   midpoint: {x: 0, y: 0, z: 0}
+  teleported: 0
+  teleport: 0
+  tpLoc: {x: 0, y: 0, z: 0}
+  moved: 0
 --- !u!61 &531597823
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19137,6 +19149,10 @@ MonoBehaviour:
   m_speed: 0.7
   stillMoving: 1
   midpoint: {x: 0, y: 0, z: 0}
+  teleported: 0
+  teleport: 0
+  tpLoc: {x: 0, y: 0, z: 0}
+  moved: 0
 --- !u!61 &541852175
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24200,6 +24216,7 @@ MonoBehaviour:
   moveDist: 1
   moveDistLeft: 1
   midpoint: {x: 0, y: 0, z: 0}
+  multiplier: 0
 --- !u!212 &655183033
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -26488,6 +26505,10 @@ MonoBehaviour:
   m_speed: 0.7
   stillMoving: 1
   midpoint: {x: 0, y: 0, z: 0}
+  teleported: 0
+  teleport: 0
+  tpLoc: {x: 0, y: 0, z: 0}
+  moved: 0
 --- !u!61 &704905816
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30940,6 +30961,10 @@ MonoBehaviour:
   m_speed: 0.7
   stillMoving: 1
   midpoint: {x: 0, y: 0, z: 0}
+  teleported: 0
+  teleport: 0
+  tpLoc: {x: 0, y: 0, z: 0}
+  moved: 0
 --- !u!61 &820854818
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -33998,8 +34023,6 @@ MonoBehaviour:
   m_VictoryText: {fileID: 1670367207}
   m_VictoryMessage: You Did It!
   m_defaultSpeed: 0.2
-  m_nextScene:
-    m_Handle: 0
   textFile: {fileID: 4900000, guid: 48e3321451e7a4049a31d0eef9a27fe1, type: 3}
   playersCanMove: 1
   moveDist: 1
@@ -35051,6 +35074,10 @@ MonoBehaviour:
   m_speed: 0.7
   stillMoving: 1
   midpoint: {x: 0, y: 0, z: 0}
+  teleported: 0
+  teleport: 0
+  tpLoc: {x: 0, y: 0, z: 0}
+  moved: 0
 --- !u!61 &918355538
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -35281,6 +35308,10 @@ MonoBehaviour:
   m_speed: 0.7
   stillMoving: 1
   midpoint: {x: 0, y: 0, z: 0}
+  teleported: 0
+  teleport: 0
+  tpLoc: {x: 0, y: 0, z: 0}
+  moved: 0
 --- !u!61 &918932876
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -36504,6 +36535,10 @@ MonoBehaviour:
   m_speed: 0.7
   stillMoving: 1
   midpoint: {x: 0, y: 0, z: 0}
+  teleported: 0
+  teleport: 0
+  tpLoc: {x: 0, y: 0, z: 0}
+  moved: 0
 --- !u!61 &937080073
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39258,6 +39293,10 @@ MonoBehaviour:
   m_speed: 0.7
   stillMoving: 1
   midpoint: {x: 0, y: 0, z: 0}
+  teleported: 0
+  teleport: 0
+  tpLoc: {x: 0, y: 0, z: 0}
+  moved: 0
 --- !u!61 &1012834597
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -41207,7 +41246,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1070174117
 RectTransform:
   m_ObjectHideFlags: 0
@@ -43747,6 +43786,10 @@ MonoBehaviour:
   m_speed: 0.7
   stillMoving: 1
   midpoint: {x: 0, y: 0, z: 0}
+  teleported: 0
+  teleport: 0
+  tpLoc: {x: 0, y: 0, z: 0}
+  moved: 0
 --- !u!61 &1155830318
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -46672,6 +46715,10 @@ MonoBehaviour:
   m_speed: 0.7
   stillMoving: 1
   midpoint: {x: 0, y: 0, z: 0}
+  teleported: 0
+  teleport: 0
+  tpLoc: {x: 0, y: 0, z: 0}
+  moved: 0
 --- !u!61 &1215571858
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -53530,6 +53577,10 @@ MonoBehaviour:
   m_speed: 0.7
   stillMoving: 1
   midpoint: {x: 0, y: 0, z: 0}
+  teleported: 0
+  teleport: 0
+  tpLoc: {x: 0, y: 0, z: 0}
+  moved: 0
 --- !u!61 &1396260476
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -54031,6 +54082,10 @@ MonoBehaviour:
   m_speed: 0.7
   stillMoving: 1
   midpoint: {x: 0, y: 0, z: 0}
+  teleported: 0
+  teleport: 0
+  tpLoc: {x: 0, y: 0, z: 0}
+  moved: 0
 --- !u!61 &1407251573
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -55964,6 +56019,10 @@ MonoBehaviour:
   m_speed: 0.7
   stillMoving: 1
   midpoint: {x: 0, y: 0, z: 0}
+  teleported: 0
+  teleport: 0
+  tpLoc: {x: 0, y: 0, z: 0}
+  moved: 0
 --- !u!61 &1459976401
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -56391,6 +56450,10 @@ MonoBehaviour:
   m_speed: 0.7
   stillMoving: 1
   midpoint: {x: 0, y: 0, z: 0}
+  teleported: 0
+  teleport: 0
+  tpLoc: {x: 0, y: 0, z: 0}
+  moved: 0
 --- !u!61 &1471320946
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -61125,6 +61188,10 @@ MonoBehaviour:
   m_speed: 0.7
   stillMoving: 1
   midpoint: {x: 0, y: 0, z: 0}
+  teleported: 0
+  teleport: 0
+  tpLoc: {x: 0, y: 0, z: 0}
+  moved: 0
 --- !u!61 &1586586671
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -67815,6 +67882,10 @@ MonoBehaviour:
   m_speed: 0.7
   stillMoving: 1
   midpoint: {x: 0, y: 0, z: 0}
+  teleported: 0
+  teleport: 0
+  tpLoc: {x: 0, y: 0, z: 0}
+  moved: 0
 --- !u!61 &1705726122
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -68152,6 +68223,10 @@ MonoBehaviour:
   m_speed: 0.7
   stillMoving: 1
   midpoint: {x: 0, y: 0, z: 0}
+  teleported: 0
+  teleport: 0
+  tpLoc: {x: 0, y: 0, z: 0}
+  moved: 0
 --- !u!61 &1708526940
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -73287,6 +73362,7 @@ MonoBehaviour:
   moveDist: 1
   moveDistLeft: 1
   midpoint: {x: 0, y: 0, z: 0}
+  multiplier: 0
 --- !u!212 &1845753881
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -76152,9 +76228,9 @@ RectTransform:
   m_Father: {fileID: 16369903}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 371.45, y: -74.6}
   m_SizeDelta: {x: 742.9, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1935289595
@@ -82262,6 +82338,10 @@ MonoBehaviour:
   m_speed: 0.7
   stillMoving: 1
   midpoint: {x: 0, y: 0, z: 0}
+  teleported: 0
+  teleport: 0
+  tpLoc: {x: 0, y: 0, z: 0}
+  moved: 0
 --- !u!61 &2071153407
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -83775,6 +83855,10 @@ MonoBehaviour:
   m_speed: 0.7
   stillMoving: 1
   midpoint: {x: 0, y: 0, z: 0}
+  teleported: 0
+  teleport: 0
+  tpLoc: {x: 0, y: 0, z: 0}
+  moved: 0
 --- !u!61 &2112476576
 BoxCollider2D:
   m_ObjectHideFlags: 0
