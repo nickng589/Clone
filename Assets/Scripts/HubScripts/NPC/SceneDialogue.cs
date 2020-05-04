@@ -28,7 +28,7 @@ public class SceneDialogue : MonoBehaviour
 	public static string Leon_2_P_2_1 = "You seem pretty smart what’s going on around here.";
 	public static string Leon_2_P_2_0 = "Are you kidding me those puzzles were horrible!";
 
-	public static string Leon_2_C_2_2 = "I’m always doing great! I enjoy the puzzles!";
+	public static string Leon_2_C_2_2 = "I think the upcoming puzzles have something to do with binary.";
 	public static string Leon_2_C_2_1 = "Everyone here has been split! You probably saw a mirror on the way here, that thing is the culprit.  I’ve been searching on a way to recombine since I got here";
 	public static string Leon_2_C_2_0 = "I guess you just don’t see the puzzles the same way as me then";
 	//neutral
