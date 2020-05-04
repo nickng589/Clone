@@ -19452,9 +19452,10 @@ MonoBehaviour:
   npcmanager: {fileID: 1488484682}
   dm: {fileID: 2107836493}
   player: {fileID: 486116998}
-  player_num: 2
+  player_num: 1
   canMove: 0
   walkTimer: 0
+  talked: 0
 --- !u!1 &540361740
 GameObject:
   m_ObjectHideFlags: 0
@@ -31171,6 +31172,87 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &841702201
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1709038274, guid: d10edf3764f1e4002a9f2eaa38bec149, type: 3}
+      propertyPath: npcmanager
+      value: 
+      objectReference: {fileID: 1488484682}
+    - target: {fileID: 1709038274, guid: d10edf3764f1e4002a9f2eaa38bec149, type: 3}
+      propertyPath: dm
+      value: 
+      objectReference: {fileID: 2107836493}
+    - target: {fileID: 1709038274, guid: d10edf3764f1e4002a9f2eaa38bec149, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 486116998}
+    - target: {fileID: 5068684666337011786, guid: d10edf3764f1e4002a9f2eaa38bec149,
+        type: 3}
+      propertyPath: m_Name
+      value: Hazel
+      objectReference: {fileID: 0}
+    - target: {fileID: 5068684666337011828, guid: d10edf3764f1e4002a9f2eaa38bec149,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 5068684666337011828, guid: d10edf3764f1e4002a9f2eaa38bec149,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 5068684666337011828, guid: d10edf3764f1e4002a9f2eaa38bec149,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5068684666337011828, guid: d10edf3764f1e4002a9f2eaa38bec149,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5068684666337011828, guid: d10edf3764f1e4002a9f2eaa38bec149,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5068684666337011828, guid: d10edf3764f1e4002a9f2eaa38bec149,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5068684666337011828, guid: d10edf3764f1e4002a9f2eaa38bec149,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5068684666337011828, guid: d10edf3764f1e4002a9f2eaa38bec149,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5068684666337011828, guid: d10edf3764f1e4002a9f2eaa38bec149,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5068684666337011828, guid: d10edf3764f1e4002a9f2eaa38bec149,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5068684666337011828, guid: d10edf3764f1e4002a9f2eaa38bec149,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d10edf3764f1e4002a9f2eaa38bec149, type: 3}
 --- !u!1 &845017944
 GameObject:
   m_ObjectHideFlags: 0

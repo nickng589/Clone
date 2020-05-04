@@ -5,8 +5,6 @@ using UnityEngine;
 public class NPCBehavior1 : MonoBehaviour
 {
     #region Editor Variables
-    [SerializeField]
-    private NPCmanager npcmanager;
 
     [SerializeField]
     [Tooltip("The dialogue manager for the npc")]
@@ -27,8 +25,11 @@ public class NPCBehavior1 : MonoBehaviour
 
     Rigidbody2D npcRigidBody;
 
+    public bool talked;
+
     void Start()
     {
+        talked = false;
         canMove = true;
         walkTimer = 1;
         if (!PlayerPrefs.HasKey("morality"))
@@ -36,7 +37,7 @@ public class NPCBehavior1 : MonoBehaviour
             PlayerPrefs.SetInt("morality", 0);
         }
         PlayerPrefs.SetInt("Leon", 0);
-        PlayerPrefs.SetInt("Romy", 0);
+        PlayerPrefs.SetInt("Hazel", 0);
     }
 
     void OnTriggerStay2D(Collider2D other)
@@ -52,77 +53,85 @@ public class NPCBehavior1 : MonoBehaviour
     {
         player.canMove = false;
         //dm.DisplayText(SceneDialogue.test);
+        string opening = "ERROR";
+        string response1 = "ERROR";
+        string response2 = "ERROR";
+        string response3 = "ERROR";
+        string character1 = "ERROR";
+        string character2 = "ERROR";
+        string character3 = "ERROR";
+        string char_morality = "ERROR";
         switch (player_num) 
         {
-            case 2:
-                dm.DisplayText(SceneDialogue.World1_opening);
-                yield return new WaitWhile(() => Input.anyKeyDown == false);
-                yield return new WaitWhile(() => !Input.GetKeyDown("space"));
-
-                dm.DisableTextBox();
-                dm.DisplayChoices(3, new string[] { "Press A for:  I’m doing great! How are you doing?", "Press D for: Where am I?", "Press S for: Why do you look so strange?" });
-
-                yield return new WaitWhile(() => Input.anyKey == true);
-                yield return new WaitWhile(() => dm.GrabInput(3) == ChoiceSystem.Choices.Invalid);
-
-                dm.DisableChoices();
-
-                switch (dm.GrabInput(3))
+            case 1:
+                if (!talked)
                 {
-                    case ChoiceSystem.Choices.Zero:
-                        PlayerPrefs.SetInt("morality", PlayerPrefs.GetInt("morality") + 1);
-                        dm.DisplayText("I’m always doing great! I enjoy the puzzles! Press space to close");
-                        PlayerPrefs.SetInt("Leon", PlayerPrefs.GetInt("Leon") + 1);
-                        break;
-                    case ChoiceSystem.Choices.One:
-                        dm.DisplayText("No one knows what this place is, it just is! Press space to close");
-                        break;
-                    case ChoiceSystem.Choices.Two:
-                        PlayerPrefs.SetInt("morality", PlayerPrefs.GetInt("morality") - 1);
-                        dm.DisplayText(" HAHA! That’s just the way I look kiddo. Press space to close");
-                        PlayerPrefs.SetInt("Leon", PlayerPrefs.GetInt("Leon") - 1);
-                        break;
+                    opening = SceneDialogue.Leon_1_O_0;
+                } else
+                {
+                    opening = SceneDialogue.Leon_default;
                 }
-
-                yield return new WaitWhile(() => Input.anyKeyDown == false);
-                yield return new WaitWhile(() => !Input.GetKeyDown("space"));
+                response1 = SceneDialogue.Leon_1_P_0;
+                response2 = SceneDialogue.Leon_1_P_1;
+                response3 = SceneDialogue.Leon_1_P_2;
+                character1 = SceneDialogue.Leon_1_C_0;
+                character2 = SceneDialogue.Leon_1_C_1;
+                character3 = SceneDialogue.Leon_1_C_2;
                 break;
-            case 3:
-                dm.DisplayText("Hey how has everyone been treating you?");
-                yield return new WaitWhile(() => Input.anyKeyDown == false);
-                yield return new WaitWhile(() => !Input.GetKeyDown("space"));
-
-                dm.DisableTextBox();
-                dm.DisplayChoices(3, new string[] { "Press A for: Great! Who are you?", "Press D for: Not too bad.", "Press S for: Terrible, get me out of here." });
-
-                yield return new WaitWhile(() => Input.anyKey == true);
-                yield return new WaitWhile(() => dm.GrabInput(3) == ChoiceSystem.Choices.Invalid);
-
-                dm.DisableChoices();
-
-                switch (dm.GrabInput(3))
+            case 2:
+                if (!talked)
                 {
-                    case ChoiceSystem.Choices.Zero:
-                        dm.DisplayText("This is my home! These are my friends! Press space to close");
-                        PlayerPrefs.SetInt("Hazel", PlayerPrefs.GetInt("Romy") + 1);
-                        break;
-                    case ChoiceSystem.Choices.One:
-                        dm.DisplayText("Great! Its nice to meet you. Press space to close");
-                        break;
-                    case ChoiceSystem.Choices.Two:
-                        dm.DisplayText("You’re gonna have to find your own way out.  Hopefully you find more comfort in here in the future. Press space to close");
-                        PlayerPrefs.SetInt("Hazel", PlayerPrefs.GetInt("Romy") - 1);
-                        break;
+                    opening = SceneDialogue.Hazel_1_O_0;
                 }
-
-                yield return new WaitWhile(() => Input.anyKeyDown == false);
-                yield return new WaitWhile(() => !Input.GetKeyDown("space"));
+                else
+                {
+                    opening = SceneDialogue.Hazel_default;
+                }
+                response1 = SceneDialogue.Hazel_1_P_0;
+                response2 = SceneDialogue.Hazel_1_P_1;
+                response3 = SceneDialogue.Hazel_1_P_2;
+                character1 = SceneDialogue.Hazel_1_C_0;
+                character2 = SceneDialogue.Hazel_1_C_1;
+                character3 = SceneDialogue.Hazel_1_C_2;
                 break;
             default:
                 Debug.Log("Something is broken lol.  This Number of player does not exist");
                 break;
         }
+        dm.DisplayText(opening);
+        yield return new WaitWhile(() => Input.anyKeyDown == false);
+        yield return new WaitWhile(() => !Input.GetKeyDown("space"));
         dm.DisableTextBox();
+        if (!talked)
+        {
+            dm.DisplayChoices(3, new string[] { "Press A for: " + response1, "Press D for: " + response2, "Press S for: " + response3 });
+
+            yield return new WaitWhile(() => Input.anyKey == true);
+            yield return new WaitWhile(() => dm.GrabInput(3) == ChoiceSystem.Choices.Invalid);
+
+            dm.DisableChoices();
+
+            switch (dm.GrabInput(3))
+            {
+                case ChoiceSystem.Choices.Zero:
+                    PlayerPrefs.SetInt("morality", PlayerPrefs.GetInt("Morality") + 1);
+                    dm.DisplayText(character1);
+                    PlayerPrefs.SetInt(char_morality, PlayerPrefs.GetInt("Leon") + 1);
+                    break;
+                case ChoiceSystem.Choices.One:
+                    dm.DisplayText(character2);
+                    break;
+                case ChoiceSystem.Choices.Two:
+                    PlayerPrefs.SetInt("morality", PlayerPrefs.GetInt("Morality") - 1);
+                    dm.DisplayText(character3);
+                    PlayerPrefs.SetInt(char_morality, PlayerPrefs.GetInt("Leon") - 1);
+                    break;
+            }
+            yield return new WaitWhile(() => Input.anyKeyDown == false);
+            yield return new WaitWhile(() => !Input.GetKeyDown("space"));
+            dm.DisableTextBox();
+            talked = true;
+        }
         player.canMove = true;
         GetComponentInParent<NPCMovement>().canMove = true;
         yield return null;
