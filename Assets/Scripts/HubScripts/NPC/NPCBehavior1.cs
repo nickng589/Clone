@@ -66,33 +66,33 @@ public class NPCBehavior1 : MonoBehaviour
             case 1:
                 if (!talked)
                 {
-                    opening = SceneDialogue.Leon_1_O_0;
+                    opening = SceneDialogue.Leon_1_O_0_0;
                 } else
                 {
                     opening = SceneDialogue.Leon_default;
                 }
-                response1 = SceneDialogue.Leon_1_P_0;
-                response2 = SceneDialogue.Leon_1_P_1;
-                response3 = SceneDialogue.Leon_1_P_2;
-                character1 = SceneDialogue.Leon_1_C_0;
-                character2 = SceneDialogue.Leon_1_C_1;
-                character3 = SceneDialogue.Leon_1_C_2;
+                response1 = SceneDialogue.Leon_1_P_0_0;
+                response2 = SceneDialogue.Leon_1_P_0_1;
+                response3 = SceneDialogue.Leon_1_P_0_2;
+                character1 = SceneDialogue.Leon_1_C_0_0;
+                character2 = SceneDialogue.Leon_1_C_0_1;
+                character3 = SceneDialogue.Leon_1_C_0_2;
                 break;
             case 2:
                 if (!talked)
                 {
-                    opening = SceneDialogue.Hazel_1_O_0;
+                    opening = SceneDialogue.Hazel_1_O_0_0;
                 }
                 else
                 {
                     opening = SceneDialogue.Hazel_default;
                 }
-                response1 = SceneDialogue.Hazel_1_P_0;
-                response2 = SceneDialogue.Hazel_1_P_1;
-                response3 = SceneDialogue.Hazel_1_P_2;
-                character1 = SceneDialogue.Hazel_1_C_0;
-                character2 = SceneDialogue.Hazel_1_C_1;
-                character3 = SceneDialogue.Hazel_1_C_2;
+                response1 = SceneDialogue.Hazel_1_P_0_0;
+                response2 = SceneDialogue.Hazel_1_P_0_1;
+                response3 = SceneDialogue.Hazel_1_P_0_2;
+                character1 = SceneDialogue.Hazel_1_C_0_0;
+                character2 = SceneDialogue.Hazel_1_C_0_1;
+                character3 = SceneDialogue.Hazel_1_C_0_2;
                 break;
             default:
                 Debug.Log("Something is broken lol.  This Number of player does not exist");
