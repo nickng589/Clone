@@ -86,7 +86,7 @@ public class NPCBehavior2 : MonoBehaviour
                     }
                     else if (relationship <= 1)
                     {
-                        opening = SceneDialogue.Leon_2_O_1;
+                        opening = SceneDialogue.Leon_2_O_0;
                         response3 = SceneDialogue.Leon_2_P_0_0;
                         response2 = SceneDialogue.Leon_2_P_0_1;
                         response1 = SceneDialogue.Leon_2_P_0_2;
@@ -95,7 +95,7 @@ public class NPCBehavior2 : MonoBehaviour
                         character1 = SceneDialogue.Leon_2_C_0_2;
                     } else
                     {
-                        opening = SceneDialogue.Leon_2_O_0;
+                        opening = SceneDialogue.Leon_2_O_1;
                         response3 = SceneDialogue.Leon_2_P_1_0;
                         response2 = SceneDialogue.Leon_2_P_1_1;
                         response1 = SceneDialogue.Leon_2_P_1_2;

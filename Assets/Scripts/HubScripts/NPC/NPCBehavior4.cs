@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPCBehavior3 : MonoBehaviour
+public class NPCBehavior4 : MonoBehaviour
 {
     #region Editor Variables
 
@@ -71,34 +71,34 @@ public class NPCBehavior3 : MonoBehaviour
                 {
                     relationship = PlayerPrefs.GetInt("Leon");
                     Debug.Log(relationship);
-                    if (relationship >= 1)
+                    if (relationship >= 2)
                     {
-                        opening = SceneDialogue.Leon_3_O_2;
-                        response3 = SceneDialogue.Leon_3_P_2_0;
-                        response2 = SceneDialogue.Leon_3_P_2_1;
-                        response1 = SceneDialogue.Leon_3_P_2_2;
-                        character3 = SceneDialogue.Leon_3_C_2_0;
-                        character2 = SceneDialogue.Leon_3_C_2_1;
-                        character1 = SceneDialogue.Leon_3_C_2_2;
+                        opening = SceneDialogue.Leon_4_O_2;
+                        response3 = SceneDialogue.Leon_4_P_2_0;
+                        response2 = SceneDialogue.Leon_4_P_2_1;
+                        response1 = SceneDialogue.Leon_4_P_2_2;
+                        character3 = SceneDialogue.Leon_4_C_2_0;
+                        character2 = SceneDialogue.Leon_4_C_2_1;
+                        character1 = SceneDialogue.Leon_4_C_2_2;
                     }
-                    else if (relationship <= 1)
+                    else if (relationship <= 2)
                     {
-                        opening = SceneDialogue.Leon_3_O_0;
-                        response3 = SceneDialogue.Leon_3_P_0_0;
-                        response2 = SceneDialogue.Leon_3_P_0_1;
-                        response1 = SceneDialogue.Leon_3_P_0_2;
-                        character3 = SceneDialogue.Leon_3_C_0_0;
-                        character2 = SceneDialogue.Leon_3_C_0_1;
-                        character1 = SceneDialogue.Leon_3_C_0_2;
+                        opening = SceneDialogue.Leon_4_O_0;
+                        response3 = SceneDialogue.Leon_4_P_0_0;
+                        response2 = SceneDialogue.Leon_4_P_0_1;
+                        response1 = SceneDialogue.Leon_4_P_0_2;
+                        character3 = SceneDialogue.Leon_4_C_0_0;
+                        character2 = SceneDialogue.Leon_4_C_0_1;
+                        character1 = SceneDialogue.Leon_4_C_0_2;
                     } else
                     {
-                        opening = SceneDialogue.Leon_3_O_1;
-                        response3 = SceneDialogue.Leon_3_P_1_0;
-                        response2 = SceneDialogue.Leon_3_P_1_1;
-                        response1 = SceneDialogue.Leon_3_P_1_2;
-                        character3 = SceneDialogue.Leon_3_C_1_0;
-                        character2 = SceneDialogue.Leon_3_C_1_1;
-                        character1 = SceneDialogue.Leon_3_C_1_2;
+                        opening = SceneDialogue.Leon_4_O_1;
+                        response3 = SceneDialogue.Leon_4_P_1_0;
+                        response2 = SceneDialogue.Leon_4_P_1_1;
+                        response1 = SceneDialogue.Leon_4_P_1_2;
+                        character3 = SceneDialogue.Leon_4_C_1_0;
+                        character2 = SceneDialogue.Leon_4_C_1_1;
+                        character1 = SceneDialogue.Leon_4_C_1_2;
                     }
                 } else
                 {
