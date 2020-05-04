@@ -200,4 +200,115 @@ public class SceneDialogue : MonoBehaviour
 	public static string Hazel_3_C_0_1 = "You and me both.";
 	public static string Hazel_3_C_0_0 = "Smart guy, eh?";
 	#endregion
+
+	#region Tim (Character 3)
+	//World 1
+	public static string Tim_default = "Uh... Hello";
+
+	public static string Tim_1_O_0 = "…";
+
+	public static string Tim_1_P_0_2 = "Hey there.";
+	public static string Tim_1_P_0_1 = "uhhhhhh, hello?";
+	public static string Tim_1_P_0_0 = "are you going to say anything?";
+
+	public static string Tim_1_C_0_2 = "H… hello";
+	public static string Tim_1_C_0_1 = "…";
+	public static string Tim_1_C_0_0 = "…";
+
+	//World 2
+	//good
+	public static string Tim_2_O_2 = "Hello...";
+
+	public static string Tim_2_P_2_2 = "Hey, are you doing alright?  Are you lost?";
+	public static string Tim_2_P_2_1 = "Hello… Again?";
+	public static string Tim_2_P_2_0 = "Do you not know how to talk?  Hello?";
+
+	public static string Tim_2_C_2_2 = "*sniffles* yeah I got lost here. I’m doing ok";
+	public static string Tim_2_C_2_1 = "Hey...";
+	public static string Tim_2_C_2_0 = "…";
+	//neutral
+	public static string Tim_2_O_1 = "Hello...";
+
+	public static string Tim_2_P_1_2 = "Hey, are you doing alright?  Are you lost?";
+	public static string Tim_2_P_1_1 = "Hello… Again?";
+	public static string Tim_2_P_1_0 = " Do you not know how to talk?  Hello?";
+
+	public static string Tim_2_C_1_2 = "I'm... ok";
+	public static string Tim_2_C_1_1 = "Uh...";
+	public static string Tim_2_C_1_0 = "...";
+	//bad
+	public static string Tim_2_O_0 = "...";
+
+	public static string Tim_2_P_0_2 = "I think we got off to a bad start last time, how are you doing?";
+	public static string Tim_2_P_0_1 = "...";
+	public static string Tim_2_P_0_0 = "Still not talking huh?";
+
+	public static string Tim_2_C_0_2 = "Not… Bad...";
+	public static string Tim_2_C_0_1 = "...";
+	public static string Tim_2_C_0_0 = "...";
+
+	//World 3
+	//good
+	public static string Tim_3_O_2 = "Hey ... could I tell you something?";
+
+	public static string Tim_3_P_2_2 = "Of course, whats on your mind?";
+	public static string Tim_3_P_2_1 = "Yeah but could you make it quick?";
+	public static string Tim_3_P_2_0 = "Not really in the mood right now, keep it to yourself.";
+
+	public static string Tim_3_C_2_2 = "I got lost here after running away from home.  It’s scary here, but it’s a lot scarier at home.";
+	public static string Tim_3_C_2_1 = "This place is pretty scary.";
+	public static string Tim_3_C_2_0 = "…";
+	//neutral
+	public static string Tim_3_O_1 = "It’s you… again...";
+
+	public static string Tim_3_P_1_2 = "Yup, it’s me.  How are you doing?";
+	public static string Tim_3_P_1_1 = "It’s me again.";
+	public static string Tim_3_P_1_0 = "Who else could it be?";
+
+	public static string Tim_3_C_1_2 = "I’m ok, just a bit scared.";
+	public static string Tim_3_C_1_1 = "Hi.";
+	public static string Tim_3_C_1_0 = "...";
+	//bad
+	public static string Tim_3_O_0 = "...";
+
+	public static string Tim_3_P_0_2 = "You alright?";
+	public static string Tim_3_P_0_1 = "...";
+	public static string Tim_3_P_0_0 = "Are you a mute?";
+
+	public static string Tim_3_C_0_2 = "I’m fine...";
+	public static string Tim_3_C_0_1 = "...";
+	public static string Tim_3_C_0_0 = "...";
+
+	//World 4
+	//good
+	public static string Tim_4_O_2 = "Could I tell you one more thing?";
+
+	public static string Tim_4_P_2_2 = "I’d love to listen to anything you have to say.";
+	public static string Tim_4_P_2_1 = "A bit busy but if you make it quick I can listen.";
+	public static string Tim_4_P_2_0 = "Nope!";
+
+	public static string Tim_4_C_2_2 = "My parents at home, they weren’t nice to me.  I don’t want to ever go back… Maybe I’ll stay here";
+	public static string Tim_4_C_2_1 = "I … don’t want to go back home.  Maybe I can just stay here.";
+	public static string Tim_4_C_2_0 = "…";
+	//neutral
+	public static string Tim_4_O_1 = "Hello.";
+
+	public static string Tim_4_P_1_2 = "Hey.  How’s it going?";
+	public static string Tim_4_P_1_1 = "Hey.";
+	public static string Tim_4_P_1_0 = "Do you know how to say anything else besides greetings?";
+
+	public static string Tim_4_C_1_2 = "This forest is pretty nice.  The people here are better than at home.";
+	public static string Tim_4_C_1_1 = "Hi.";
+	public static string Tim_4_C_1_0 = "...";
+	//bad
+	public static string Tim_4_O_0 = "...";
+
+	public static string Tim_4_P_0_2 = "How’s it going kid?";
+	public static string Tim_4_P_0_1 = "...";
+	public static string Tim_4_P_0_0 = "Hello? Is there a brain in that head?";
+
+	public static string Tim_4_C_0_2 = "Good...";
+	public static string Tim_4_C_0_1 = "...";
+	public static string Tim_4_C_0_0 = "...";
+	#endregion
 }

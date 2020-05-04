@@ -40,6 +40,14 @@ public class NPCBehavior4 : MonoBehaviour
         {
             PlayerPrefs.SetInt("Leon", 0);
         }
+        if (!PlayerPrefs.HasKey("Hazel"))
+        {
+            PlayerPrefs.SetInt("Hazel", 0);
+        }
+        if (!PlayerPrefs.HasKey("Tim"))
+        {
+            PlayerPrefs.SetInt("Tim", 0);
+        }
     }
 
     void OnTriggerStay2D(Collider2D other)
@@ -142,6 +150,47 @@ public class NPCBehavior4 : MonoBehaviour
                 else
                 {
                     opening = SceneDialogue.Hazel_default;
+                }
+                break;
+            case 3:
+                if (!talked)
+                {
+                    relationship = PlayerPrefs.GetInt("Tim");
+                    Debug.Log(relationship);
+                    if (relationship >= 2)
+                    {
+                        opening = SceneDialogue.Tim_4_O_2;
+                        response3 = SceneDialogue.Tim_4_P_2_0;
+                        response2 = SceneDialogue.Tim_4_P_2_1;
+                        response1 = SceneDialogue.Tim_4_P_2_2;
+                        character3 = SceneDialogue.Tim_4_C_2_0;
+                        character2 = SceneDialogue.Tim_4_C_2_1;
+                        character1 = SceneDialogue.Tim_4_C_2_2;
+                    }
+                    else if (relationship <= 2)
+                    {
+                        opening = SceneDialogue.Tim_4_O_0;
+                        response3 = SceneDialogue.Tim_4_P_0_0;
+                        response2 = SceneDialogue.Tim_4_P_0_1;
+                        response1 = SceneDialogue.Tim_4_P_0_2;
+                        character3 = SceneDialogue.Tim_4_C_0_0;
+                        character2 = SceneDialogue.Tim_4_C_0_1;
+                        character1 = SceneDialogue.Tim_4_C_0_2;
+                    }
+                    else
+                    {
+                        opening = SceneDialogue.Tim_4_O_1;
+                        response3 = SceneDialogue.Tim_4_P_1_0;
+                        response2 = SceneDialogue.Tim_4_P_1_1;
+                        response1 = SceneDialogue.Tim_4_P_1_2;
+                        character3 = SceneDialogue.Tim_4_C_1_0;
+                        character2 = SceneDialogue.Tim_4_C_1_1;
+                        character1 = SceneDialogue.Tim_4_C_1_2;
+                    }
+                }
+                else
+                {
+                    opening = SceneDialogue.Leon_default;
                 }
                 break;
             default:

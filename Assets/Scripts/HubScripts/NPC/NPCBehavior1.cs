@@ -99,6 +99,23 @@ public class NPCBehavior1 : MonoBehaviour
                 character1 = SceneDialogue.Hazel_1_C_0_2;
                 char_morality = "Hazel";
                 break;
+            case 3:
+                if (!talked)
+                {
+                    opening = SceneDialogue.Tim_1_O_0;
+                }
+                else
+                {
+                    opening = SceneDialogue.Tim_default;
+                }
+                response3 = SceneDialogue.Tim_1_P_0_0;
+                response2 = SceneDialogue.Tim_1_P_0_1;
+                response1 = SceneDialogue.Tim_1_P_0_2;
+                character3 = SceneDialogue.Tim_1_C_0_0;
+                character2 = SceneDialogue.Tim_1_C_0_1;
+                character1 = SceneDialogue.Tim_1_C_0_2;
+                char_morality = "Tim";
+                break;
             default:
                 Debug.Log("Something is broken lol.  This Number of player does not exist");
                 break;
