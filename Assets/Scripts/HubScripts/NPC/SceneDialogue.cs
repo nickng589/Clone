@@ -52,9 +52,76 @@ public class SceneDialogue : MonoBehaviour
 	public static string Leon_2_C_0_2 = "No problem, that kind of stuff happens to me all the time too.  Hope you are enjoying the puzzles!";
 	public static string Leon_2_C_0_1 = "HAHA, yup it is the crazy looking guy again!";
 	public static string Leon_2_C_0_0 = "Hey hey hey, don’t forget you were the one who walked up to me.";
+
+	//World 3
+	//good
+	public static string Leon_3_O_2 = "Hey I’m trying to collect some data about the forest, could you tell me a little about the puzzles you just completed?  In exchange I’ll tell you a little about what I know! ";
+
+	public static string Leon_3_P_2_2 = "Good thing I took CS61C at UC Berkeley because knowing binary really helped me with the last puzzle";
+	public static string Leon_3_P_2_1 = "Honestly, I forgot the last set of puzzles.  But so far it seems like I am alternating between this forest and some place where there is a split version of me";
+	public static string Leon_3_P_2_0 = "How about you play the puzzles yourself?";
+
+	public static string Leon_3_C_2_2 = "Ohhhhh, very interesting.  So from what I have collected, there is a mirror somewhere deep in the forest that will allow you to recombine back again";
+	public static string Leon_3_C_2_1 = "Hmmmm, that’s very useful.  I’ll write that down in my notes.";
+	public static string Leon_3_C_2_0 = "I guess I will then.";
+	//neutral
+	public static string Leon_3_O_1 = "Hey it’s the new kid!  Learn anything new?";
+
+	public static string Leon_3_P_1_2 = "It seems like I am alternating between this forest and some place where there is a split version of me.  Do you know anything about whats going on?";
+	public static string Leon_3_P_1_1 = "Uh, not much.  I guess the puzzles are getting gradually harder?";
+	public static string Leon_3_P_1_0 = "No";
+
+	public static string Leon_3_C_1_2 = "Mhmmmmmmmm, that seems to be what’s going on for everyone here.  I think we were all split across dimensions when entering the forest and need to make it to the center to get recombined.";
+	public static string Leon_3_C_1_1 = "Ah, that does align with the rest of my data.  You could probably expect that trend going forward";
+	public static string Leon_3_C_1_0 = "That’s unfortunate, maybe you should pay closer attention.";
+
+	//bad
+	public static string Leon_3_O_0 = "It’s the kid again...";
+
+	public static string Leon_3_P_0_2 = "What are those notes there for?  Looks interesting.";
+	public static string Leon_3_P_0_1 = "Yup it’s me, the kid.";
+	public static string Leon_3_P_0_0 = "What’s with the tone old man?";
+
+	public static string Leon_3_C_0_2 = "Oh, these notes?  I’m glad you asked!  I’ve been trying to figure out what’s happening in this weird place for a while.";
+	public static string Leon_3_C_0_1 = "Yup it is you… the kid.";
+	public static string Leon_3_C_0_0 = "What’s with the rudeness young man?";
+
+	//World 4
+	//good
+	public static string Leon_4_O_2 = "Hey kid I’ve just collected some new data! Wanna take a look? ";
+
+	public static string Leon_4_P_2_2 = "Of course!";
+	public static string Leon_4_P_2_1 = "I’m in a bit of a rush but I guess I have time.";
+	public static string Leon_4_P_2_0 = "Nah, not really.";
+
+	public static string Leon_4_C_2_2 = "So i’ve been studying the insects who have entered this forest.  Outside of the forest have a lifespan of one year.  But tehir lifespan is halved after entering the forest.  This leads me to believe that all living things that enter this forest have their lifespan halved… Including you and me.";
+	public static string Leon_4_C_2_1 = "To make it short, based on data I have collected from insects who have entered the forest, the lifespan of living things are halved when entering the forest.";
+	public static string Leon_4_C_2_0 = "Alright, maybe next time then.";
+	//neutral
+	public static string Leon_4_O_1 = "I’ve been collecting some data, but it isn’t quite complete.  Wanna listen and maybe you could help me out?";
+
+	public static string Leon_4_P_1_2 = "Yeah sure, let me take a look.";
+	public static string Leon_4_P_1_1 = "I guess I could take a quick look, I’m in a bit of a rush though.";
+	public static string Leon_4_P_1_0 = "No";
+
+	public static string Leon_4_C_1_2 = "So I’ve observed a few fruit flies who have lived 15, 19, 21, 18, and 22 days long.  From what I remember fruit flies have an average lifespan of 40 days.  I think this means something but I’m not sure what...";
+	public static string Leon_4_C_1_1 = "I’ll make it quick then.  So I’ve observed a few fruit flies who have lived 15, 19, 21, 18, and 22 days long. I think this means something but I’m not sure what...";
+	public static string Leon_4_C_1_0 = "Alright I’ll keep looking myself then.";
+
+	//bad
+	public static string Leon_4_O_0 = "Sorry kiddo I’m busy right now.";
+
+	public static string Leon_4_P_0_2 = "Busy with what?  I’m interested.";
+	public static string Leon_4_P_0_1 = "Uh alright.";
+	public static string Leon_4_P_0_0 = "Oh yeah? Me too.";
+
+	public static string Leon_4_C_0_2 = "Oh really?  Great! Yeah I’ve been tinkering around with insects for a while.  It seems like there is a connection between their lifespan and being split but I’m not sure what..";
+	public static string Leon_4_C_0_1 = "I’ll just get back to work then.";
+	public static string Leon_4_C_0_0 = "Hey you are the one who walked up to me.";
 	#endregion
 
 	#region Hazel (Character 2)
+	//World 1
 	public static string Hazel_default = "Got nothing better to do than talk to me, huh?";
 
 	public static string Hazel_1_O_0 = "Hey you!";
@@ -66,5 +133,71 @@ public class SceneDialogue : MonoBehaviour
 	public static string Hazel_1_C_0_2 = "Hey! I’m Hazel.  Looks like we are in a similar situation, I also got lost looking for a friend.  What a coincidence!";
 	public static string Hazel_1_C_0_1 = "Don’t be shy! I’m Hazel.";
 	public static string Hazel_1_C_0_0 = "I’ll do whatever I want!";
+
+	//World 2
+	//good
+	public static string Hazel_2_O_2 = "Well, if it isn’t my best friend Pero.";
+
+	public static string Hazel_2_P_2_2 = "Haha, if it isn’t my best bud Hazel";
+	public static string Hazel_2_P_2_1 = "Best friend? We just met.";
+	public static string Hazel_2_P_2_0 = "I’m not even close to being your best friend.";
+
+	public static string Hazel_2_C_2_2 = "Glad someone my age finally is around, no one else here can really relate to me except you.";
+	public static string Hazel_2_C_2_1 = "Well how many times do I have to meet you before I can call you that?";
+	public static string Hazel_2_C_2_0 = "Is that right?  Forget I said anything then";
+	//neutral
+	public static string Hazel_2_O_1 = "I still never got your name, I gave you mine so it’s only fair.";
+
+	public static string Hazel_2_P_1_2 = "Oh it’s Pero, should have introduced myself sooner.";
+	public static string Hazel_2_P_1_1 = "Its Pero.";
+	public static string Hazel_2_P_1_0 = "You never asked";
+
+	public static string Hazel_2_C_1_2 = "No problem, nice to meet you Pero!";
+	public static string Hazel_2_C_1_1 = "Pretty straightforward guy, huh?";
+	public static string Hazel_2_C_1_0 = "I thought introducing yourself was common manners? Is it not?";
+
+	//bad
+	public static string Hazel_2_O_0 = "If it isn’t the rude brat from before.";
+
+	public static string Hazel_2_P_0_2 = "I think we got off on the wrong foot. My name is Pero, nice to meet you.";
+	public static string Hazel_2_P_0_1 = "Yup it’s me, the rude guy.";
+	public static string Hazel_2_P_0_0 = "Well, if it isn’t the ruder brat from before.";
+
+	public static string Hazel_2_C_0_2 = "No problem, nice to meet you Pero!";
+	public static string Hazel_2_C_0_1 = "HAHA, You’re a pretty funny guy.";
+	public static string Hazel_2_C_0_0 = "Haha, you think you are a pretty funny guy.  huh?";
+
+	//World 3
+	//good
+	public static string Hazel_3_O_2 = "How has it been going finding your friend?  For me it’s been a bit… rough.";
+
+	public static string Hazel_3_P_2_2 = "Yeah me too, still no clue where they are.  All I can do is head further into this forest";
+	public static string Hazel_3_P_2_1 = "Not sure what to tell you, I have no idea if I’m even going in the right direction.";
+	public static string Hazel_3_P_2_0 = "How about we both just focus on finding our own friend, don’t worry about me.";
+
+	public static string Hazel_3_C_2_2 = "Yeah I hope we can both make some progress toward finding our friends.  But at the same time I can’t help but start to feel hopeless.";
+	public static string Hazel_3_C_2_1 = "You and me both.  For all we know we might be getting further and further from our friends.";
+	public static string Hazel_3_C_2_0 = "Hey, don’t get snappy with me, I just wanted to talk.";
+	//neutral
+	public static string Hazel_3_O_1 = "How’s your search for your friend going?";
+
+	public static string Hazel_3_P_1_2 = "Still searching.  All I can do is go deeper. how about you?";
+	public static string Hazel_3_P_1_1 = "Not sure if I am getting any further or any closer to be honest to you..";
+	public static string Hazel_3_P_1_0 = "It’s been brutal.  I feel like I’m getting further and further as I go deeper and deeper.";
+
+	public static string Hazel_3_C_1_2 = "Yeah, I’m still looking too.  Starting to feel a little hopeless, though.";
+	public static string Hazel_3_C_1_1 = "I feel you, I can’t tell if I’m making any progress or not.";
+	public static string Hazel_3_C_1_0 = "Yeah It’s starting to look worse and worse the longer I look.";
+
+	//bad
+	public static string Hazel_3_O_0 = "Still around here, huh?";
+
+	public static string Hazel_3_P_0_2 = "Yup still around.  What are you doing here?";
+	public static string Hazel_3_P_0_1 = "Yup, nowhere else to go.";
+	public static string Hazel_3_P_0_0 = "Welll... Yeah, nowhere else to go? Thats a dumb question.";
+
+	public static string Hazel_3_C_0_2 = "Been searching for my friend.";
+	public static string Hazel_3_C_0_1 = "You and me both.";
+	public static string Hazel_3_C_0_0 = "Smart guy, eh?";
 	#endregion
 }

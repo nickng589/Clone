@@ -72,14 +72,17 @@ public class ChoiceSystem : MonoBehaviour
     {
         choicePanels[(int)Choices.Left].SetText(text[0]);
         choicePanels[(int)Choices.Left].SetVisible(true);
+        choicePanels[(int)Choices.Left].SetWidth(300);
         choicePanels[(int)Choices.Left].SetTextSize(11);
 
         choicePanels[(int)Choices.Right].SetText(text[1]);
         choicePanels[(int)Choices.Right].SetVisible(true);
+        choicePanels[(int)Choices.Right].SetWidth(300);
         choicePanels[(int)Choices.Right].SetTextSize(11);
 
         choicePanels[(int)Choices.Down].SetText(text[2]);
         choicePanels[(int)Choices.Down].SetVisible(true);
+        choicePanels[(int)Choices.Down].SetWidth(300);
         choicePanels[(int)Choices.Down].SetTextSize(11);
 
     }

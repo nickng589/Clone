@@ -38,6 +38,9 @@ public class NPCBehavior1 : MonoBehaviour
         }
         PlayerPrefs.SetInt("Leon", 0);
         PlayerPrefs.SetInt("Hazel", 0);
+        PlayerPrefs.SetInt("Tim", 0);
+        PlayerPrefs.SetInt("Romy", 0);
+        PlayerPrefs.SetInt("Norman/Addison", 0);
     }
 
     void OnTriggerStay2D(Collider2D other)
