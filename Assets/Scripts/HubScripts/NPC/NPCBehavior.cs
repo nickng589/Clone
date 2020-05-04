@@ -68,14 +68,14 @@ public class NPCBehavior : MonoBehaviour
                 switch (dm.GrabInput(3))
                 {
                     case ChoiceSystem.Choices.Zero:
-                        PlayerPrefs.SetInt("morality", PlayerPrefs.GetInt("Morality") + 1);
+                        PlayerPrefs.SetInt("morality", PlayerPrefs.GetInt("morality") + 1);
                         dm.DisplayText("I’m always doing great! I enjoy the puzzles! Press space to close");
                         break;
                     case ChoiceSystem.Choices.One:
                         dm.DisplayText("No one knows what this place is, it just is! Press space to close");
                         break;
                     case ChoiceSystem.Choices.Two:
-                        PlayerPrefs.SetInt("morality", PlayerPrefs.GetInt("Morality") - 1);
+                        PlayerPrefs.SetInt("morality", PlayerPrefs.GetInt("morality") - 1);
                         dm.DisplayText(" HAHA! That’s just the way I look kiddo. Press space to close");
                         break;
                 }
