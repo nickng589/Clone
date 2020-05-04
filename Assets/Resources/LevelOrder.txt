@@ -22,13 +22,10 @@ Adder
 Level3
 Level7
 Level8
-<<<<<<< HEAD
 Level 17
 Level 20
 Level 22
-=======
 Adder2
->>>>>>> f34a377a01c69234e56a2626a873d7d41a223a2b
 HubWorld
 TriggerEndScene
 
