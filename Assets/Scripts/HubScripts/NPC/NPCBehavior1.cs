@@ -66,7 +66,13 @@ public class NPCBehavior1 : MonoBehaviour
         switch (player_num) 
         {
             case 1:
-                opening = SceneDialogue.Leon_1_O_0;
+                if (!talked)
+                {
+                    opening = SceneDialogue.Leon_1_O_0;
+                } else
+                {
+                    opening = SceneDialogue.Leon_default;
+                }
                 response1 = SceneDialogue.Leon_1_P_0;
                 response2 = SceneDialogue.Leon_1_P_1;
                 response3 = SceneDialogue.Leon_1_P_2;
@@ -75,7 +81,14 @@ public class NPCBehavior1 : MonoBehaviour
                 character3 = SceneDialogue.Leon_1_C_2;
                 break;
             case 2:
-                opening = SceneDialogue.Hazel_1_O_0;
+                if (!talked)
+                {
+                    opening = SceneDialogue.Hazel_1_O_0;
+                }
+                else
+                {
+                    opening = SceneDialogue.Hazel_default;
+                }
                 response1 = SceneDialogue.Hazel_1_P_0;
                 response2 = SceneDialogue.Hazel_1_P_1;
                 response3 = SceneDialogue.Hazel_1_P_2;
@@ -90,35 +103,37 @@ public class NPCBehavior1 : MonoBehaviour
         dm.DisplayText(opening);
         yield return new WaitWhile(() => Input.anyKeyDown == false);
         yield return new WaitWhile(() => !Input.GetKeyDown("space"));
-
         dm.DisableTextBox();
-        dm.DisplayChoices(3, new string[] { "Press A for: " + response1, "Press D for: " + response2, "Press S for: " + response3});
-
-        yield return new WaitWhile(() => Input.anyKey == true);
-        yield return new WaitWhile(() => dm.GrabInput(3) == ChoiceSystem.Choices.Invalid);
-
-        dm.DisableChoices();
-
-        switch (dm.GrabInput(3))
+        if (!talked)
         {
-            case ChoiceSystem.Choices.Zero:
-                PlayerPrefs.SetInt("morality", PlayerPrefs.GetInt("Morality") + 1);
-                dm.DisplayText(character1);
-                PlayerPrefs.SetInt(char_morality, PlayerPrefs.GetInt("Leon") + 1);
-                break;
-            case ChoiceSystem.Choices.One:
-                dm.DisplayText(character2);
-                break;
-            case ChoiceSystem.Choices.Two:
-                PlayerPrefs.SetInt("morality", PlayerPrefs.GetInt("Morality") - 1);
-                dm.DisplayText(character3);
-                PlayerPrefs.SetInt(char_morality, PlayerPrefs.GetInt("Leon") - 1);
-                break;
-        }
+            dm.DisplayChoices(3, new string[] { "Press A for: " + response1, "Press D for: " + response2, "Press S for: " + response3 });
 
-        yield return new WaitWhile(() => Input.anyKeyDown == false);
-        yield return new WaitWhile(() => !Input.GetKeyDown("space"));
-        dm.DisableTextBox();
+            yield return new WaitWhile(() => Input.anyKey == true);
+            yield return new WaitWhile(() => dm.GrabInput(3) == ChoiceSystem.Choices.Invalid);
+
+            dm.DisableChoices();
+
+            switch (dm.GrabInput(3))
+            {
+                case ChoiceSystem.Choices.Zero:
+                    PlayerPrefs.SetInt("morality", PlayerPrefs.GetInt("Morality") + 1);
+                    dm.DisplayText(character1);
+                    PlayerPrefs.SetInt(char_morality, PlayerPrefs.GetInt("Leon") + 1);
+                    break;
+                case ChoiceSystem.Choices.One:
+                    dm.DisplayText(character2);
+                    break;
+                case ChoiceSystem.Choices.Two:
+                    PlayerPrefs.SetInt("morality", PlayerPrefs.GetInt("Morality") - 1);
+                    dm.DisplayText(character3);
+                    PlayerPrefs.SetInt(char_morality, PlayerPrefs.GetInt("Leon") - 1);
+                    break;
+            }
+            yield return new WaitWhile(() => Input.anyKeyDown == false);
+            yield return new WaitWhile(() => !Input.GetKeyDown("space"));
+            dm.DisableTextBox();
+            talked = true;
+        }
         player.canMove = true;
         GetComponentInParent<NPCMovement>().canMove = true;
         yield return null;

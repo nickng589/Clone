@@ -8,6 +8,8 @@ public class SceneDialogue : MonoBehaviour
 	//format for strings (Char name)_(World#)_(P if Player response or C if character response, O if opening)_(0, 1, 2 describes how selfless/nice the respone is with 2 being the highest)
 	#region Leon (Character 1)
 	//World 1
+	public static string Leon_default = "Isn't this place so interesting?";
+
 	public static string Leon_1_O_0 = "Hey! A newcomer! How are you doing?";
 
 	public static string Leon_1_P_2 = "I’m doing great! How are you doing?";
@@ -20,6 +22,8 @@ public class SceneDialogue : MonoBehaviour
 	#endregion
 
 	#region Hazel (Character 2)
+	public static string Hazel_default = "Got nothing better to do than talk to me, huh?";
+
 	public static string Hazel_1_O_0 = "Hey you!";
 
 	public static string Hazel_1_P_2 = "Hey, I’m Pero.  I got lost in here looking for a friend. Who are you?";
