@@ -27758,6 +27758,10 @@ MonoBehaviour:
   m_speed: 0.7
   stillMoving: 1
   midpoint: {x: 0, y: 0, z: 0}
+  teleported: 0
+  teleport: 0
+  tpLoc: {x: 0, y: 0, z: 0}
+  moved: 0
 --- !u!61 &876149136
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39361,6 +39365,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1404423703}
     m_Modifications:
+    - target: {fileID: 4972265960790892874, guid: 6761d701a896a451da58379e05d8daec,
+        type: 3}
+      propertyPath: multiplier
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7733384339755221938, guid: 6761d701a896a451da58379e05d8daec,
         type: 3}
       propertyPath: m_Name
@@ -53926,8 +53935,6 @@ MonoBehaviour:
   m_VictoryText: {fileID: 97395108}
   m_VictoryMessage: You Did It!
   m_defaultSpeed: 0.2
-  m_nextScene:
-    m_Handle: 0
   textFile: {fileID: 4900000, guid: 48e3321451e7a4049a31d0eef9a27fe1, type: 3}
   playersCanMove: 1
   moveDist: 1

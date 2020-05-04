@@ -54,6 +54,7 @@ MonoBehaviour:
   moveDist: 1
   moveDistLeft: 1
   midpoint: {x: 0, y: 0, z: 0}
+  multiplier: 1
 --- !u!61 &571607887
 BoxCollider2D:
   m_ObjectHideFlags: 0

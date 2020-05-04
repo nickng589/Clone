@@ -15,10 +15,15 @@ public class PlayerController : MonoBehaviour
     public int moveDist = 1;
     public int moveDistLeft = 1;
     public Vector3 midpoint;
+    public float multiplier;
     #endregion
     // Start is called before the first frame update
     void Start()
-    { 
+    {
+        p_Anim.SetFloat("LeftSpeed", multiplier);
+        p_Anim.SetFloat("RightSpeed", multiplier);
+        p_Anim.SetFloat("UpSpeed", multiplier);
+        p_Anim.SetFloat("DownSpeed", multiplier);
         p_GM = GameObject.Find("GameManager").GetComponent<GameManager>();
         stillMoving = true;
     }
