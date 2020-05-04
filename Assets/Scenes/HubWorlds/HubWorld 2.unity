@@ -14573,6 +14573,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 383714216}
   m_CullTransparentMesh: 0
+--- !u!1 &384232109 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1709038272, guid: d10edf3764f1e4002a9f2eaa38bec149,
+    type: 3}
+  m_PrefabInstance: {fileID: 1594011357}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &384232110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 384232109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c350738453a3eaf4c88649db767cbdca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dm: {fileID: 2107836493}
+  player: {fileID: 486116998}
+  player_num: 2
+  canMove: 0
+  walkTimer: 0
+  talked: 0
 --- !u!1 &385481417
 GameObject:
   m_ObjectHideFlags: 0
@@ -57256,7 +57280,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1709038274, guid: d10edf3764f1e4002a9f2eaa38bec149, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d10edf3764f1e4002a9f2eaa38bec149, type: 3}
 --- !u!1 &1594271894
 GameObject:

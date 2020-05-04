@@ -10,7 +10,7 @@ public class SceneDialogue : MonoBehaviour
 	//World 1
 	public static string Leon_default = "Isn't this place so interesting?";
 
-	public static string Leon_1_O_0_0 = "Hey! A newcomer! How are you doing?";
+	public static string Leon_1_O_0 = "Hey! A newcomer! How are you doing?";
 
 	public static string Leon_1_P_0_2 = "I’m doing great! How are you doing?";
 	public static string Leon_1_P_0_1 = "Where am I?";
@@ -19,8 +19,10 @@ public class SceneDialogue : MonoBehaviour
 	public static string Leon_1_C_0_2 = "I’m always doing great! I enjoy the puzzles!";
 	public static string Leon_1_C_0_1 = "No one knows what this place is, it just is!";
 	public static string Leon_1_C_0_0 = "HAHA! That’s just the way I look kiddo.";
+
 	//World 2
-	public static string Leon_2_O_2_1 = "Hey that last set of puzzles was really fun wasn’t it!";
+	//good
+	public static string Leon_2_O_2 = "Hey that last set of puzzles was really fun wasn’t it!";
 
 	public static string Leon_2_P_2_2 = "Yeah they were great, do you have any ideas whats coming up next?";
 	public static string Leon_2_P_2_1 = "You seem pretty smart what’s going on around here.";
@@ -29,12 +31,33 @@ public class SceneDialogue : MonoBehaviour
 	public static string Leon_2_C_2_2 = "I’m always doing great! I enjoy the puzzles!";
 	public static string Leon_2_C_2_1 = "Everyone here has been split! You probably saw a mirror on the way here, that thing is the culprit.  I’ve been searching on a way to recombine since I got here";
 	public static string Leon_2_C_2_0 = "I guess you just don’t see the puzzles the same way as me then";
+	//neutral
+	public static string Leon_2_O_1 = "Hey it’s you again!";
+
+	public static string Leon_2_P_1_2 = "You seem pretty smart, what’s going on around here.";
+	public static string Leon_2_P_1_1 = "Yup it’s me again.";
+	public static string Leon_2_P_1_0 = "Uhhhhh, could you stop talking to me?";
+
+	public static string Leon_2_C_1_2 = "Everyone here has been split! You probably saw a mirror on the way here, that thing is the culprit.  I’ve been searching on a way to recombine since I got here";
+	public static string Leon_2_C_1_1 = "Looks like you have been dealing with the puzzles well so far! You haven’t gone crazy yet!";
+	public static string Leon_2_C_1_0 = "Hey hey hey, don’t forget you were the one who walked up to me.";
+
+	//bad
+	public static string Leon_2_O_0 = "Hey there.";
+
+	public static string Leon_2_P_0_2 = "Sorry about talking about your looks last time, it just came out";
+	public static string Leon_2_P_0_1 = "Hey it’s the crazy looking guy again.";
+	public static string Leon_2_P_0_0 = "Uhhhhh, could you stop talking to me?";
+
+	public static string Leon_2_C_0_2 = "No problem, that kind of stuff happens to me all the time too.  Hope you are enjoying the puzzles!";
+	public static string Leon_2_C_0_1 = "HAHA, yup it is the crazy looking guy again!";
+	public static string Leon_2_C_0_0 = "Hey hey hey, don’t forget you were the one who walked up to me.";
 	#endregion
 
 	#region Hazel (Character 2)
 	public static string Hazel_default = "Got nothing better to do than talk to me, huh?";
 
-	public static string Hazel_1_O_0_0 = "Hey you!";
+	public static string Hazel_1_O_0 = "Hey you!";
 
 	public static string Hazel_1_P_0_2 = "Hey, I’m Pero.  I got lost in here looking for a friend. Who are you?";
 	public static string Hazel_1_P_0_1 = "Hello.";

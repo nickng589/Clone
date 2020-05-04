@@ -36,11 +36,11 @@ public class NPCBehavior2 : MonoBehaviour
         {
             PlayerPrefs.SetInt("morality", 0);
         }
-        if (!PlayerPrefs.HasKey("morality"))
+        if (!PlayerPrefs.HasKey("Leon"))
         {
             PlayerPrefs.SetInt("Leon", 0);
         }
-        if (!PlayerPrefs.HasKey("morality"))
+        if (!PlayerPrefs.HasKey("Hazel"))
         {
             PlayerPrefs.SetInt("Hazel", 0);
         }
@@ -76,22 +76,35 @@ public class NPCBehavior2 : MonoBehaviour
                 if (!talked)
                 {
                     relationship = PlayerPrefs.GetInt("Leon");
+                    Debug.Log(relationship);
                     if (relationship >= 1)
                     {
-                        opening = SceneDialogue.Leon_1_O_0_0;
-                        response1 = SceneDialogue.Leon_1_P_0_0;
-                        response2 = SceneDialogue.Leon_1_P_0_1;
-                        response3 = SceneDialogue.Leon_1_P_0_2;
-                        character1 = SceneDialogue.Leon_1_C_0_0;
-                        character2 = SceneDialogue.Leon_1_C_0_1;
-                        character3 = SceneDialogue.Leon_1_C_0_2;
+                        opening = SceneDialogue.Leon_2_O_2;
+                        response3 = SceneDialogue.Leon_2_P_2_0;
+                        response2 = SceneDialogue.Leon_2_P_2_1;
+                        response1 = SceneDialogue.Leon_2_P_2_2;
+                        character3 = SceneDialogue.Leon_2_C_2_0;
+                        character2 = SceneDialogue.Leon_2_C_2_1;
+                        character1 = SceneDialogue.Leon_2_C_2_2;
                     }
                     else if (relationship <= 1)
                     {
-
+                        opening = SceneDialogue.Leon_2_O_1;
+                        response3 = SceneDialogue.Leon_2_P_0_0;
+                        response2 = SceneDialogue.Leon_2_P_0_1;
+                        response1 = SceneDialogue.Leon_2_P_0_2;
+                        character3 = SceneDialogue.Leon_2_C_0_0;
+                        character2 = SceneDialogue.Leon_2_C_0_1;
+                        character1 = SceneDialogue.Leon_2_C_0_2;
                     } else
                     {
-
+                        opening = SceneDialogue.Leon_2_O_0;
+                        response3 = SceneDialogue.Leon_2_P_1_0;
+                        response2 = SceneDialogue.Leon_2_P_1_1;
+                        response1 = SceneDialogue.Leon_2_P_1_2;
+                        character3 = SceneDialogue.Leon_2_C_1_0;
+                        character2 = SceneDialogue.Leon_2_C_1_1;
+                        character1 = SceneDialogue.Leon_2_C_1_2;
                     }
                 } else
                 {
@@ -101,13 +114,13 @@ public class NPCBehavior2 : MonoBehaviour
             case 2:
                 if (!talked)
                 {
-                    opening = SceneDialogue.Hazel_1_O_0_0;
-                    response1 = SceneDialogue.Hazel_1_P_0_0;
+                    opening = SceneDialogue.Hazel_1_O_0;
+                    response3 = SceneDialogue.Hazel_1_P_0_0;
                     response2 = SceneDialogue.Hazel_1_P_0_1;
-                    response3 = SceneDialogue.Hazel_1_P_0_2;
-                    character1 = SceneDialogue.Hazel_1_C_0_0;
+                    response1 = SceneDialogue.Hazel_1_P_0_2;
+                    character3 = SceneDialogue.Hazel_1_C_0_0;
                     character2 = SceneDialogue.Hazel_1_C_0_1;
-                    character3 = SceneDialogue.Hazel_1_C_0_2;
+                    character1 = SceneDialogue.Hazel_1_C_0_2;
                 }
                 else
                 {
