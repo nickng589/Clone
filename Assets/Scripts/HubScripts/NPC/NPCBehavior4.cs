@@ -238,6 +238,48 @@ public class NPCBehavior4 : MonoBehaviour
                     opening = SceneDialogue.Romy_default;
                 }
                 break;
+            case 5:
+                if (!talked)
+                {
+                    relationship = PlayerPrefs.GetInt("NA");
+                    Debug.Log(relationship);
+                    if (relationship >= 1)
+                    {
+                        opening = SceneDialogue.Addison_2_O_2;
+                        response3 = SceneDialogue.Addison_2_P_2_0;
+                        response2 = SceneDialogue.Addison_2_P_2_1;
+                        response1 = SceneDialogue.Addison_2_P_2_2;
+                        character3 = SceneDialogue.Addison_2_C_2_0;
+                        character2 = SceneDialogue.Addison_2_C_2_1;
+                        character1 = SceneDialogue.Addison_2_C_2_2;
+                    }
+                    else if (relationship <= 1)
+                    {
+                        opening = SceneDialogue.Addison_2_O_0;
+                        response3 = SceneDialogue.Addison_2_P_0_0;
+                        response2 = SceneDialogue.Addison_2_P_0_1;
+                        response1 = SceneDialogue.Addison_2_P_0_2;
+                        character3 = SceneDialogue.Addison_2_C_0_0;
+                        character2 = SceneDialogue.Addison_2_C_0_1;
+                        character1 = SceneDialogue.Addison_2_C_0_2;
+                    }
+                    else
+                    {
+                        opening = SceneDialogue.Addison_2_O_1;
+                        response3 = SceneDialogue.Addison_2_P_1_0;
+                        response2 = SceneDialogue.Addison_2_P_1_1;
+                        response1 = SceneDialogue.Addison_2_P_1_2;
+                        character3 = SceneDialogue.Addison_2_C_1_0;
+                        character2 = SceneDialogue.Addison_2_C_1_1;
+                        character1 = SceneDialogue.Addison_2_C_1_2;
+                    }
+                    char_morality = "NA";
+                }
+                else
+                {
+                    opening = SceneDialogue.Addison_default;
+                }
+                break;
             default:
                 Debug.Log("Something is broken lol.  This Number of player does not exist");
                 break;

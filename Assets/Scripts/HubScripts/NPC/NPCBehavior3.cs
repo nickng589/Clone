@@ -49,6 +49,7 @@ public class NPCBehavior3 : MonoBehaviour
             PlayerPrefs.SetInt("Tim", 0);
         }
         PlayerPrefs.SetInt("Romy", 0);
+        PlayerPrefs.SetInt("NA", 0);
     }
 
     void OnTriggerStay2D(Collider2D other)
@@ -213,6 +214,23 @@ public class NPCBehavior3 : MonoBehaviour
                 else
                 {
                     opening = SceneDialogue.Romy_default;
+                }
+                break;
+            case 5:
+                if (!talked)
+                {
+                    opening = SceneDialogue.Norman_1_O_0;
+                    response3 = SceneDialogue.Norman_1_P_0_0;
+                    response2 = SceneDialogue.Norman_1_P_0_1;
+                    response1 = SceneDialogue.Norman_1_P_0_2;
+                    character3 = SceneDialogue.Norman_1_C_0_0;
+                    character2 = SceneDialogue.Norman_1_C_0_1;
+                    character1 = SceneDialogue.Norman_1_C_0_2;
+                    char_morality = "NA";
+                }
+                else
+                {
+                    opening = SceneDialogue.Norman_default;
                 }
                 break;
             default:

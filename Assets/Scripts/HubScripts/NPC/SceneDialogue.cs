@@ -357,5 +357,53 @@ public class SceneDialogue : MonoBehaviour
 	public static string Romy_2_C_0_2 = "Great! Hope you are doing good as well";
 	public static string Romy_2_C_0_1 = "Ha ha, hope you are enjoying the forest";
 	public static string Romy_2_C_0_0 = "Alright";
-    #endregion
+	#endregion
+
+	#region Norman/Addison (Character 5)
+	//World 1
+	public static string Norman_default = "Oh man I made a mistake.";
+	public static string Addison_default = "I miss him.";
+
+	public static string Norman_1_O_0 = "Hey I got into a fight with my wife, Addison.  If you see her could you tell her something?";
+
+	public static string Norman_1_P_0_2 = "Sure, what is it?";
+	public static string Norman_1_P_0_1 = "I guess, its kinda a pain though.";
+	public static string Norman_1_P_0_0 = "No, you are pathetic";
+
+	public static string Norman_1_C_0_2 = "Tell her that I miss her and I was wrong.  Thanks kid.";
+	public static string Norman_1_C_0_1 = "Tell her I miss her, please.";
+	public static string Norman_1_C_0_0 = "Seriously? come on man.";
+
+	//World 2
+	//good
+	public static string Addison_2_O_2 = "Hey have you seen my husband?";
+
+	public static string Addison_2_P_2_2 = "Yeah, he told me to tell you he misses you, and loves you.";
+	public static string Addison_2_P_2_1 = "Uh yeah he told me to tell you something but I forgot";
+	public static string Addison_2_P_2_0 = "No I haven't";
+
+	public static string Addison_2_C_2_2 = "Oh my god.  I hope I can find him, I miss him too.";
+	public static string Addison_2_C_2_1 = "Uh yeah he told me to tell you something but I forgot";
+	public static string Addison_2_C_2_0 = "Oh no, I think he ran in to find me and now we are both lost";
+	//neutral
+	public static string Addison_2_O_1 = "Hey have you seen my husband?";
+
+	public static string Addison_2_P_1_2 = "Yeah, he told me to tell you he misses you.";
+	public static string Addison_2_P_1_1 = "Uh yeah he told me to tell you something but I forgot";
+	public static string Addison_2_P_1_0 = "No I haven't";
+
+	public static string Addison_2_C_1_2 = "I miss him too! I got to find him!";
+	public static string Addison_2_C_1_1 = "How could you forget?";
+	public static string Addison_2_C_1_0 = "Oh no, I think he ran in to find me and now we are both lost";
+	//bad
+	public static string Addison_2_O_0 = "Hey have you seen my husband?";
+
+	public static string Addison_2_P_0_2 = "I have.  I was supposed to deliver a message but I couldn't understand him.";
+	public static string Addison_2_P_0_1 = "No, I haven't";
+	public static string Addison_2_P_0_0 = "Yeah he looked like quite the loser";
+
+	public static string Addison_2_C_0_2 = "I got to find him then! We both got lost in here.";
+	public static string Addison_2_C_0_1 = "Oh no, I think he ran in to find me and now we are both lost";
+	public static string Addison_2_C_0_0 = "Hey! Don't speak about my husband like that";
+	#endregion
 }
