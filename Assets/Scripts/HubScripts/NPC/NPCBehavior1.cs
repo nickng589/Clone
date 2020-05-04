@@ -5,8 +5,6 @@ using UnityEngine;
 public class NPCBehavior1 : MonoBehaviour
 {
     #region Editor Variables
-    [SerializeField]
-    private NPCmanager npcmanager;
 
     [SerializeField]
     [Tooltip("The dialogue manager for the npc")]
@@ -39,7 +37,7 @@ public class NPCBehavior1 : MonoBehaviour
             PlayerPrefs.SetInt("morality", 0);
         }
         PlayerPrefs.SetInt("Leon", 0);
-        PlayerPrefs.SetInt("Romy", 0);
+        PlayerPrefs.SetInt("Hazel", 0);
     }
 
     void OnTriggerStay2D(Collider2D other)
