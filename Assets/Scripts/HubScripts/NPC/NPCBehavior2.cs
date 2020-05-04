@@ -41,8 +41,6 @@ public class NPCBehavior2 : MonoBehaviour
             PlayerPrefs.SetInt("Leon", 0);
         }
         PlayerPrefs.SetInt("Hazel", 0);
-        PlayerPrefs.SetInt("Tim", 0);
-        PlayerPrefs.SetInt("Romy", 0);
     }
 
     void OnTriggerStay2D(Collider2D other)
@@ -146,7 +144,7 @@ public class NPCBehavior2 : MonoBehaviour
                 case ChoiceSystem.Choices.Zero:
                     PlayerPrefs.SetInt("morality", PlayerPrefs.GetInt("Morality") + 1);
                     dm.DisplayText(character1);
-                    PlayerPrefs.SetInt(char_morality, PlayerPrefs.GetInt("Leon") + 1);
+                    PlayerPrefs.SetInt(char_morality, PlayerPrefs.GetInt(char_morality) + 1);
                     break;
                 case ChoiceSystem.Choices.One:
                     dm.DisplayText(character2);
@@ -154,7 +152,7 @@ public class NPCBehavior2 : MonoBehaviour
                 case ChoiceSystem.Choices.Two:
                     PlayerPrefs.SetInt("morality", PlayerPrefs.GetInt("Morality") - 1);
                     dm.DisplayText(character3);
-                    PlayerPrefs.SetInt(char_morality, PlayerPrefs.GetInt("Leon") - 1);
+                    PlayerPrefs.SetInt(char_morality, PlayerPrefs.GetInt(char_morality) - 1);
                     break;
             }
             yield return new WaitWhile(() => Input.anyKeyDown == false);

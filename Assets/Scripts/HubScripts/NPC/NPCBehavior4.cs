@@ -108,13 +108,36 @@ public class NPCBehavior4 : MonoBehaviour
             case 2:
                 if (!talked)
                 {
-                    opening = SceneDialogue.Hazel_1_O_0;
-                    response3 = SceneDialogue.Hazel_1_P_0_0;
-                    response2 = SceneDialogue.Hazel_1_P_0_1;
-                    response1 = SceneDialogue.Hazel_1_P_0_2;
-                    character3 = SceneDialogue.Hazel_1_C_0_0;
-                    character2 = SceneDialogue.Hazel_1_C_0_1;
-                    character1 = SceneDialogue.Hazel_1_C_0_2;
+                    if (relationship >= 2)
+                    {
+                        opening = SceneDialogue.Hazel_3_O_2;
+                        response3 = SceneDialogue.Hazel_3_P_2_0;
+                        response2 = SceneDialogue.Hazel_3_P_2_1;
+                        response1 = SceneDialogue.Hazel_3_P_2_2;
+                        character3 = SceneDialogue.Hazel_3_C_2_0;
+                        character2 = SceneDialogue.Hazel_3_C_2_1;
+                        character1 = SceneDialogue.Hazel_3_C_2_2;
+                    }
+                    else if (relationship <= 2)
+                    {
+                        opening = SceneDialogue.Hazel_3_O_0;
+                        response3 = SceneDialogue.Hazel_3_P_0_0;
+                        response2 = SceneDialogue.Hazel_3_P_0_1;
+                        response1 = SceneDialogue.Hazel_3_P_0_2;
+                        character3 = SceneDialogue.Hazel_3_C_0_0;
+                        character2 = SceneDialogue.Hazel_3_C_0_1;
+                        character1 = SceneDialogue.Hazel_3_C_0_2;
+                    }
+                    else
+                    {
+                        opening = SceneDialogue.Hazel_3_O_1;
+                        response3 = SceneDialogue.Hazel_3_P_1_0;
+                        response2 = SceneDialogue.Hazel_3_P_1_1;
+                        response1 = SceneDialogue.Hazel_3_P_1_2;
+                        character3 = SceneDialogue.Hazel_3_C_1_0;
+                        character2 = SceneDialogue.Hazel_3_C_1_1;
+                        character1 = SceneDialogue.Hazel_3_C_1_2;
+                    }
                 }
                 else
                 {
@@ -143,7 +166,7 @@ public class NPCBehavior4 : MonoBehaviour
                 case ChoiceSystem.Choices.Zero:
                     PlayerPrefs.SetInt("morality", PlayerPrefs.GetInt("Morality") + 1);
                     dm.DisplayText(character1);
-                    PlayerPrefs.SetInt(char_morality, PlayerPrefs.GetInt("Leon") + 1);
+                    PlayerPrefs.SetInt(char_morality, PlayerPrefs.GetInt(char_morality) + 1);
                     break;
                 case ChoiceSystem.Choices.One:
                     dm.DisplayText(character2);
@@ -151,7 +174,7 @@ public class NPCBehavior4 : MonoBehaviour
                 case ChoiceSystem.Choices.Two:
                     PlayerPrefs.SetInt("morality", PlayerPrefs.GetInt("Morality") - 1);
                     dm.DisplayText(character3);
-                    PlayerPrefs.SetInt(char_morality, PlayerPrefs.GetInt("Leon") - 1);
+                    PlayerPrefs.SetInt(char_morality, PlayerPrefs.GetInt(char_morality) - 1);
                     break;
             }
             yield return new WaitWhile(() => Input.anyKeyDown == false);
