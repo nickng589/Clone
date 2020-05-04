@@ -105,6 +105,7 @@ public class NPCBehavior2 : MonoBehaviour
                         character2 = SceneDialogue.Leon_2_C_1_1;
                         character1 = SceneDialogue.Leon_2_C_1_2;
                     }
+                    char_morality = "Leon";
                 } else
                 {
                     opening = SceneDialogue.Leon_default;
@@ -120,6 +121,7 @@ public class NPCBehavior2 : MonoBehaviour
                     character3 = SceneDialogue.Hazel_1_C_0_0;
                     character2 = SceneDialogue.Hazel_1_C_0_1;
                     character1 = SceneDialogue.Hazel_1_C_0_2;
+                    char_morality = "Hazel";
                 }
                 else
                 {
@@ -161,10 +163,11 @@ public class NPCBehavior2 : MonoBehaviour
                         character2 = SceneDialogue.Tim_2_C_1_1;
                         character1 = SceneDialogue.Tim_2_C_1_2;
                     }
+                    char_morality = "Tim";
                 }
                 else
                 {
-                    opening = SceneDialogue.Leon_default;
+                    opening = SceneDialogue.Tim_default;
                 }
                 break;
             default:

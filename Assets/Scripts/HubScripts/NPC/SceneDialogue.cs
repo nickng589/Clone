@@ -311,4 +311,51 @@ public class SceneDialogue : MonoBehaviour
 	public static string Tim_4_C_0_1 = "...";
 	public static string Tim_4_C_0_0 = "...";
 	#endregion
+
+	#region Romy (Character 4)
+	//World 1
+	public static string Romy_default = "I love this forest!";
+
+	public static string Romy_1_O_0 = "Hey how has everyone been treating you?";
+
+	public static string Romy_1_P_0_2 = "Great! Who are you?";
+	public static string Romy_1_P_0_1 = "Not too bad.";
+	public static string Romy_1_P_0_0 = "Terrible, get me out of here.";
+
+	public static string Romy_1_C_0_2 = "This is my home! These are my friends!";
+	public static string Romy_1_C_0_1 = "Great! It’s nice to meet you.";
+	public static string Romy_1_C_0_0 = "You’re gonna have to find your own way out.  Hopefully you find more comfort in here in the future";
+
+	//World 2
+	//good
+	public static string Romy_2_O_2 = "Hi friend, have you gotten a grasp for what’s going on yet?";
+
+	public static string Romy_2_P_2_2 = "Uhh. I’m still a little confused to be quite honest.";
+	public static string Romy_2_P_2_1 = "I guess so";
+	public static string Romy_2_P_2_0 = "Ez pz";
+
+	public static string Romy_2_C_2_2 = "Don’t worry, I can help. I’ll try and keep an eye out for Robyn for you";
+	public static string Romy_2_C_2_1 = "Great, let me know if you need anything";
+	public static string Romy_2_C_2_0 = "lol";
+	//neutral
+	public static string Romy_2_O_1 = "Do you need some help?";
+
+	public static string Romy_2_P_1_2 = "That would be great! Where do I need to go?";
+	public static string Romy_2_P_1_1 = "No thank you.";
+	public static string Romy_2_P_1_0 = "I got this on my own.";
+
+	public static string Romy_2_C_1_2 = "Don’t give up! Just take your time and think things through. Head straight for that exit. ";
+	public static string Romy_2_C_1_1 = "You’ll be fineeeeee, you got it.";
+	public static string Romy_2_C_1_0 = "Jk, good luck :)";
+	//bad
+	public static string Romy_2_O_0 = "Hey hey hey";
+
+	public static string Romy_2_P_0_2 = "How are you doing?";
+	public static string Romy_2_P_0_1 = "Hey";
+	public static string Romy_2_P_0_0 = "Go away big raccoon thing.";
+
+	public static string Romy_2_C_0_2 = "Great! Hope you are doing good as well";
+	public static string Romy_2_C_0_1 = "Ha ha, hope you are enjoying the forest";
+	public static string Romy_2_C_0_0 = "Alright";
+    #endregion
 }

@@ -108,6 +108,7 @@ public class NPCBehavior4 : MonoBehaviour
                         character2 = SceneDialogue.Leon_4_C_1_1;
                         character1 = SceneDialogue.Leon_4_C_1_2;
                     }
+                    char_morality = "Leon";
                 } else
                 {
                     opening = SceneDialogue.Leon_default;
@@ -146,6 +147,7 @@ public class NPCBehavior4 : MonoBehaviour
                         character2 = SceneDialogue.Hazel_3_C_1_1;
                         character1 = SceneDialogue.Hazel_3_C_1_2;
                     }
+                    char_morality = "Hazel";
                 }
                 else
                 {
@@ -187,10 +189,53 @@ public class NPCBehavior4 : MonoBehaviour
                         character2 = SceneDialogue.Tim_4_C_1_1;
                         character1 = SceneDialogue.Tim_4_C_1_2;
                     }
+                    char_morality = "Tim";
                 }
                 else
                 {
-                    opening = SceneDialogue.Leon_default;
+                    opening = SceneDialogue.Tim_default;
+                }
+                break;
+            case 4:
+                if (!talked)
+                {
+                    relationship = PlayerPrefs.GetInt("Romy");
+                    Debug.Log(relationship);
+                    if (relationship >= 1)
+                    {
+                        opening = SceneDialogue.Romy_2_O_2;
+                        response3 = SceneDialogue.Romy_2_P_2_0;
+                        response2 = SceneDialogue.Romy_2_P_2_1;
+                        response1 = SceneDialogue.Romy_2_P_2_2;
+                        character3 = SceneDialogue.Romy_2_C_2_0;
+                        character2 = SceneDialogue.Romy_2_C_2_1;
+                        character1 = SceneDialogue.Romy_2_C_2_2;
+                    }
+                    else if (relationship <= 1)
+                    {
+                        opening = SceneDialogue.Romy_2_O_0;
+                        response3 = SceneDialogue.Romy_2_P_0_0;
+                        response2 = SceneDialogue.Romy_2_P_0_1;
+                        response1 = SceneDialogue.Romy_2_P_0_2;
+                        character3 = SceneDialogue.Romy_2_C_0_0;
+                        character2 = SceneDialogue.Romy_2_C_0_1;
+                        character1 = SceneDialogue.Romy_2_C_0_2;
+                    }
+                    else
+                    {
+                        opening = SceneDialogue.Romy_2_O_1;
+                        response3 = SceneDialogue.Romy_2_P_1_0;
+                        response2 = SceneDialogue.Romy_2_P_1_1;
+                        response1 = SceneDialogue.Romy_2_P_1_2;
+                        character3 = SceneDialogue.Romy_2_C_1_0;
+                        character2 = SceneDialogue.Romy_2_C_1_1;
+                        character1 = SceneDialogue.Romy_2_C_1_2;
+                    }
+                    char_morality = "Romy";
+                }
+                else
+                {
+                    opening = SceneDialogue.Romy_default;
                 }
                 break;
             default:
