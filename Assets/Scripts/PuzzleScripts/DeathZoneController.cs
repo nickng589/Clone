@@ -97,7 +97,7 @@ public class DeathZoneController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            collision.gameObject.GetComponent<PlayerController>().Die();
         }
         else if (collision.gameObject.tag == "Box")
         {

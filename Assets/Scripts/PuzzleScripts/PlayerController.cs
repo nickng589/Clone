@@ -15,10 +15,15 @@ public class PlayerController : MonoBehaviour
     public int moveDist = 1;
     public int moveDistLeft = 1;
     public Vector3 midpoint;
+    public float multiplier;
     #endregion
     // Start is called before the first frame update
     void Start()
-    { 
+    {
+        p_Anim.SetFloat("LeftSpeed", multiplier);
+        p_Anim.SetFloat("RightSpeed", multiplier);
+        p_Anim.SetFloat("UpSpeed", multiplier);
+        p_Anim.SetFloat("DownSpeed", multiplier);
         p_GM = GameObject.Find("GameManager").GetComponent<GameManager>();
         stillMoving = true;
     }
@@ -58,6 +63,25 @@ public class PlayerController : MonoBehaviour
         StartCoroutine(MoveToCoroutine(initialPos, finalPos));
     }
 
+    public void Die()
+    {
+        StartCoroutine(DeathCoroutine());
+    }
+
+    IEnumerator DeathCoroutine()
+    {
+        float animSpeed = 0.2f;
+        float elapsedTime = 0.0f;
+        Vector3 originalSize = gameObject.transform.localScale;
+        while (elapsedTime < animSpeed)
+        {
+            //gameObject.transform.localRotation = Quaternion.Lerp(new Quaternion(0, 0, 360f, 0), new Quaternion(0, 0, 0, 0), elapsedTime / m_speed);
+            gameObject.transform.localScale = Vector3.Lerp(originalSize,Vector3.zero, elapsedTime / animSpeed);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        p_GM.PlayerDeath();
+    }
 
     IEnumerator MoveToCoroutine(Vector3 initialPos, Vector3 finalPos)
     {

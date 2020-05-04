@@ -364,6 +364,7 @@ public class GameManager : MonoBehaviour
                                 Vector3 midPos = new Vector3(x + offsetX, y + offsetY);
                                 worldMatrix[x, y].GetComponent<BoxController>().midpoint = midPos;
                                 worldMatrix[x, y].GetComponent<BoxController>().stillMoving = true;
+                                GameObject box = worldMatrix[x, y];
                             }
                         }
                     }
@@ -820,7 +821,7 @@ public class GameManager : MonoBehaviour
                             else if (worldMatrix[x, y].tag == "Box")
                             {
                                 GameObject box = worldMatrix[x, y];
-                                if (!box.GetComponent<BoxController>().teleported)
+                                if (!box.GetComponent<BoxController>().moved)
                                 {
                                     Vector3 finalPos = new Vector3(x + offsetX, y + offsetY);
                                     if (telepMatrix[x, y] != null)
@@ -832,8 +833,9 @@ public class GameManager : MonoBehaviour
                                         {
                                             worldMatrix[x + tpX, y + tpY] = worldMatrix[x, y];
                                             worldMatrix[x, y] = null;
-                                            box.GetComponent<BoxController>().TeleportTo(new Vector3(x + offsetX + tpX, y + offsetY + tpY));
-                                            finalPos = new Vector3(x + offsetX + tpX, y + offsetY + tpY);
+                                            
+                                            Vector3 tpPos = new Vector3(x + offsetX + tpX, y + offsetY + tpY);
+                                            box.GetComponent<BoxController>().TeleportTo(tpPos);
                                         }
                                     }
                                     box.GetComponent<BoxController>().MoveTo(box.transform.position, finalPos);
@@ -852,7 +854,7 @@ public class GameManager : MonoBehaviour
                             if (worldMatrix[x, y].tag == "Box")
                             {
                                 GameObject box = worldMatrix[x, y];
-                                box.GetComponent<BoxController>().teleported = false;
+                                box.GetComponent<BoxController>().moved = false;
                             }
                         }
                     }
@@ -866,11 +868,11 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
-        if (Input.GetKeyDown(KeyCode.H))
+        /*if (Input.GetKeyDown(KeyCode.H))
         {
             PlayerPrefs.SetInt("CurrentLevel", PlayerPrefs.GetInt("CurrentLevel") - 1);
             SceneManager.LoadScene("HubWorld");
-        }
+        }*/
 
     }
     
@@ -928,7 +930,9 @@ public class GameManager : MonoBehaviour
             {
                 if (worldMatrix[gX, gY].tag == "Player")
                 {
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                    playersCanMove = false;
+                    lockGame = true;
+                    worldMatrix[gX, gY].GetComponent<PlayerController>().Die();
                 }
                 if (worldMatrix[gX, gY].tag == "Box")
                 {
@@ -940,6 +944,26 @@ public class GameManager : MonoBehaviour
             worldMatrix[gX, gY] = g;
         }
         
+    }
+
+    public void PlayerDeath()
+    {
+        StartCoroutine(DeathCoroutine());
+    }
+
+    IEnumerator DeathCoroutine()    
+    {
+        float elapsedTime = 0.0f;
+        float animSpeed = 1.5f;
+        m_VictoryText.text = "You Died";
+        m_VictoryText.color = Color.clear;
+        while (elapsedTime <animSpeed)
+        {
+            m_VictoryText.color = Color.Lerp(Color.clear, new Color(0.8f,0.0f,0.0f), elapsedTime / animSpeed);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void removeFromMatrix(GameObject g)

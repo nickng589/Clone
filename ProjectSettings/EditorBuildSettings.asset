@@ -62,4 +62,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Adder.unity
     guid: 4fa7d3bb97d72364a89852c257c78be7
+  - enabled: 1
+    path: Assets/Scenes/Cutscenes/TriggerEndScene.unity
+    guid: f3c22b39b3c8d4d66b4b710890010427
+  - enabled: 1
+    path: Assets/Scenes/Cutscenes/Ending1.unity
+    guid: 52273097530b5437cb78d0dbd0b94ed3
+  - enabled: 1
+    path: Assets/Scenes/Cutscenes/Ending2.unity
+    guid: 62eeaeca08fc44fbfb67bec20b0ea958
+  - enabled: 1
+    path: Assets/Scenes/Cutscenes/Ending3.unity
+    guid: 9a16ce5b1873540ccb4f9c5f33cd65f4
+  - enabled: 1
+    path: Assets/Scenes/Cutscenes/IntroCutscene.unity
+    guid: dfca537a0a3b848cc92e769e89ac91a8
   m_configObjects: {}
