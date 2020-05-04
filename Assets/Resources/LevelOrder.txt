@@ -8,16 +8,23 @@ FreezePU Intro Level
 InvertPU Intro Level
 SpeedPU Intro Level
 Level10
+Level 16
 HubWorld
 Level9
 Level4
 Level5
 Level6
+Level 18
+Level 19
+Level 21
 HubWorld
 Adder
 Level3
 Level7
 Level8
+Level 17
+Level 20
+Level 22
 HubWorld
 TriggerEndScene
 
