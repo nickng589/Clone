@@ -243,7 +243,7 @@ public class NPCBehavior3 : MonoBehaviour
         dm.DisableTextBox();
         if (!talked)
         {
-            dm.DisplayChoices(3, new string[] { "Press A for: " + response1, "Press D for: " + response2, "Press S for: " + response3 });
+            dm.DisplayChoices(3, new string[] { response1, response2, response3 });
 
             yield return new WaitWhile(() => Input.anyKey == true);
             yield return new WaitWhile(() => dm.GrabInput(3) == ChoiceSystem.Choices.Invalid);

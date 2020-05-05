@@ -23,7 +23,7 @@ public class ChoicePanelController : MonoBehaviour
     //Sets the container width and inner text width accordingly
     public void SetWidth(int newContainerWidth) {
         containerRectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, newContainerWidth);
-        textRectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, newContainerWidth-10);
+        textRectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, newContainerWidth-40);
     }
 
     //Sets the text of this choice panel

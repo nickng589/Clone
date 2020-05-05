@@ -316,8 +316,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 229b8e521ee2b4db488c71f939075a6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  end1name: Ending1
+  end1name: Ending3
   end2name: Ending2
-  end3name: Ending3
+  end3name: Ending1
   moralityThreshold1: 0
-  moralityThreshold2: 2
+  moralityThreshold2: 6

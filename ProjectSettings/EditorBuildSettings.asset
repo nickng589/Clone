@@ -101,4 +101,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Level 22.unity
     guid: 86edd9607c8ff42579972b08ce8d6811
+  - enabled: 1
+    path: Assets/Scenes/HubWorlds/HubWorld 1.unity
+    guid: 73c1ddcfee702404fab720a7c591ab0d
+  - enabled: 1
+    path: Assets/Scenes/HubWorlds/HubWorld 2.unity
+    guid: 94d04618e9a34ae4eac86c1ad4866a88
+  - enabled: 1
+    path: Assets/Scenes/HubWorlds/HubWorld 3.unity
+    guid: 56aa69dea50cf1a4e93ed244dcad4aa3
+  - enabled: 1
+    path: Assets/Scenes/HubWorlds/HubWorld 4.unity
+    guid: 5e47520aa73073540ab8b8d489dd5eef
   m_configObjects: {}

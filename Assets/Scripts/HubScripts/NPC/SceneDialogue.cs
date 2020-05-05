@@ -22,31 +22,31 @@ public class SceneDialogue : MonoBehaviour
 
 	//World 2
 	//good
-	public static string Leon_2_O_2 = "Hey that last set of puzzles was really fun wasn’t it!";
+	public static string Leon_2_O_2 = "Hey, that last set of puzzles was really fun, wasn’t it!";
 
-	public static string Leon_2_P_2_2 = "Yeah they were great, do you have any ideas whats coming up next?";
-	public static string Leon_2_P_2_1 = "You seem pretty smart what’s going on around here.";
-	public static string Leon_2_P_2_0 = "Are you kidding me those puzzles were horrible!";
+	public static string Leon_2_P_2_2 = "Yeah they were great, do you have any ideas on whats coming up next?";
+	public static string Leon_2_P_2_1 = "You seem pretty smart, what’s going on around here?";
+	public static string Leon_2_P_2_0 = "Are you kidding me? Those puzzles were horrible!";
 
-	public static string Leon_2_C_2_2 = "I think the upcoming puzzles have something to do with binary.";
-	public static string Leon_2_C_2_1 = "Everyone here has been split! You probably saw a mirror on the way here, that thing is the culprit.  I’ve been searching on a way to recombine since I got here";
-	public static string Leon_2_C_2_0 = "I guess you just don’t see the puzzles the same way as me then";
+	public static string Leon_2_C_2_2 = "I think the upcoming puzzles have something to do with binary. May want to look into it.";
+	public static string Leon_2_C_2_1 = "Everyone here has been split! You probably saw a mirror on the way here, that thing is the culprit.  I’ve been searching on a way to recombine since I got here.";
+	public static string Leon_2_C_2_0 = "I guess you just don’t see the puzzles the same way as me then.";
 	//neutral
-	public static string Leon_2_O_1 = "Hey it’s you again!";
+	public static string Leon_2_O_1 = "Hey, it’s you again!";
 
-	public static string Leon_2_P_1_2 = "You seem pretty smart, what’s going on around here.";
-	public static string Leon_2_P_1_1 = "Yup it’s me again.";
+	public static string Leon_2_P_1_2 = "You seem pretty smart, what’s going on around here?";
+	public static string Leon_2_P_1_1 = "Yup it’s me again. My name is Pero.";
 	public static string Leon_2_P_1_0 = "Uhhhhh, could you stop talking to me?";
 
-	public static string Leon_2_C_1_2 = "Everyone here has been split! You probably saw a mirror on the way here, that thing is the culprit.  I’ve been searching on a way to recombine since I got here";
-	public static string Leon_2_C_1_1 = "Looks like you have been dealing with the puzzles well so far! You haven’t gone crazy yet!";
+	public static string Leon_2_C_1_2 = "Everyone here has been split! You probably saw a mirror on the way here, that thing is the culprit.  I’ve been searching on a way to recombine since I got here.";
+	public static string Leon_2_C_1_1 = "Looks like you have been dealing with the puzzles well so far! You haven’t gone crazy yet! Good for you.";
 	public static string Leon_2_C_1_0 = "Hey hey hey, don’t forget you were the one who walked up to me.";
 
 	//bad
 	public static string Leon_2_O_0 = "Hey there.";
 
 	public static string Leon_2_P_0_2 = "Sorry about talking about your looks last time, it just came out";
-	public static string Leon_2_P_0_1 = "Hey it’s the crazy looking guy again.";
+	public static string Leon_2_P_0_1 = "Hey, it’s the crazy looking guy again.";
 	public static string Leon_2_P_0_0 = "Uhhhhh, could you stop talking to me?";
 
 	public static string Leon_2_C_0_2 = "No problem, that kind of stuff happens to me all the time too.  Hope you are enjoying the puzzles!";
@@ -61,8 +61,8 @@ public class SceneDialogue : MonoBehaviour
 	public static string Leon_3_P_2_1 = "Honestly, I forgot the last set of puzzles.  But so far it seems like I am alternating between this forest and some place where there is a split version of me";
 	public static string Leon_3_P_2_0 = "How about you play the puzzles yourself?";
 
-	public static string Leon_3_C_2_2 = "Ohhhhh, very interesting.  So from what I have collected, there is a mirror somewhere deep in the forest that will allow you to recombine back again";
-	public static string Leon_3_C_2_1 = "Hmmmm, that’s very useful.  I’ll write that down in my notes.";
+	public static string Leon_3_C_2_2 = "Ohhhhh, very interesting. I hear that it's the number one public university? Anyways, here's a bit of my knowledge: there is definitely an exit to the forest, but only past all these puzzles.";
+	public static string Leon_3_C_2_1 = "Yep, I'm glad you've noticed it! I think I've almost discovered a way to recombine people who have been split - give me a bit longer to work on it.";
 	public static string Leon_3_C_2_0 = "I guess I will then.";
 	//neutral
 	public static string Leon_3_O_1 = "Hey it’s the new kid!  Learn anything new?";
@@ -80,11 +80,11 @@ public class SceneDialogue : MonoBehaviour
 
 	public static string Leon_3_P_0_2 = "What are those notes there for?  Looks interesting.";
 	public static string Leon_3_P_0_1 = "Yup it’s me, the kid.";
-	public static string Leon_3_P_0_0 = "What’s with the tone old man?";
+	public static string Leon_3_P_0_0 = "What’s with the tone, old man?";
 
 	public static string Leon_3_C_0_2 = "Oh, these notes?  I’m glad you asked!  I’ve been trying to figure out what’s happening in this weird place for a while.";
 	public static string Leon_3_C_0_1 = "Yup it is you… the kid.";
-	public static string Leon_3_C_0_0 = "What’s with the rudeness young man?";
+	public static string Leon_3_C_0_0 = "What’s with the rudeness, young man?";
 
 	//World 4
 	//good
@@ -117,21 +117,21 @@ public class SceneDialogue : MonoBehaviour
 
 	public static string Leon_4_C_0_2 = "Oh really?  Great! Yeah I’ve been tinkering around with insects for a while.  It seems like there is a connection between their lifespan and being split but I’m not sure what..";
 	public static string Leon_4_C_0_1 = "I’ll just get back to work then.";
-	public static string Leon_4_C_0_0 = "Hey you are the one who walked up to me.";
+	public static string Leon_4_C_0_0 = "Hey, you're the one who walked up to me.";
 	#endregion
 
 	#region Hazel (Character 2)
 	//World 1
 	public static string Hazel_default = "Got nothing better to do than talk to me, huh?";
 
-	public static string Hazel_1_O_0 = "Hey you!";
+	public static string Hazel_1_O_0 = "Hey, you!";
 
 	public static string Hazel_1_P_0_2 = "Hey, I’m Pero.  I got lost in here looking for a friend. Who are you?";
 	public static string Hazel_1_P_0_1 = "Hello.";
 	public static string Hazel_1_P_0_0 = "Don’t yell at me like that!";
 
 	public static string Hazel_1_C_0_2 = "Hey! I’m Hazel.  Looks like we are in a similar situation, I also got lost looking for a friend.  What a coincidence!";
-	public static string Hazel_1_C_0_1 = "Don’t be shy! I’m Hazel.";
+	public static string Hazel_1_C_0_1 = "Don’t be shy! I’m Hazel. I also got lost looking for a friend. If you need anything, let me know.";
 	public static string Hazel_1_C_0_0 = "I’ll do whatever I want!";
 
 	//World 2
@@ -142,15 +142,15 @@ public class SceneDialogue : MonoBehaviour
 	public static string Hazel_2_P_2_1 = "Best friend? We just met.";
 	public static string Hazel_2_P_2_0 = "I’m not even close to being your best friend.";
 
-	public static string Hazel_2_C_2_2 = "Glad someone my age finally is around, no one else here can really relate to me except you.";
-	public static string Hazel_2_C_2_1 = "Well how many times do I have to meet you before I can call you that?";
-	public static string Hazel_2_C_2_0 = "Is that right?  Forget I said anything then";
+	public static string Hazel_2_C_2_2 = "Glad someone my age finally is around, no one else here can really relate to me.";
+	public static string Hazel_2_C_2_1 = "Well, how many times do I have to meet you before I can call you that? If you haven't noticed, we're trapped here for a while. Might as well be friends, right?";
+	public static string Hazel_2_C_2_0 = "Is that right?  Forget I said anything then.";
 	//neutral
 	public static string Hazel_2_O_1 = "I still never got your name, I gave you mine so it’s only fair.";
 
 	public static string Hazel_2_P_1_2 = "Oh it’s Pero, should have introduced myself sooner.";
 	public static string Hazel_2_P_1_1 = "Its Pero.";
-	public static string Hazel_2_P_1_0 = "You never asked";
+	public static string Hazel_2_P_1_0 = "You never asked.";
 
 	public static string Hazel_2_C_1_2 = "No problem, nice to meet you Pero!";
 	public static string Hazel_2_C_1_1 = "Pretty straightforward guy, huh?";
@@ -187,7 +187,7 @@ public class SceneDialogue : MonoBehaviour
 
 	public static string Hazel_3_C_1_2 = "Yeah, I’m still looking too.  Starting to feel a little hopeless, though.";
 	public static string Hazel_3_C_1_1 = "I feel you, I can’t tell if I’m making any progress or not.";
-	public static string Hazel_3_C_1_0 = "Yeah It’s starting to look worse and worse the longer I look.";
+	public static string Hazel_3_C_1_0 = "Yeah It’s starting to look worse and worse the longer I look. At this point...I just want to get out of here.";
 
 	//bad
 	public static string Hazel_3_O_0 = "Still around here, huh?";
@@ -209,7 +209,7 @@ public class SceneDialogue : MonoBehaviour
 
 	public static string Tim_1_P_0_2 = "Hey there.";
 	public static string Tim_1_P_0_1 = "uhhhhhh, hello?";
-	public static string Tim_1_P_0_0 = "are you going to say anything?";
+	public static string Tim_1_P_0_0 = "Are you going to say anything?";
 
 	public static string Tim_1_C_0_2 = "H… hello";
 	public static string Tim_1_C_0_1 = "…";
@@ -223,7 +223,7 @@ public class SceneDialogue : MonoBehaviour
 	public static string Tim_2_P_2_1 = "Hello… Again?";
 	public static string Tim_2_P_2_0 = "Do you not know how to talk?  Hello?";
 
-	public static string Tim_2_C_2_2 = "*sniffles* yeah I got lost here. I’m doing ok";
+	public static string Tim_2_C_2_2 = "*sniffles* yeah, I got lost here. I’m doing ok";
 	public static string Tim_2_C_2_1 = "Hey...";
 	public static string Tim_2_C_2_0 = "…";
 	//neutral
@@ -252,7 +252,7 @@ public class SceneDialogue : MonoBehaviour
 	public static string Tim_3_O_2 = "Hey ... could I tell you something?";
 
 	public static string Tim_3_P_2_2 = "Of course, whats on your mind?";
-	public static string Tim_3_P_2_1 = "Yeah but could you make it quick?";
+	public static string Tim_3_P_2_1 = "Yeah, but could you make it quick?";
 	public static string Tim_3_P_2_0 = "Not really in the mood right now, keep it to yourself.";
 
 	public static string Tim_3_C_2_2 = "I got lost here after running away from home.  It’s scary here, but it’s a lot scarier at home.";
@@ -322,7 +322,7 @@ public class SceneDialogue : MonoBehaviour
 	public static string Romy_1_P_0_1 = "Not too bad.";
 	public static string Romy_1_P_0_0 = "Terrible, get me out of here.";
 
-	public static string Romy_1_C_0_2 = "This is my home! These are my friends!";
+	public static string Romy_1_C_0_2 = "I'm Romy! I live here. Welcome to the forest! It's a weird place, as I'm sure you've seen.";
 	public static string Romy_1_C_0_1 = "Great! It’s nice to meet you.";
 	public static string Romy_1_C_0_0 = "You’re gonna have to find your own way out.  Hopefully you find more comfort in here in the future";
 
@@ -356,7 +356,7 @@ public class SceneDialogue : MonoBehaviour
 
 	public static string Romy_2_C_0_2 = "Great! Hope you are doing good as well";
 	public static string Romy_2_C_0_1 = "Ha ha, hope you are enjoying the forest";
-	public static string Romy_2_C_0_0 = "Alright";
+	public static string Romy_2_C_0_0 = "Alright.";
 	#endregion
 
 	#region Norman/Addison (Character 5)
@@ -368,7 +368,7 @@ public class SceneDialogue : MonoBehaviour
 
 	public static string Norman_1_P_0_2 = "Sure, what is it?";
 	public static string Norman_1_P_0_1 = "I guess, its kinda a pain though.";
-	public static string Norman_1_P_0_0 = "No, you are pathetic";
+	public static string Norman_1_P_0_0 = "No, you are pathetic.";
 
 	public static string Norman_1_C_0_2 = "Tell her that I miss her and I was wrong.  Thanks kid.";
 	public static string Norman_1_C_0_1 = "Tell her I miss her, please.";
@@ -376,17 +376,17 @@ public class SceneDialogue : MonoBehaviour
 
 	//World 2
 	//good
-	public static string Addison_2_O_2 = "Hey have you seen my husband?";
+	public static string Addison_2_O_2 = "Hey, have you seen my husband? Maybe you've seen him around? I'm really worried...";
 
 	public static string Addison_2_P_2_2 = "Yeah, he told me to tell you he misses you, and loves you.";
-	public static string Addison_2_P_2_1 = "Uh yeah he told me to tell you something but I forgot";
+	public static string Addison_2_P_2_1 = "Uh yeah, he told me to tell you something but I forgot";
 	public static string Addison_2_P_2_0 = "No I haven't";
 
 	public static string Addison_2_C_2_2 = "Oh my god.  I hope I can find him, I miss him too.";
-	public static string Addison_2_C_2_1 = "Uh yeah he told me to tell you something but I forgot";
-	public static string Addison_2_C_2_0 = "Oh no, I think he ran in to find me and now we are both lost";
+	public static string Addison_2_C_2_1 = "Well...thanks for nothing, I guess.";
+	public static string Addison_2_C_2_0 = "Oh no, I think he ran in to find me and now we are both lost...";
 	//neutral
-	public static string Addison_2_O_1 = "Hey have you seen my husband?";
+	public static string Addison_2_O_1 = "Hey, have you seen my husband?";
 
 	public static string Addison_2_P_1_2 = "Yeah, he told me to tell you he misses you.";
 	public static string Addison_2_P_1_1 = "Uh yeah he told me to tell you something but I forgot";
@@ -400,10 +400,10 @@ public class SceneDialogue : MonoBehaviour
 
 	public static string Addison_2_P_0_2 = "I have.  I was supposed to deliver a message but I couldn't understand him.";
 	public static string Addison_2_P_0_1 = "No, I haven't";
-	public static string Addison_2_P_0_0 = "Yeah he looked like quite the loser";
+	public static string Addison_2_P_0_0 = "Yeah, he looked like quite the loser";
 
 	public static string Addison_2_C_0_2 = "I got to find him then! We both got lost in here.";
-	public static string Addison_2_C_0_1 = "Oh no, I think he ran in to find me and now we are both lost";
+	public static string Addison_2_C_0_1 = "Oh no, I think he ran in to find me and now we are both lost...";
 	public static string Addison_2_C_0_0 = "Hey! Don't speak about my husband like that";
 	#endregion
 }
