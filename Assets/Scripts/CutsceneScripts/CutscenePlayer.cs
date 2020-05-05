@@ -31,9 +31,6 @@ public class CutscenePlayer : MonoBehaviour
     void Start()
     {
         timelineArray = new List<PlayableAsset>();
-        if (PlayerPrefs.GetInt("Addison") >= friendshipThreshold) {
-            timelineArray.Add(p_AddisonTimeline);
-        }
         if (PlayerPrefs.GetInt("Hazel") >= friendshipThreshold)
         {
             timelineArray.Add(p_HazelTimeline);
@@ -42,9 +39,10 @@ public class CutscenePlayer : MonoBehaviour
         {
             timelineArray.Add(p_LeonTimeline);
         }
-        if (PlayerPrefs.GetInt("Norman") >= friendshipThreshold)
+        if (PlayerPrefs.GetInt("Norman/Addison") >= friendshipThreshold)
         {
             timelineArray.Add(p_NormanTimeline);
+            timelineArray.Add(p_AddisonTimeline);
         }
         if (PlayerPrefs.GetInt("Romy") >= friendshipThreshold)
         {

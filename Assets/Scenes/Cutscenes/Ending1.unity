@@ -21804,8 +21804,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Thanks Pero. I don''t have many friends, so it means a lot to me that you
-    wanted to help me out. '
+  m_Text: Thanks for talking to me Pero. I don't really want to go back home but...maybe
+    I can go with you?
 --- !u!222 &1074674580
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -42825,8 +42825,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Hey Pero. I'm not very good at saying this, but...thanks. It's been nice
-    talking to you.
+  m_Text: Hey Pero. Thanks for helping me find my husband, it means a lot.
 --- !u!222 &1911104809
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -46100,8 +46099,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Pero! What's up. Looks like we're making it out of this hellhole, thank
-    goodness. I guess I'll see you later!
+  m_Text: Pero! What's up. Looks like we're making it out of this hellhole. And I
+    found Addison, thanks for delivering my message!
 --- !u!222 &2086198050
 CanvasRenderer:
   m_ObjectHideFlags: 0

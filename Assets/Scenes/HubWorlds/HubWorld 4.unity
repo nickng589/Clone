@@ -257,7 +257,7 @@ PrefabInstance:
     - target: {fileID: 8949204561836378362, guid: 24690d38d1fd84c8ab1cebd73f24f126,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8949204562409571398, guid: 24690d38d1fd84c8ab1cebd73f24f126,
         type: 3}
@@ -4109,7 +4109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dm: {fileID: 2107836493}
   player: {fileID: 486116998}
-  player_num: 4
+  player_num: 3
   canMove: 0
   walkTimer: 0
   talked: 0
@@ -18081,7 +18081,7 @@ PrefabInstance:
     - target: {fileID: 8949204561836378362, guid: 24690d38d1fd84c8ab1cebd73f24f126,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8949204562409571398, guid: 24690d38d1fd84c8ab1cebd73f24f126,
         type: 3}
@@ -18141,7 +18141,7 @@ PrefabInstance:
     - target: {fileID: 8949204562409571398, guid: 24690d38d1fd84c8ab1cebd73f24f126,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 371.45
+      value: 559.67505
       objectReference: {fileID: 0}
     - target: {fileID: 8949204562409571398, guid: 24690d38d1fd84c8ab1cebd73f24f126,
         type: 3}
@@ -21901,7 +21901,7 @@ PrefabInstance:
     - target: {fileID: 8949204561836378362, guid: 24690d38d1fd84c8ab1cebd73f24f126,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8949204562409571398, guid: 24690d38d1fd84c8ab1cebd73f24f126,
         type: 3}
@@ -51329,7 +51329,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dm: {fileID: 2107836493}
   player: {fileID: 486116998}
-  player_num: 0
+  player_num: 4
   canMove: 0
   walkTimer: 0
   talked: 0

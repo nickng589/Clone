@@ -1,15 +1,14 @@
 IntroCutscene
-HubWorld
 Box Intro Level
 Level1
 Level2
-HubWorld
+HubWorld1
 FreezePU Intro Level
 InvertPU Intro Level
 SpeedPU Intro Level
 Level10
 Level 16
-HubWorld
+HubWorld2
 Level9
 Level4
 Level5
@@ -17,7 +16,7 @@ Level6
 Level 18
 Level 19
 Level 21
-HubWorld
+HubWorld3
 Adder
 Level3
 Level7
@@ -26,6 +25,6 @@ Level 17
 Level 20
 Level 22
 Adder2
-HubWorld
+HubWorld4
 TriggerEndScene
 
