@@ -300,7 +300,7 @@ public class NPCBehavior4 : MonoBehaviour
             switch (dm.GrabInput(3))
             {
                 case ChoiceSystem.Choices.Zero:
-                    PlayerPrefs.SetInt("morality", PlayerPrefs.GetInt("Morality") + 1);
+                    PlayerPrefs.SetInt("morality", PlayerPrefs.GetInt("morality") + 1);
                     dm.DisplayText(character1);
                     PlayerPrefs.SetInt(char_morality, PlayerPrefs.GetInt(char_morality) + 1);
                     break;
@@ -308,7 +308,7 @@ public class NPCBehavior4 : MonoBehaviour
                     dm.DisplayText(character2);
                     break;
                 case ChoiceSystem.Choices.Two:
-                    PlayerPrefs.SetInt("morality", PlayerPrefs.GetInt("Morality") - 1);
+                    PlayerPrefs.SetInt("morality", PlayerPrefs.GetInt("morality") - 1);
                     dm.DisplayText(character3);
                     PlayerPrefs.SetInt(char_morality, PlayerPrefs.GetInt(char_morality) - 1);
                     break;

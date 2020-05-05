@@ -320,4 +320,4 @@ MonoBehaviour:
   end2name: Ending2
   end3name: Ending1
   moralityThreshold1: 0
-  moralityThreshold2: 6
+  moralityThreshold2: 3
