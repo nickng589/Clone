@@ -4109,7 +4109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dm: {fileID: 2107836493}
   player: {fileID: 486116998}
-  player_num: 4
+  player_num: 3
   canMove: 0
   walkTimer: 0
   talked: 0
@@ -51329,7 +51329,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dm: {fileID: 2107836493}
   player: {fileID: 486116998}
-  player_num: 0
+  player_num: 4
   canMove: 0
   walkTimer: 0
   talked: 0
