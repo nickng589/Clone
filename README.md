@@ -1,6 +1,6 @@
-# Clone
-
 ## Download and run the game [here](https://itch.io/queue/c/850031/gdd-spring-2020-showcase?game_id=586504)!
+
+# Clone
 
 Solve puzzles and meet new friends while exploring a magical forest world!
 
